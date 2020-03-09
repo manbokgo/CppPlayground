@@ -23,10 +23,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="solved\1181.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="%40 Template.cpp">
+    <ClCompile Include="problem\%40 Template.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
