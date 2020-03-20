@@ -11,7 +11,7 @@ int lower_idx(int target, int len) {
         if (a[mid] >= target) en = mid;
         else st = mid + 1;
     }
-    return st; // st = enÀ¸·Î °¡´ÉÇÑ ÈÄº¸°¡ 1°³·Î È®Á¤µÉ °æ¿ì while¹®À» Å»ÃâÇÔ
+    return st; // st = enìœ¼ë¡œ ê°€ëŠ¥í•œ í›„ë³´ê°€ 1ê°œë¡œ í™•ì •ë  ê²½ìš° whileë¬¸ì„ íƒˆì¶œí•¨
 }
 
 int upper_idx(int target, int len) {
@@ -22,7 +22,7 @@ int upper_idx(int target, int len) {
         if (a[mid] > target) en = mid;
         else st = mid + 1;
     }
-    return st; // st = enÀ¸·Î °¡´ÉÇÑ ÈÄº¸°¡ 1°³·Î È®Á¤µÉ °æ¿ì while¹®À» Å»ÃâÇÔ
+    return st; // st = enìœ¼ë¡œ ê°€ëŠ¥í•œ í›„ë³´ê°€ 1ê°œë¡œ í™•ì •ë  ê²½ìš° whileë¬¸ì„ íƒˆì¶œí•¨
 }
 
 int main(void) {
