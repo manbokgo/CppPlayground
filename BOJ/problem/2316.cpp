@@ -1,7 +1,5 @@
-#include <cstdio>
-#include <vector>
-#include <queue>
-#include <algorithm>
+#include <bits/stdc++.h>
+
 using namespace std;
 const int MAX_V = 800;
 const int INF = 100000000;
@@ -10,51 +8,72 @@ struct Edge
 {
     int to, c, f;
     Edge *dual;
-    Edge() : Edge(-1, 0) {}
-    Edge(int to1, int c1) : to(to1), c(c1), f(0), dual(nullptr) {}
+    Edge(int to, int c) : to(to), c(c), f(0), dual(nullptr) {}
     int spare()
     {
         return c - f;
     }
-    void addFlow(int f1)
+    void addFlow(int flow)
     {
-        f += f1;
-        dual->f -= f1;
+        f += flow;
+        dual->f -= flow;
     }
 };
 
 int main()
 {
-    // 각 정점 n은 두 개의 정점 n*2-2, n*2-1로 나뉘어진다.
-    int N, P;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, p;
     vector<Edge *> adj[MAX_V];
-    scanf("%d %d", &N, &P);
-    // 각 정점을 분리하고 사이에 용량 1인 간선 추가
-    for (int i = 0; i < N; i++)
+    cin >> n >> p;
+
+    int S = 1;
+    int E = 2;
+    Edge *e1;
+    Edge *e2;
+
+    for (int v = 0; v < n; ++v)
     {
-        int u = i * 2, v = u + 1;
-        Edge *e1 = new Edge(v, 1), *e2 = new Edge(u, 0);
+        int inputV = v * 2;
+        int outputV = inputV + 1;
+
+        e1 = new Edge(outputV, 1);
+        e2 = new Edge(inputV, 0);
         e1->dual = e2;
         e2->dual = e1;
-        adj[u].push_back(e1);
-        adj[v].push_back(e2);
-    }
-    // 간선을 입력받아 분리된 정점에 맞게 방향 간선 2개 추가
-    for (int i = 0; i < P; i++)
-    {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        a--;
-        b--;
-        Edge *e1 = new Edge(b * 2, 1), *e2 = new Edge(a * 2, 1);
-        e1->dual = e2;
-        e2->dual = e1;
-        adj[a * 2 + 1].push_back(e1);
-        adj[b * 2 + 1].push_back(e2);
+        adj[inputV].push_back(e1);
+        adj[outputV].push_back(e2);
     }
 
-    // 최대 유량 구하기
-    int total = 0, S = 1, E = 2;
+    while (p--)
+    {
+        int u, v;
+        cin >> u >> v;
+        --u;
+        --v;
+        int inputU = u * 2;
+        int outputU = inputU + 1;
+        int inputV = v * 2;
+        int outputV = inputV + 1;
+
+        e1 = new Edge(inputV, 1);
+        e2 = new Edge(outputU, 0);
+        e1->dual = e2;
+        e2->dual = e1;
+        adj[outputU].push_back(e1);
+        adj[inputV].push_back(e2);
+
+        e1 = new Edge(inputU, 1);
+        e2 = new Edge(outputV, 0);
+        e1->dual = e2;
+        e2->dual = e1;
+        adj[outputV].push_back(e1);
+        adj[inputU].push_back(e2);
+    }
+
+    int total = 0;
     while (true)
     {
         int prev[MAX_V];
@@ -94,6 +113,6 @@ int main()
         }
         total += flow;
     }
-    // 결과 출력
-    printf("%d\n", total);
+
+    cout << total;
 }
