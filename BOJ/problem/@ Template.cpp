@@ -7,6 +7,7 @@
 #define all(x) x.begin(), x.end()
 #define sortvec(x) sort(all(x))
 #define compress(x) x.erase(unique(all(x)), x.end())
+#define findvec(x, value) find(all(x), value) != x.end()
 
 using namespace std;
 

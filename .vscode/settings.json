@@ -15,6 +15,19 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "utility": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "string_view": "cpp",
+        "*.tcc": "cpp",
+        "optional": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp"
     }
 }
