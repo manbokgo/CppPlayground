@@ -1,7 +1,4 @@
 #include <bits/stdc++.h>
-#define all(x) x.begin(), x.end()
-#define findvec(x, value) find(all(x), value) != x.end()
-
 using namespace std;
 const int MAX_V = 10000;
 const int INF = 100000000;
@@ -100,56 +97,37 @@ int main()
             if (prev[E] == -1)
                 break;
 
-            int flow = INF;
-            for (int i = E; i != S; i = prev[i])
-            {
-                flow = min(flow, path[i]->spare());
-            }
+            int flow = 1;
             for (int i = E; i != S; i = prev[i])
             {
                 path[i]->addFlow(flow);
             }
-        }
-
-        while (true)
-        {
-            int cur = S;
-            while (cur != E)
-            {
-                if (cur % 2 == 1)
-                    pathAns.push(cur / 2 + 1);
-                int prev = cur;
-                for (Edge *e : adj[cur])
-                {
-                    if (e->f > 0)
-                    {
-                        e->f = 0;
-                        cur = e->to;
-                        break;
-                    }
-                }
-                if (prev == cur)
-                    break;
-            }
-            if (cur != E)
-                break;
-
-            pathAns.push(2);
-            ++total;
+            total++;
         }
 
         cout << "Case " << tc << ":\n";
         if (total >= k)
         {
-            while (!pathAns.empty() && k > 0)
+            while (k > 0)
             {
-                cout << pathAns.front() << " ";
-                if (pathAns.front() == 2)
+                int cur = S;
+                while (cur != E)
                 {
-                    cout << "\n";
-                    --k;
+                    int prev = cur;
+                    for (Edge *e : adj[cur])
+                    {
+                        if (e->f > 0)
+                        {
+                            if (cur % 2 == 1)
+                                cout << cur / 2 + 1 << " ";
+                            e->f = 0;
+                            cur = e->to;
+                            break;
+                        }
+                    }
                 }
-                pathAns.pop();
+                cout << "2\n";
+                --k;
             }
         }
         else
