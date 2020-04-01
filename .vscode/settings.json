@@ -30,6 +30,8 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "new": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "bitset": "cpp",
+        "set": "cpp"
     }
 }

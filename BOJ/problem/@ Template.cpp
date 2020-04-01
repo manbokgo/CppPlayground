@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+using namespace std;
 
 #define pb push_back
 #define mp make_pair
@@ -8,8 +9,6 @@
 #define sortvec(x) sort(all(x))
 #define compress(x) x.erase(unique(all(x)), x.end())
 #define findvec(x, value) find(all(x), value) != x.end()
-
-using namespace std;
 
 typedef long long ll;
 typedef pair<int, int> pii;
