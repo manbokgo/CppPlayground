@@ -185,7 +185,7 @@ int Partition(int* arr, int left, int right)
 
 }
 
-void QuickSortMedian(int* arr, int Left, int Right)
+void QuickSort(int* arr, int Left, int Right)
 {
 	if (Left < Right)
 	{
@@ -226,15 +226,15 @@ void QuickSortMedian(int* arr, int Left, int Right)
 		std::cout << std::endl << std::endl;
 
 
-		QuickSortMedian(arr, Left, pivot - 1);
-		QuickSortMedian(arr, pivot + 1, Right);
+		QuickSort(arr, Left, pivot - 1);
+		QuickSort(arr, pivot + 1, Right);
 	}
 }
 
-void QuickSortMedian(int* arr, int size) {
+void QuickSort(int* arr, int size) {
 	arrSize = size;
 	std::cout << "---------------------------" << std::endl;;
-	QuickSortMedian(arr, 0, size - 1);
+	QuickSort(arr, 0, size - 1);
 	std::cout << "---------------------------" << std::endl;
 }
 
@@ -251,7 +251,7 @@ bool Test(int* arr1, int* arr2, int size)
 	std::cout << std::endl;
 
 
-	QuickSortMedian(arr1, size);
+	QuickSort(arr1, size);
 
 
 	std::cout << "Sorted: ";

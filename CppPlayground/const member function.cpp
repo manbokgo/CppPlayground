@@ -20,8 +20,8 @@ int main()
 {
 	int i = 1;
 	const Test bar = Test(&i);
-
 	std::cout << i << std::endl;
+
 	bar.Foo();
 	std::cout << i << std::endl;
 
