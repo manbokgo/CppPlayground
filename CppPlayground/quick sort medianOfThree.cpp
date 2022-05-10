@@ -64,7 +64,9 @@ int PartitionMedian(int* arr, int left, int mid, int right)
 
 void QuickSortMedian(int* arr, int Left, int Right)
 {
-	int mid = (Left + Right) / 2;
+	// 웬만해서는 그럴 일 없겠지만 21억 넘어가는 경우 방지
+	// int mid = (Left + Right) / 2;
+	int mid = Left + (Right - Left) / 2;
 	threeSort(arr, Left, mid, Right);
 
 	if (Right - Left + 1 > 3)
