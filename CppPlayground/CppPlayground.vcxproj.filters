@@ -27,5 +27,8 @@
     <ClCompile Include="quick sort medianOfThree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="merge sort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
