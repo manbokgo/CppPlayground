@@ -33,6 +33,9 @@ std::vector<int> BellmanFord(std::vector<Edge> Edges, int VertexNum, int Start)
 			{
 				distance[e.dst] = distance[e.src] + e.weight;
 				Change = true;
+
+				// N 라운드 때 가중치 변경은 음의 폐로를 의미함
+				if (i == VertexNum) break;
 			}
 		}
 
@@ -60,7 +63,7 @@ int main ()
 	Nav.emplace_back(0, 3, 5);
 	Nav.emplace_back(1, 2, 2);
 	Nav.emplace_back(2, 3, -1);
-	Nav.emplace_back(3, 1, -2);
+	Nav.emplace_back(3, 1, 0);
 
 	std::vector<int> result = BellmanFord(Nav, 4, 0);
 
