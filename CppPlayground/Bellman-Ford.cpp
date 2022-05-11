@@ -17,11 +17,12 @@ struct Edge
 };
 
 
-// std::vector<int> OutDistance(VertexNum, INT_MAX)
-bool BellmanFord(std::vector<int>* OutDistance, const std::vector<Edge>& Edges, int Start)
+bool BellmanFord(std::vector<int>* OutDistance, int VertexNum, const std::vector<Edge>& Edges, int Start)
 {
 	std::vector<int>& distance = *OutDistance;
-	const int VertexNum = distance.size();
+	distance.resize(VertexNum);
+	std::fill(distance.begin(), distance.end(), INT_MAX);
+
 	distance[Start] = 0;
 
 	for (int i = 1; i <= VertexNum; i++)
@@ -60,8 +61,8 @@ int main()
 	Nav.emplace_back(2, 3, -1);
 	Nav.emplace_back(3, 1, -5);
 
-	std::vector<int> distance(4, INT_MAX);
-	bool Success = BellmanFord(&distance, Nav, 0);
+	std::vector<int> distance;
+	bool Success = BellmanFord(&distance, 4, Nav, 0);
 
 	return 0;
 }
