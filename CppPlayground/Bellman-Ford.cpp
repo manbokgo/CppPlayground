@@ -1,6 +1,7 @@
 ﻿#include <vector>
 #include <iostream>
 
+
 struct Edge
 {
 	int src;
@@ -15,18 +16,20 @@ struct Edge
 	}
 };
 
-const int INF = INT_MAX;
-std::vector<int> BellmanFord(std::vector<Edge> Edges, int VertexNum, int Start)
+
+// std::vector<int> OutDistance(VertexNum, INT_MAX)
+bool BellmanFord(std::vector<int>* OutDistance, const std::vector<Edge>& Edges, int Start)
 {
-	std::vector<int> distance(VertexNum, INF);
+	std::vector<int>& distance = *OutDistance;
+	const int VertexNum = distance.size();
 	distance[Start] = 0;
 
 	for (int i = 1; i <= VertexNum; i++)
 	{
 		bool Change = false;
-		for (Edge& e : Edges)
+		for (const Edge& e : Edges)
 		{
-			if (distance[e.src] == INF)
+			if (distance[e.src] == INT_MAX)
 				continue;
 
 			if (distance[e.dst] > distance[e.src] + e.weight)
@@ -34,28 +37,20 @@ std::vector<int> BellmanFord(std::vector<Edge> Edges, int VertexNum, int Start)
 				distance[e.dst] = distance[e.src] + e.weight;
 				Change = true;
 
-				// N 라운드 때 가중치 변경은 음의 폐로를 의미함
-				if (i == VertexNum) break;
+				// N 라운드에서 가중치 변경은 음의 폐로를 의미함
+				if (i == VertexNum)
+					return false;
 			}
 		}
 
 		if (!Change)
-		{
-			std::cout << "최단 경로 찾기 완료 " << i << std::endl;
 			break;
-		}
-
-		if (i == VertexNum && Change)
-		{
-			std::cout << "음의 폐로" << std::endl;
-			break;
-		}
 	}
 
-	return distance;
+	return true;
 }
 
-int main ()
+int main()
 {
 	std::vector<Edge> Nav;
 	Nav.emplace_back(0, 1, 3);
@@ -63,9 +58,10 @@ int main ()
 	Nav.emplace_back(0, 3, 5);
 	Nav.emplace_back(1, 2, 2);
 	Nav.emplace_back(2, 3, -1);
-	Nav.emplace_back(3, 1, 0);
+	Nav.emplace_back(3, 1, -5);
 
-	std::vector<int> result = BellmanFord(Nav, 4, 0);
+	std::vector<int> distance(4, INT_MAX);
+	bool Success = BellmanFord(&distance, Nav, 0);
 
 	return 0;
 }
