@@ -39,6 +39,9 @@
     <ClCompile Include="const member variable.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="compile-time tuple macro.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HeapSort.h">
