@@ -59,7 +59,7 @@ int main()
 	Nav.emplace_back(0, 3, 5);
 	Nav.emplace_back(1, 2, 2);
 	Nav.emplace_back(2, 3, -1);
-	Nav.emplace_back(3, 1, -5);
+	Nav.emplace_back(3, 1, 0);
 
 	std::vector<int> distance;
 	bool Success = BellmanFord(&distance, 4, Nav, 0);

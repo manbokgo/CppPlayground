@@ -50,6 +50,9 @@ int Partition(int* arr, int left, int right)
 	}
 	return high;*/
 
+
+
+
 	// 20 27 139
 	// 1~100 테스트 0 99 5148
 	// 왼쪽 피벗인데 중간처럼하는 방식 geeksforgeeks p / p+1
@@ -284,55 +287,55 @@ bool Test(int* arr1, int* arr2, int size)
 }
 
 int main() {
-	// {
-	// 	int test[] = { 1, 2, 3, 4, 5 };
-	// 	int result[] = { 1, 2, 3, 4, 5 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 5,4,3,2,1 };
-	// 	int result[] = { 1, 2, 3, 4, 5 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 5, 4 };
-	// 	int result[] = { 4, 5 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 4, 5 };
-	// 	int result[] = { 4, 5 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 7, 7 };
-	// 	int result[] = { 7, 7 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 5, 3, 1, 6, 7, 2, 4, 8, 9 };
-	// 	int result[] = { 1, 2, 3, 4, 5, 6, 7 ,8, 9 };
-	// 	Test(test, result, std::size(test));
-	// }
-	//
-	// {
-	// 	int test[] = { 5, 3, 9, 8, 6, 5, 4, 1, 5 };
-	// 	int result[] = { 1, 3, 4, 5, 5, 5, 6, 8, 9 };
-	// 	Test(test, result, std::size(test));
-	// }
-
 	{
-		int test[100];
-		std::iota(std::begin(test), std::end(test), 0);
-		int result[100];
-		std::copy(std::begin(test), std::end(test), std::begin(result));
+		int test[] = { 1, 2, 3, 4, 5 };
+		int result[] = { 1, 2, 3, 4, 5 };
 		Test(test, result, std::size(test));
 	}
+	
+	{
+		int test[] = { 5,4,3,2,1 };
+		int result[] = { 1, 2, 3, 4, 5 };
+		Test(test, result, std::size(test));
+	}
+	
+	{
+		int test[] = { 5, 4 };
+		int result[] = { 4, 5 };
+		Test(test, result, std::size(test));
+	}
+	
+	{
+		int test[] = { 4, 5 };
+		int result[] = { 4, 5 };
+		Test(test, result, std::size(test));
+	}
+	
+	{
+		int test[] = { 7, 7 };
+		int result[] = { 7, 7 };
+		Test(test, result, std::size(test));
+	}
+	
+	{
+		int test[] = { 5, 3, 1, 6, 7, 2, 4, 8, 9 };
+		int result[] = { 1, 2, 3, 4, 5, 6, 7 ,8, 9 };
+		Test(test, result, std::size(test));
+	}
+	
+	{
+		int test[] = { 5, 3, 9, 8, 6, 5, 4, 1, 5 };
+		int result[] = { 1, 3, 4, 5, 5, 5, 6, 8, 9 };
+		Test(test, result, std::size(test));
+	}
+
+	// {
+	// 	int test[100];
+	// 	std::iota(std::begin(test), std::end(test), 0);
+	// 	int result[100];
+	// 	std::copy(std::begin(test), std::end(test), std::begin(result));
+	// 	Test(test, result, std::size(test));
+	// }
 
 	if (errorCaused) std::cout << "ERROR" << std::endl;
 	else std::cout << "ALL GOOD" << std::endl;

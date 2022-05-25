@@ -15,22 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="const member function.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="emplace_back.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="quick sort test.cpp">
+    <ClCompile Include="for loop optimization.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="quick sort medianOfThree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="quick sort test.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="merge sort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="emplace_back.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="const member function.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="Bellman-Ford.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="const member variable.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
