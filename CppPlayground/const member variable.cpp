@@ -24,12 +24,6 @@ public:
     [[nodiscard]] constexpr operator T() const { return val_; }
 };
 
-void GetScreenDimension(uint32_t* const outWidth, uint32_t* const outHeight)
-{
-	Assert(outWidth);
-	Assert(outHeight);
-}
-
 struct Point {
     int x = 0;
     int y = 0;
@@ -61,16 +55,16 @@ int main() {
     points.emplace_back(1, 3);
     points.emplace_back(4, 3);
     points.emplace_back(2, 3);
-
+    
     std::ranges::sort(points, {}, &ImmutablePoint::x); // Ok
     print("\nSort by name using a projection", points, '\n');
-
-    std::vector<const Point&> triangles1; // Error
+    
+    // std::vector<const Point&> triangles1; // Error
     std::vector<std::reference_wrapper<const Point>> triangles2;
     Point q{ 3,2 };
     triangles2.emplace_back(q);
     triangles2[0].get();
-
+    
     std::ranges::sort(triangles2, {}, &Point::x);
     print("\nSort by name using a projection", triangles2, '\n');
 }
