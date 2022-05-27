@@ -48,6 +48,9 @@
     <ClCompile Include="const member variable move semantics.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="push_back vs emplace_back.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HeapSort.h">
