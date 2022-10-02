@@ -24,6 +24,12 @@ int main()
     }
     std::cout << '\n';
 
+    int a = 3;
+    if (a = 4)
+    {   
+        
+    }
+
     for (auto it = r_begin; it != r_end; ++it) {
         std::cout << *it << ' ';
     }
