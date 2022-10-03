@@ -1,46 +1,71 @@
 ﻿#include <iostream>
+#include <mutex>
 
 template <typename T>
 class Singleton
 {
 public:
-	static T& Instance()
-	{
-		static T instance;
-		return instance;
-	}
+    template <typename... Args>
+    static void CreateInstance(Args&&...args)
+    {
+        struct AbstractSingleton : T
+        {
+            using T::T;
+            void injectAbstraction() override {}
+        };
 
-	Singleton(const Singleton&)            = delete;
-	Singleton& operator=(const Singleton&) = delete;
+        static std::once_flag flag;
+        std::call_once(flag,
+                       [](auto&&...args)
+                       {
+                           m_Instance = std::make_unique<AbstractSingleton>(std::forward<Args>(args)...);
+                       },
+                       std::forward<Args>(args)...);
+    }
+
+    static T& Instance()
+    {
+        return *m_Instance;
+    }
+
+    Singleton(const Singleton&)            = delete;
+    Singleton(Singleton&&)                 = delete;
+    Singleton& operator=(const Singleton&) = delete;
+    Singleton& operator=(Singleton&&)      = delete;
 
 protected:
-	Singleton() = default;
+    Singleton()  = default;
+    ~Singleton() = default;
+
+private:
+    virtual void injectAbstraction() = 0;
+
+private:
+    static inline std::unique_ptr<T> m_Instance = nullptr;
 };
 
 // example
-class TestSingleton final : public Singleton<TestSingleton>
+class Foo : public Singleton<Foo>
 {
-	friend class Singleton<TestSingleton>;
-private:
-	TestSingleton() { std::cout << "constructed" << std::endl; }
-
 public:
-	~TestSingleton() { std::cout << "destructed" << std::endl; }
+    Foo(int value)
+        : m_Value(value)
+    {
+        std::cout << "Init " << m_Value << std::endl;
+    }
 
-	void use() const { std::cout << "in use" << std::endl; };
+    ~Foo() {}
+
+private:
+    int m_Value;
 };
 
 int main()
 {
-	// Test cannot_create; /* ERROR */
-	std::cout << "Entering main()" << std::endl;
-	{
-		auto const& t = TestSingleton::Instance();
-		t.use();
-	}
-	{
-		auto const& t = TestSingleton::Instance();
-		t.use();
-	}
-	std::cout << "Leaving main()" << std::endl;
+    std::cout << "Entering main()" << std::endl;
+
+    Foo::CreateInstance(42);
+    const auto& t = Foo::Instance();
+
+    std::cout << "Leaving main()" << std::endl;
 }
