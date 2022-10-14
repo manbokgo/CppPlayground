@@ -12,13 +12,12 @@ struct XMFLOAT2
     float data2;
 };
 
-#pragma pack(4)
+// Good
 struct Foo
 {
-    char a;
-    int b;
-    char c;
-    double d;
+    alignas(4) char a;
+    char b;
+    float c;
 };
 
 #include <iostream>
@@ -37,6 +36,7 @@ int main()
         << "&diff: " << (int)&z - (int)&y << '\n'
         << "&z a: " << offsetof(Foo, a) << '\n'
         << "&z b: " << offsetof(Foo, b) << '\n'
-        << "&z c: " << offsetof(Foo, c) << '\n'
-        << "&z d: " << offsetof(Foo, d) << '\n';
+        // << "&z c: " << offsetof(Foo, c) << '\n'
+        // << "&z d: " << offsetof(Foo, d) << '\n'
+        ;
 }
