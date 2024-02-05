@@ -8,17 +8,18 @@ struct XMFLOAT3
 };
 struct XMFLOAT2
 {
-    float data;
-    float data2;
+    float data[2];
 };
 
 // Good
-struct Foo
+#pragma pack(16)
+struct alignas(16) Foo
 {
-    alignas(4) char a;
-    char b;
-    float c;
-};
+    XMFLOAT3 a; // 0
+    XMFLOAT3 b; // 12
+    bool     c; // 24
+    float    d; // 25
+}; // 이처럼 pack이 원래의 정렬보다 더 작다면 효과가 있다.
 
 #include <iostream>
 
@@ -36,6 +37,8 @@ int main()
         << "&diff: " << (int)&z - (int)&y << '\n'
         << "&z a: " << offsetof(Foo, a) << '\n'
         << "&z b: " << offsetof(Foo, b) << '\n'
+        << "&z b: " << offsetof(Foo, c) << '\n'
+        << "&z b: " << offsetof(Foo, d) << '\n'
         // << "&z c: " << offsetof(Foo, c) << '\n'
         // << "&z d: " << offsetof(Foo, d) << '\n'
         ;

@@ -1,71 +1,57 @@
 ﻿#include <iostream>
-#include <mutex>
 
 template <typename T>
 class Singleton
 {
 public:
-    template <typename... Args>
-    static void CreateInstance(Args&&...args)
-    {
-        struct AbstractSingleton : T
-        {
-            using T::T;
-            void injectAbstraction() override {}
-        };
-
-        static std::once_flag flag;
-        std::call_once(flag,
-                       [](auto&&...args)
-                       {
-                           m_Instance = std::make_unique<AbstractSingleton>(std::forward<Args>(args)...);
-                       },
-                       std::forward<Args>(args)...);
-    }
-
     static T& Instance()
     {
-        return *m_Instance;
+        static T instance{ token{} };
+        return instance;
     }
 
-    Singleton(const Singleton&)            = delete;
-    Singleton(Singleton&&)                 = delete;
+    Singleton(const Singleton&) = delete;
+    Singleton(Singleton&&) = delete;
     Singleton& operator=(const Singleton&) = delete;
-    Singleton& operator=(Singleton&&)      = delete;
+    Singleton& operator=(Singleton&&) = delete;
 
 protected:
-    Singleton()  = default;
+    Singleton() = default;
     ~Singleton() = default;
 
-private:
-    virtual void injectAbstraction() = 0;
-
-private:
-    static inline std::unique_ptr<T> m_Instance = nullptr;
+        struct token {};
 };
+
+
+// .cpp
+#define	SINGLETON_CLASS(Type)     \
+public:                           \
+    Type() = delete;              \
+    Type(token);                  \
+    ~Type();
 
 // example
 class Foo : public Singleton<Foo>
 {
 public:
-    Foo(int value)
-        : m_Value(value)
+    Foo() = delete;
+
+    explicit Foo(token)
     {
-        std::cout << "Init " << m_Value << std::endl;
+        std::cout << "Created" << std::endl;
     }
-
-    ~Foo() {}
-
-private:
-    int m_Value;
+    ~Foo()
+    {
+        std::cout << "Destructed" << std::endl;
+    }
 };
 
 int main()
 {
     std::cout << "Entering main()" << std::endl;
 
-    Foo::CreateInstance(42);
     const auto& t = Foo::Instance();
+    // Singleton<Foo> t3;
 
     std::cout << "Leaving main()" << std::endl;
 }
