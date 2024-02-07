@@ -1,0 +1,915 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/CppClangTidy/Checks/@EntryValue">*,-cppcoreguidelines-pro-type-member-init</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ClassCanBeSealed_002EGlobal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ClassCanBeSealed_002ELocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ConvertToConstant_002EGlobal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ConvertToConstant_002ELocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadAngleBracketsSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadBracesSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadChildStatementIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadColonSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadCommaSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadControlBracesIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadControlBracesLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadDeclarationBracesIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadDeclarationBracesLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadEmptyBracesLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadExpressionBracesIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadExpressionBracesLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadListLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadMemberAccessSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadNamespaceBracesIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadParensLineBreaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadParensSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadSemicolonSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadSpacesAfterKeyword_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadSquareBracketsSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadSwitchBracesIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppBadSymbolSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationAddition_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationComparison_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationConversionCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationDivision_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationFactoryFloat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationFactoryScale_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationSubtraction_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilDurationUnnecessaryConversion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilFasterStrsplitDelimiter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilNoInternalDependencies_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilNoNamespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilRedundantStrcatCalls_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilStrCatAppend_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilStringFindStartswith_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilStringFindStrContains_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilTimeComparison_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilTimeSubtraction_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAbseilUpgradeDurationConversions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAlteraIdDependentBackwardBranch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAlteraKernelNameRestriction_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAlteraSingleWorkItemBarrier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAlteraStructPackAlign_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAlteraUnrollLoops_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecAccept_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecAccept4_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecCreat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecDup_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecEpollCreate_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecEpollCreate1_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecFopen_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecInotifyInit_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecInotifyInit1_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecMemfdCreate_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecOpen_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecPipe_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecPipe2_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidCloexecSocket_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyAndroidComparisonInTempFailureRetry_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyBugproneBoolPointerImplicitConversion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyBugproneEasilySwappableParameters_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyBugproneExceptionEscape_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyBugproneNarrowingConversions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyBugproneUnhandledExceptionAtNew_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertCon36C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertCon54Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl03C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl16C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl21Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl37C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl50Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl51Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl54Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertDcl59Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertEnv33C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertErr09Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertErr52Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertErr58Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertErr61Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertFio38C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertMsc30C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertMsc32C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertMsc50Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertOop11Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertOop54Cpp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertPos44C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertPos47C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertSig30C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCertStr34C_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerApiModelingGoogleGTest_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerApiModelingLlvmCastValue_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerApiModelingLlvmReturnValue_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerApiModelingStdCLibraryFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerApiModelingTrustNonnull_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreBuiltinBuiltinFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreBuiltinNoReturnFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreCallAndMessage_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreCallAndMessageModeling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreDivideZero_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreDynamicTypePropagation_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreNonnilStringConstants_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreNonNullParamChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreNullDereference_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreStackAddrEscapeBase_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreStackAddressEscape_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUndefinedBinaryOperatorResult_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUninitializedArraySubscript_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUninitializedAssign_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUninitializedBranch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUninitializedCapturedBlockVariable_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreUninitializedUndefReturn_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCoreVLASize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusInnerPointer_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusMove_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusNewDelete_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusNewDeleteLeaks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusPlacementNew_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusPureVirtualCall_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusSelfAssignment_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusSmartPtrModeling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerCplusplusVirtualCallModeling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerDeadcodeDeadStores_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerFuchsiaHandleChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullabilityBase_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullableDereferenced_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullablePassedToNonnull_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullableReturnedFromNonnull_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullPassedToNonnull_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerNullabilityNullReturnedFromNonnull_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinCplusplusUninitializedObject_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinCplusplusVirtualCall_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinMpiMPIChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinOsxCocoaLocalizabilityEmptyLocalizationContextChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinOsxCocoaLocalizabilityNonLocalizedStringChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinOsxOSObjectCStyleCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinPerformanceGCDAntipattern_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinPerformancePadding_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOptinPortabilityUnixAPI_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxAPI_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaAtSync_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaAutoreleaseWrite_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaClassRelease_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaDealloc_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaIncompatibleMethodTypes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaLoops_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaMissingSuperCall_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaNilArg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaNonNilReturnValue_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaNSAutoreleasePool_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaNSError_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaObjCGenerics_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaRetainCount_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaRetainCountBase_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaRunLoopAutoreleaseLeak_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaSelfInit_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaSuperDealloc_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaUnusedIvars_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCocoaVariadicMethodTypes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCoreFoundationCFError_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCoreFoundationCFNumber_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCoreFoundationCFRetainRelease_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCoreFoundationContainersOutOfBounds_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxCoreFoundationContainersPointerSizedValues_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxMIG_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxNSOrCFErrorDerefChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxNumberObjectConversion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxObjCProperty_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxOSObjectRetainCount_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerOsxSecKeychainAPI_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityFloatLoopCounter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIBcmp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIBcopy_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIBzero_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIDecodeValueOfObjCType_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIDeprecatedOrUnsafeBufferHandling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIGetpw_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIGets_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIMkstemp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIMktemp_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIRand_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPISecuritySyntaxChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIStrcpy_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIUncheckedReturn_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerSecurityInsecureAPIVfork_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixAPI_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixCstringBadSizeArg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixCstringCStringModeling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixCstringNullArg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixDynamicMemoryModeling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixMalloc_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixMallocSizeof_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixMismatchedDeallocator_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerUnixVfork_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerValistCopyToSelf_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerValistUninitialized_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerValistUnterminated_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerValistValistBase_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerWebkitNoUncountedMemberChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerWebkitRefCntblBaseVirtualDtor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangAnalyzerWebkitUncountedLambdaCapturesChecker_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticAbstractFinalClass_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticAixCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticAvrRtlibLinkingQuirks_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticBuiltinAssumeAlignedAlignment_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticC99Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticClangClPch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticConceptsTsCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp11Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp11CompatDeprecatedWritableStrings_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp11CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp11CompatReservedUserDefinedLiteral_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp14Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp14CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp17Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp17CompatMangling_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp17CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp20Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp20CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp2aCompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98CompatBindToTemporaryCopy_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98CompatExtraSemi_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98CompatLocalTypeTemplateArgs_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98CompatUnnamedTypeTemplateArgs_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11CompatBinaryLiteral_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11Cpp14Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11Cpp14CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11Cpp14Cpp17Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCpp98Cpp11Cpp14Cpp17CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCppCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCtadMaybeUnsupported_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCtu_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticCudaCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticDarwinSdkSettings_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticDefaultedFunctionDeleted_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticDeprecatedCopyWithUserProvidedDtor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticDocumentationUnknownCommand_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticDoublePromotion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticError_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticExitTimeDestructors_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticExternCCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticExtraSemiStmt_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticFixedEnumExtension_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticGccCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticGlobalConstructors_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticGnuAnonymousStruct_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticIgnoredAttributes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticIgnoredAvailabilityWithoutSdkSettings_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticIgnoredPragmaOptimize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticKeywordCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticLogicalOpParentheses_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticMaxTokens_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticMicrosoftStaticAssert_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticMissingPrototypes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticMissingVariableDeclarations_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticOldStyleCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticParenthesesEquality_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreC2xCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreC2xCompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp14Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp14CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp17Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp17CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp20Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp20CompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp2bCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreCpp2bCompatPedantic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticPreOpenmp51Compat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticShadowFieldInConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticShadowFieldInConstructorModified_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticShadowUncapturedLocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSignCompare_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSignConversion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSlhAsmGoto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSpirCompat_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticStdlibcxxNotFound_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSuggestDestructorOverride_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSuggestOverride_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticSwitchEnum_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticTautologicalUnsignedZeroCompare_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnknownAttributes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnknownCudaVersion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnknownPragmas_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnsupportedTargetOpt_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnusedButSetParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnusedButSetVariable_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnusedLambdaCapture_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnusedParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUnusedVariable_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticUserDefinedLiterals_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyClangDiagnosticZeroAsNullPointerConstant_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesAvoidCArrays_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesAvoidMagicNumbers_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesAvoidNonConstGlobalVariables_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesCCopyAssignmentSignature_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesExplicitVirtualFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesInitVariables_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesMacroUsage_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesNoMalloc_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesNonPrivateMemberVariablesInClasses_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesOwningMemory_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesPreferMemberInitializer_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProBoundsArrayToPointerDecay_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProBoundsConstantArrayIndex_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProBoundsPointerArithmetic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeConstCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeCstyleCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeReinterpretCast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeStaticCastDowncast_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeUnionAccess_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesProTypeVararg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesSlicing_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyCppcoreguidelinesSpecialMemberFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyDarwinAvoidSpinlock_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyDarwinDispatchOnceNonstatic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaDefaultArgumentsCalls_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaDefaultArgumentsDeclarations_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaHeaderAnonNamespaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaMultipleInheritance_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaOverloadedOperator_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaStaticallyConstructedObjects_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaTrailingReturn_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyFuchsiaVirtualInheritance_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleBuildExplicitMakePair_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleBuildNamespaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleBuildUsingNamespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleDefaultArguments_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleExplicitConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleGlobalNamesInHeaders_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleObjcAvoidNsobjectNew_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleObjcAvoidThrowingException_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleObjcFunctionNaming_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleObjcGlobalVariableDeclaration_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityAvoidUnderscoreInGoogletestName_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityBracesAroundStatements_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityCasting_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityFunctionSize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityNamespaceComments_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleReadabilityTodo_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyGoogleRuntimeInt_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppAvoidCArrays_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppBracesAroundStatements_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppDeprecatedHeaders_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppExplicitConversions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppFunctionSize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppInvalidAccessMoved_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppMemberInit_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppMoveConstArg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppMultiwayPathsCovered_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNamedParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNewDeleteOperators_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNoArrayDecay_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNoAssembler_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNoexceptMove_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppNoMalloc_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppSignedBitwise_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppSpecialMemberFunctions_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppStaticAssert_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUndelegatedConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUppercaseLiteralSuffix_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseAuto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseEmplace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseEqualsDefault_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseEqualsDelete_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseNoexcept_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseNullptr_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppUseOverride_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyHicppVararg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmElseAfterReturn_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmHeaderGuard_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmIncludeOrder_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmlibcCalleeNamespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmlibcImplementationInNamespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmlibcRestrictSystemLibcHeaders_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmNamespaceComment_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmPreferIsaOrDynCastInConditionals_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmQualifiedAuto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyLlvmTwineLocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyMiscDefinitionsInHeaders_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyMiscMisplacedConst_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyMiscNonPrivateMemberVariablesInClasses_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyMiscNoRecursion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyMiscUnusedParameters_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeAvoidCArrays_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeConcatNestedNamespaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeMakeShared_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeMakeUnique_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeRedundantVoidArg_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseAuto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseDefaultMemberInit_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseEqualsDefault_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseNullptr_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseOverride_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseTrailingReturnType_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyModernizeUseUsing_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyPerformanceNoexceptMoveConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyPerformanceNoIntToPtr_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyPortabilityRestrictSystemIncludes_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyPortabilitySimdIntrinsics_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityAvoidConstParamsInDecls_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityBracesAroundStatements_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityConstReturnType_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityConvertMemberFunctionsToStatic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityElseAfterReturn_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityFunctionCognitiveComplexity_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityFunctionSize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityIdentifierNaming_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityImplicitBoolConversion_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityIsolateDeclaration_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityMagicNumbers_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityMakeMemberFunctionConst_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityMisleadingIndentation_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityNamedParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityNonConstParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityQualifiedAuto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityRedundantAccessSpecifiers_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityRedundantControlFlow_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityRedundantMemberInit_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilitySimplifyBooleanExpr_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityStaticDefinitionInAnonymousNamespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyReadabilityUppercaseLiteralSuffix_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppClangTidyZirconTemporaryObjects_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppDeclarationHidesUncapturedLocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppHeaderHasBeenAlreadyIncluded_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppIncorrectBlankLinesNearBraces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppInitializedValueIsAlwaysRewritten_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppLocalVariableWithNonTrivialDtorIsNeverUsed_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMemberFunctionMayBeStatic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMissingBlankLines_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMissingIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMissingLinebreak_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMissingSpace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppMultipleSpaces_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppNonExceptionSafeResourceAcquisition_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppNonExplicitConversionOperator_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppNonExplicitConvertingConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppOutdentIsOffPrevLevel_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppParameterMayBeConst_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppParameterNamesMismatch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppParameterNeverUsed_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantAccessSpecifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantBaseClassAccessSpecifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantBlankLines_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantCastExpression_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantConstSpecifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantControlFlowJump_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantElaboratedTypeSpecifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantElseKeyword_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantElseKeywordInsideCompoundStatement_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantEmptyDeclaration_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantEmptyStatement_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantExplicitTemplateArguments_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantInlineSpecifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantLambdaParameterList_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantLinebreak_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantParentheses_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantQualifier_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantSpace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppRedundantStaticSpecifierOnMemberAllocationFunction_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppTabsAndSpacesMismatch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppTabsAreDisallowed_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppTabsOutsideIndent_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppThisArgMemberFuncDelegateCtorIsUnsuportedByDotNetCore_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppTooWideScopeInitStatement_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUE4BlueprintCallableFunctionMayBeConst_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUE4BlueprintCallableFunctionMayBeStatic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUE4CodingStandardNamingViolationWarning_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUnnecessaryWhitespace_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUseAuto_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUseAutoForNumeric_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppUseStructuredBinding_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022CppWrongIndentSize_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022LocalFunctionCanBeMadeStatic_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022MemberCanBeInternal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022MemberCanBeMadeStatic_002EGlobal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022MemberCanBeMadeStatic_002ELocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ParameterTypeCanBeEnumerable_002EGlobal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ParameterTypeCanBeEnumerable_002ELocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022PassStringInterpolation_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ReturnTypeCanBeEnumerable_002EGlobal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022ReturnTypeCanBeEnumerable_002ELocal_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022StructMemberCanBeMadeReadOnly_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022SuggestBaseTypeForParameter_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022SuggestBaseTypeForParameterInConstructor_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CConfigurableSeverity_0020Id_003D_0022UseStringInterpolationWhenPossible_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/CodeIssueFilter/IssueTypesToHide/=_003CStaticSeverity_0020Severity_003D_0022_002D1_0022_0020Title_003D_0022Structural_0020Search_0020Pattern_0022_0020GroupId_003D_0022StructuralSearch_0022_0020_002F_003E/@EntryIndexedValue">DoShow</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyBugproneNarrowingConversions/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyClangDiagnosticDeprecatedCopyWithUserProvidedDtor/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyClangDiagnosticDoublePromotion/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyClangDiagnosticExtraSemiStmt/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyClangDiagnosticSignCompare/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyClangDiagnosticSwitchEnum/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyCppcoreguidelinesProTypeStaticCastDowncast/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyCppcoreguidelinesSpecialMemberFunctions/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyHicppMultiwayPathsCovered/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyMiscMisplacedConst/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyModernizeUseAuto/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyModernizeUseEqualsDefault/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClangTidyPerformanceNoIntToPtr/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppClassCanBeFinal/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppCStyleCast/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceCVQualifiersOrder/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceCVQualifiersPlacement/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceDoStatementBraces/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceForStatementBraces/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceFunctionDeclarationStyle/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceIfStatementBraces/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceNestedNamespacesStyle/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceOverridingDestructorStyle/@EntryIndexedValue">WARNING</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceOverridingFunctionStyle/@EntryIndexedValue">WARNING</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceTypeAliasCodeStyle/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppEnforceWhileStatementBraces/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppInconsistentNaming/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppInitializedValueIsAlwaysRewritten/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppLocalVariableMayBeConst/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppMemberFunctionMayBeStatic/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppParameterMayBeConst/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppRedundantQualifier/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppRemoveRedundantBraces/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppTooWideScope/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppWrongIncludesOrder/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CppWrongSlashesInIncludeDirective/@EntryIndexedValue">SUGGESTION</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeCleanup/Profiles/=Copy_0020of_0020Built_002Din_003A_0020Full_0020Cleanup/@EntryIndexedValue">&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Profile name="Copy of Built-in: Full Cleanup"&gt;&lt;CppAddTypenameTemplateKeywords&gt;True&lt;/CppAddTypenameTemplateKeywords&gt;&lt;CppMakeLocalVarConstDescriptor&gt;True&lt;/CppMakeLocalVarConstDescriptor&gt;&lt;CppMakeMethodConst&gt;True&lt;/CppMakeMethodConst&gt;&lt;CppRemoveCastDescriptor&gt;True&lt;/CppRemoveCastDescriptor&gt;&lt;CppRemoveElseKeyword&gt;True&lt;/CppRemoveElseKeyword&gt;&lt;CppShortenQualifiedName&gt;True&lt;/CppShortenQualifiedName&gt;&lt;CppDeleteRedundantSpecifier&gt;True&lt;/CppDeleteRedundantSpecifier&gt;&lt;CppRemoveStatement&gt;True&lt;/CppRemoveStatement&gt;&lt;CppDeleteRedundantTypenameTemplateKeywords&gt;True&lt;/CppDeleteRedundantTypenameTemplateKeywords&gt;&lt;CppRemoveUnusedIncludes&gt;True&lt;/CppRemoveUnusedIncludes&gt;&lt;CppReplaceExpressionWithBooleanConst&gt;True&lt;/CppReplaceExpressionWithBooleanConst&gt;&lt;CppMakeIfConstexpr&gt;True&lt;/CppMakeIfConstexpr&gt;&lt;CppMakePostfixOperatorPrefix&gt;True&lt;/CppMakePostfixOperatorPrefix&gt;&lt;CppChangeSmartPointerToMakeFunction&gt;True&lt;/CppChangeSmartPointerToMakeFunction&gt;&lt;CppReplaceThrowWithRethrowFix&gt;True&lt;/CppReplaceThrowWithRethrowFix&gt;&lt;CppTypeTraitAliasDescriptor&gt;True&lt;/CppTypeTraitAliasDescriptor&gt;&lt;CppReplaceExpressionWithNullptr&gt;True&lt;/CppReplaceExpressionWithNullptr&gt;&lt;CppReplaceTieWithStructuredBindingDescriptor&gt;True&lt;/CppReplaceTieWithStructuredBindingDescriptor&gt;&lt;CppUseAssociativeContainsDescriptor&gt;True&lt;/CppUseAssociativeContainsDescriptor&gt;&lt;CppUseEraseAlgorithmDescriptor&gt;True&lt;/CppUseEraseAlgorithmDescriptor&gt;&lt;CppCodeStyleCleanupDescriptor ArrangeBraces="True" ArrangeAuto="True" ArrangeFunctionDeclarations="True" ArrangeNestedNamespaces="True" ArrangeTypeAliases="True" ArrangeCVQualifiers="True" ArrangeSlashesInIncludeDirectives="True" ArrangeOverridingFunctions="True" SortIncludeDirectives="True" SortMemberInitializers="True" /&gt;&lt;CppReformatCode&gt;True&lt;/CppReformatCode&gt;&lt;XMLReformatCode&gt;True&lt;/XMLReformatCode&gt;&lt;/Profile&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeCleanup/RecentlyUsedProfile/@EntryValue">Copy of Built-in: Full Cleanup</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInForStatement/@EntryValue">RequiredForMultiline</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInIfStatement/@EntryValue">NotRequiredForBoth</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInWhileStatement/@EntryValue">Required</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesRedundant/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_ARGUMENT/@EntryValue">False</s:Boolean>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/BLANK_LINES_AROUND_CLASS_DEFINITION/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/EMPTY_BLOCK_STYLE/@EntryValue">TOGETHER_SAME_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/FUNCTION_DECLARATION_RETURN_TYPE_STYLE/@EntryValue">ON_SINGLE_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/FUNCTION_DEFINITION_RETURN_TYPE_STYLE/@EntryValue">ON_SINGLE_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_PREPROCESSOR_DIRECTIVES/@EntryValue">Normal</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_COMMENTS/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_DECLARATION_NAMES/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_AFTER_COLON_IN_MEMBER_INITIALIZER_LISTS/@EntryValue">ON_SINGLE_LINE</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_BEFORE_COMMA_IN_MEMBER_INITIALIZER_LISTS/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/MEMBER_INITIALIZER_LIST_STYLE/@EntryValue">LINE_BREAK</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/TOPLEVEL_FUNCTION_DECLARATION_RETURN_TYPE_STYLE/@EntryValue">ON_SINGLE_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/TOPLEVEL_FUNCTION_DEFINITION_RETURN_TYPE_STYLE/@EntryValue">ON_SINGLE_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_ENUMERATION_STYLE/@EntryValue">WRAP_IF_LONG</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_TERNARY_EXPR_STYLE/@EntryValue">WRAP_IF_LONG</s:String>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/XmlFormatter/WRAP_LIMIT/@EntryValue">80</s:Int64>
+	<s:Boolean x:Key="/Default/CodeStyle/CppIncludeDirective/SortIncludeDirectives/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CppSortIncludes/IncludeSortCategories/@EntryValue">&lt;CppIncludeCategories&gt;&#xD;
+  &lt;CppIncludeCategorySetting Pattern="^&amp;quot;GameDefines.h.*" Description="Game Defines" Group="0" Order="1" /&gt;&#xD;
+  &lt;CppIncludeCategorySetting Pattern="^&amp;lt;.*" Description="#include &amp;lt;header&amp;gt;" Group="1" Order="3" /&gt;&#xD;
+  &lt;CppIncludeCategorySetting Pattern="^&amp;quot;.*" Description="#include &amp;quot;header&amp;quot;" Group="2" Order="4" /&gt;&#xD;
+&lt;/CppIncludeCategories&gt;</s:String>
+	<s:Int64 x:Key="/Default/CodeStyle/CppSortIncludes/MainHeaderGroup/@EntryValue">0</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CppSortIncludes/MainHeaderOrder/@EntryValue">2</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CppSortIncludes/UnmatchedHeaderGroup/@EntryValue">3</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CppSortIncludes/UnmatchedHeaderOrder/@EntryValue">5</s:Int64>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppConstructor/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppConstructor/Options/=AcceptParameterKind/@EntryIndexedValue">Const reference</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppConstructor/Options/=AccessRight/@EntryIndexedValue">public</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppConstructor/Options/=DeclareConstructorsNodiscard/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppConstructor/Options/=DefaultEmptyConstructors/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppConstructor/Options/=UseConstParameterTypes/@EntryIndexedValue">False</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=AccessRight/@EntryIndexedValue">public</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=CopyOperationsKind/@EntryIndexedValue">implement</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=MakeMoveOperationsNoexcept/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=MoveOperationsKind/@EntryIndexedValue">skip</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=SwapBasedAssignment/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppCopyAndMoveOperations/Options/=UseUniformInitialization/@EntryIndexedValue">False</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppDefinitions/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppDefinitions/Options/=GenerateInlineDefinitions/@EntryIndexedValue">False</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppEqualityOperators/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppEqualityOperators/Options/=GenerateSecondaryOperators/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppEqualityOperators/Options/=UseTie/@EntryIndexedValue">False</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=AcceptParameterKind/@EntryIndexedValue">Const reference</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=AccessRight/@EntryIndexedValue">public</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=AddPrefixesToGetters/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=AddPrefixesToSetters/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=DeclareGettersNodiscard/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=GenerateProperties/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=GetterAndSetterKind/@EntryIndexedValue">Getter</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=InlineDefinition/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=InsertVirtualSpecifier/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=ReturnKind/@EntryIndexedValue">Const reference</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppGettersAndSetters/Options/=UseConstParameterTypes/@EntryIndexedValue">False</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=CppRelationalOperators/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppRelationalOperators/Options/=GenerateSecondaryOperators/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=CppRelationalOperators/Options/=UseTie/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=BS/@EntryIndexedValue">BS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=CB/@EntryIndexedValue">CB</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=CS/@EntryIndexedValue">CS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=DS/@EntryIndexedValue">DS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=DSV/@EntryIndexedValue">DSV</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=FOV/@EntryIndexedValue">FOV</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=GS/@EntryIndexedValue">GS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=HS/@EntryIndexedValue">HS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=IB/@EntryIndexedValue">IB</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=ID/@EntryIndexedValue">ID</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=PS/@EntryIndexedValue">PS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=RS/@EntryIndexedValue">RS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=RTV/@EntryIndexedValue">RTV</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=SRV/@EntryIndexedValue">SRV</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=UAV/@EntryIndexedValue">UAV</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=UI/@EntryIndexedValue">UI</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=UUID/@EntryIndexedValue">UUID</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=VB/@EntryIndexedValue">VB</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=VS/@EntryIndexedValue">VS</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Abbreviations/=XY/@EntryIndexedValue">XY</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020fields/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020fields/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020methods/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020methods/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020public_0020fields/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Class_0020and_0020struct_0020public_0020fields/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Classes_0020and_0020structs/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Classes_0020and_0020structs/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Concepts/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Concepts/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enum_0020Class/@EntryIndexedValue">&lt;NamingElement Priority="3"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="enum" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="e" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enum_0020members/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enum_0020members/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enumerators/@EntryIndexedValue">&lt;NamingElement Priority="13"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="scoped enumerator" /&gt;&lt;type Name="unscoped enumerator" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enums/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Enums/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Events/@EntryIndexedValue">&lt;NamingElement Priority="9"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="event" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Fields/@EntryIndexedValue">&lt;NamingElement Priority="10"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="class field" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="m_" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="m_b" Suffix="" Style="AaBb" /&gt;&lt;ExtraRule Prefix="m_e" Suffix="" Style="AaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Functions/@EntryIndexedValue">&lt;NamingElement Priority="7"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="global function" /&gt;&lt;type Name="member function" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020constants/@EntryIndexedValue">&lt;NamingElement Priority="19"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="True" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="global variable" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AA_BB" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020functions/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020functions/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020Variable/@EntryIndexedValue">&lt;NamingElement Priority="15"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="global variable" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020variables/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Global_0020variables/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Interface/@EntryIndexedValue">&lt;NamingElement Priority="4"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="__interface" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="I" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Local_0020variables/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Local_0020variables/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Macros/@EntryIndexedValue">&lt;NamingElement Priority="20"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="macro" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AA_BB"&gt;&lt;ExtraRule Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Namespaces/@EntryIndexedValue">&lt;NamingElement Priority="1"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="namespace" /&gt;&lt;type Name="namespace alias" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aa_bb"&gt;&lt;ExtraRule Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Non_002DType_0020Template_0020Parameters/@EntryIndexedValue">&lt;NamingElement Priority="21"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="non-type template parameter" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="b" Suffix="" Style="AaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Other_0020constants/@EntryIndexedValue">&lt;NamingElement Priority="18"&gt;&lt;Descriptor Static="True" Constexpr="Indeterminate" Const="True" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="class field" /&gt;&lt;type Name="local variable" /&gt;&lt;type Name="struct field" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AA_BB" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Parameters/@EntryIndexedValue">&lt;NamingElement Priority="17"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="function parameter" /&gt;&lt;type Name="lambda parameter" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Properties/@EntryIndexedValue">&lt;NamingElement Priority="8"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="property" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Static_0020Field/@EntryIndexedValue">&lt;NamingElement Priority="11"&gt;&lt;Descriptor Static="True" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="class field" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="s_" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="" Suffix="" Style="AaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Static_0020Global_0020Variable/@EntryIndexedValue">&lt;NamingElement Priority="16"&gt;&lt;Descriptor Static="True" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="global variable" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="s_" Suffix="" Style="AaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Struct_0020Field/@EntryIndexedValue">&lt;NamingElement Priority="12"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="PUBLIC"&gt;&lt;type Name="struct field" /&gt;&lt;type Name="union member" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="b" Suffix="" Style="AaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Template_0020parameters/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Template_0020parameters/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Typedefs/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Typedefs/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Types/@EntryIndexedValue">&lt;NamingElement Priority="2"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="class" /&gt;&lt;type Name="concept" /&gt;&lt;type Name="struct" /&gt;&lt;type Name="type alias" /&gt;&lt;type Name="type template parameter" /&gt;&lt;type Name="typedef" /&gt;&lt;type Name="union" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="I" Suffix="" Style="AaBb" /&gt;&lt;ExtraRule Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/Policy&gt;&lt;/NamingElement&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Union_0020members/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Union_0020members/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Unions/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Unions/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Naming/CppNaming/Rules/=Variables/@EntryIndexedValue">&lt;NamingElement Priority="14"&gt;&lt;Descriptor Static="Indeterminate" Constexpr="Indeterminate" Const="Indeterminate" Volatile="Indeterminate" Accessibility="NOT_APPLICABLE"&gt;&lt;type Name="global variable" /&gt;&lt;type Name="local variable" /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/NamingElement&gt;</s:String>
+	<s:Boolean x:Key="/Default/Environment/AIAssistantOptions/IsUserNotifiedAboutSmartChat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/ErrorStripe/ErrorStripeWidth/@EntryValue">Narrow</s:String>
+	<s:Boolean x:Key="/Default/Environment/Feedback/ShouldPrompt/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/GenerateMru/GroupByType/=CppConstructor/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/GenerateMru/SortByName/=CppGettersAndSetters/@EntryIndexedValue">False</s:Boolean>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue">590</s:Int64>
+	<s:String x:Key="/Default/Environment/InlayHints/GeneralInlayHintsOptions/DefaultMode/@EntryValue">PushToShowHints</s:String>
+	<s:String x:Key="/Default/Environment/JetBrainsAIOptions/IdToken/@EntryValue">eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHcmF6aWUgQXV0aGVudGljYXRpb24iLCJ1aWQiOiI2NGIzZjVlZS02NTRiLTRmZjQtYjAzZi0yMDVlYjNmOTNjYWMiLCJ1c2VyX3N0YXRlIjoiRUFQIiwicmVnaXN0cmF0aW9uX2RhdGUiOjE2OTE0ODIxNzQ3MDYsImV4cCI6MTY5MjY5MTc3OX0.S2ss3LPrELrp_UWTgOJVMjfX0AS36-qOY6uZ07fyoBrvmL5ccmzS1lw3Wz4Hu9l_--RJoYub-HDZTOuyL3dmNmnHndwCuIUiFnzClS4pM4ytXYOnsFYe8FlE_QAJobEvmNS5DRaoZL5Wxoy2IvpPar5QSOvaa0KocFmVgaMBzXO0xrGOrn4l25fLPz3Npr_br0UKIqO9-jfJhkoK7bwAPWoqxUtDek4jQ4OFaSe2p9tAU1IPyS5e6ynJbDkG_tj7pep5Ale1EEWpj5OPF90OPsOUzfZQkOxRn3UfqRXGkkheChiVMMNWdVu5Stkz3lpDEhcieOC9AsgRJDhYjhSnMQ</s:String>
+	<s:String x:Key="/Default/Environment/JetBrainsAIOptions/QuotaCurrent/@EntryValue">-2147483648</s:String>
+	<s:String x:Key="/Default/Environment/JetBrainsAIOptions/QuotaMaximum/@EntryValue">-2147483648</s:String>
+	<s:String x:Key="/Default/Environment/JetBrainsAIOptions/QuotaRefillAt/@EntryValue">12/31/9999 23:59:59</s:String>
+	<s:String x:Key="/Default/Environment/JetBrainsAIOptions/QuotaUntil/@EntryValue">12/31/9999 23:59:59</s:String>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchBehaviour/=Roslyn_002Dswea/@EntryIndexedValue">LIVE_MONITOR</s:String>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchBehaviour/=SyncSettings/@EntryIndexedValue">DO_NOTHING</s:String>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchBehaviour/=VCS/@EntryIndexedValue">DO_NOTHING</s:String>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchConflictResolutionMode/=Roslyn_002Dswea/@EntryIndexedValue">NOTIFY</s:String>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchConflictResolutionMode/=SyncSettings/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/Environment/PerformanceGuide/SwitchConflictResolutionMode/=SyncSettings/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/PerformanceGuide/SwitchConflictResolutionMode/=VCS/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/Environment/PerformanceGuide/SwitchConflictResolutionMode/=VCS/@EntryIndexRemoved">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndices/=JetBrains_002EPsiFeatures_002EUIInteractive_002ERefactorings_002EControls_002EUsagesDescriptor/@EntryIndexedValue">12</s:Int64>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndices/=JetBrains_002EPsiFeatures_002EVisualStudio_002EDebugger_002EBreakpoints_002EBreakpointsBrowserDescriptor/@EntryIndexedValue">3</s:Int64>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndices/=JetBrains_002EReSharper_002EFeature_002EServices_002ENavigation_002EDescriptors_002ESearchUsagesDescriptor/@EntryIndexedValue">3</s:Int64>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndices/=JetBrains_002EReSharper_002EFeature_002EServices_002ERefactorings_002EConflicts_002EOccurrences_002EConflictOccurrencesDescriptor/@EntryIndexedValue">9</s:Int64>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndices/=JetBrains_002EReSharper_002EFeatures_002ENavigation_002EFeatures_002EGoToDeclaredElement_002EGotoDeclaredElementsBrowserDescriptor/@EntryIndexedValue">12</s:Int64>
+	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/ShowIgnoredOccurrences/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EApplication_002EExceptionReport_002EUserLoginInformationMigrateSettings/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EFeature_002EServices_002ECpp_002ECodeStyle_002EIncludesOrder_002ECppIncludeDirectiveSettingsMigration/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EFeature_002EServices_002ECpp_002ECodeStyle_002ESettingsUpgrade_002EFunctionReturnStyleSettingsUpgrader/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/UpdatesManger/LastUpdateCheck/@EntryValue">02/08/2024 00:18:29</s:String>
+	<s:String x:Key="/Default/Environment/UpdatesManger/LastUpdateCheckPerHost/=ReSharperPlatformVs17/@EntryIndexedValue">02/07/2024 15:17:59</s:String>
+	<s:String x:Key="/Default/Environment/UserInterface/HierarchyView/ViewStyle/@EntryValue">SuperTypes</s:String>
+	<s:Int64 x:Key="/Default/Environment/UserInterface/InspectionResultView/GroupingIndex/@EntryValue">15</s:Int64>
+	<s:Boolean x:Key="/Default/GrammarAndSpelling/LanguageDetection/DontSuggestLanguages/=KO/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/DiskCleanup/LastRunTime/@EntryValue">02/08/2024 02:28:15</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=EditorConfigFeatureSuggester/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=GotoSuggester/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/IntellisenseHousekeeping/HintUsed/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/Layout/DialogWindows/OptionsDialogView/Position/@EntryValue">[-39.2,56](1384,977.6)</s:String>
+	<s:String x:Key="/Default/Housekeeping/Layout/DialogWindows/OwnedDialogPosition/Position/=AdvancedSearchDialog/@EntryIndexedValue">[0,185.333333333333](500,484)</s:String>
+	<s:String x:Key="/Default/Housekeeping/Layout/DialogWindows/RefactoringWizardWindow/Location/@EntryValue">-44.8,-347.2</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue">CppCodeStyle</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoSearchForTextInStrings/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/Search/HighlightUsagesHintUsed/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/TreeModelBrowserPanelPersistence/IsPreviewVisible/=CallHierarchyTreeDescriptor/@EntryIndexedValue">False</s:Boolean>
+	<s:Double x:Key="/Default/Housekeeping/TreeModelBrowserPanelPersistence/PreviewSplitterVerticalProportion/=CallHierarchyTreeDescriptor/@EntryIndexedValue">1</s:Double>
+	<s:Boolean x:Key="/Default/Housekeeping/UpgradeFromExceptionReport/DefaultReporterBehaviorChanged/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/UpgradeFromExceptionReport/UpgradePerformed/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/WhatsNewShown/WhatsNewShownIndexedEntry/=RC/@EntryIndexedValue">2023.3</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=00F55D78D4C95342887FDE4327914AA3/Position/@EntryValue">5</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=18AAF856CB6B4B478CA186911B83751E/EntryName/@EntryValue">Tomato Header file</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=18AAF856CB6B4B478CA186911B83751E/Position/@EntryValue">1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/EntryName/@EntryValue">Tomato Source file</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Position/@EntryValue">2</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=64EDB544AC8E924696C7B438289B12B6/Position/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=6C28FB119C8ED3469FE990023D0EC27F/EntryName/@EntryValue">Tomato Class</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=7ACC4B62181F8546894C5C6BE2077C30/Position/@EntryValue">6</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=83CCE6429EB23444919E0C842CBA0BF5/Position/@EntryValue">8</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=87C527147598DC48B459FA54D26AA0D2/EntryName/@EntryValue">PS Template</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=87C527147598DC48B459FA54D26AA0D2/Position/@EntryValue">3</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=DC382AF7D0007545BD63EC8B3729639C/Entry/=C72B7CD086ABB54CA1E6A9E75D5C51F1/Position/@EntryValue">7</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/CustomProperties/=Extension/@EntryIndexedValue">h</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/CustomProperties/=FileName/@EntryIndexedValue">File</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Description/@EntryValue">Tomato Header file</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Field/=HEADER/Expression/@EntryValue">cppFileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/Type/@EntryValue">InCppProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=18AAF856CB6B4B478CA186911B83751E/Text/@EntryValue">$HEADER$#pragma once&#xD;
+&#xD;
+namespace tomato&#xD;
+{&#xD;
+	$END$&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/CustomProperties/=Extension/@EntryIndexedValue">cpp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/CustomProperties/=FileName/@EntryIndexedValue">File</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Description/@EntryValue">Tomato Source file</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=HEADER/Expression/@EntryValue">cppFileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=PCH/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=PCH/Expression/@EntryValue">cppPchIncludeDirective()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=PCH/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Field/=PCH/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/Type/@EntryValue">InCppProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=22206DDCEEB0D54FA48CC3E5A9EFF6C2/Text/@EntryValue">$HEADER$$PCH$&#xD;
+&#xD;
+namespace tomato&#xD;
+{&#xD;
+	$END$&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/CustomProperties/=Extension/@EntryIndexedValue">h</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/CustomProperties/=FileName/@EntryIndexedValue">NewClass</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Description/@EntryValue">Tomato Class</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=HEADER/Expression/@EntryValue">cppFileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=NAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=NAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=NAME/InitialSection/@EntryValue">70A92A47EB00394B8B3D28A3B6AB7B36</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=NAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=PCH/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=PCH/Expression/@EntryValue">cppPchIncludeDirective()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=PCH/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=PCH/InitialSection/@EntryValue">70A92A47EB00394B8B3D28A3B6AB7B36</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Field/=PCH/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/Type/@EntryValue">InCppProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Section/=70A92A47EB00394B8B3D28A3B6AB7B36/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Section/=70A92A47EB00394B8B3D28A3B6AB7B36/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.cpp" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Section/=70A92A47EB00394B8B3D28A3B6AB7B36/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Section/=70A92A47EB00394B8B3D28A3B6AB7B36/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Section/=70A92A47EB00394B8B3D28A3B6AB7B36/SectionPlain/Text/@EntryValue">$PCH$#include "$NAME$.h"&#xD;
+&#xD;
+namespace tomato&#xD;
+{&#xD;
+&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C28FB119C8ED3469FE990023D0EC27F/Text/@EntryValue">$HEADER$#pragma once&#xD;
+&#xD;
+namespace tomato&#xD;
+{&#xD;
+	class $CLASS$&#xD;
+	{&#xD;
+		public:&#xD;
+			$CLASS$() = default;&#xD;
+			~$CLASS$() = default;&#xD;
+&#xD;
+		private:&#xD;
+		$END$&#xD;
+	};&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/CustomProperties/=Extension/@EntryIndexedValue">cpp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/CustomProperties/=FileName/@EntryIndexedValue">Main</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Description/@EntryValue">PS Template</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Scope/=CD5B1AEA8099834C8F10F84286AA88CA/Type/@EntryValue">InCppProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=87C527147598DC48B459FA54D26AA0D2/Text/@EntryValue">// URL: &#xD;
+// Algo: &#xD;
+&#xD;
+// Start:	&#xD;
+// Read:	&#xD;
+// Think:	&#xD;
+// Code:	&#xD;
+// Total:	&#xD;
+&#xD;
+#include &lt;bits/stdc++.h&gt;&#xD;
+using namespace std;&#xD;
+&#xD;
+#define pb push_back&#xD;
+#define X first&#xD;
+#define Y second&#xD;
+#define all(x) x.begin(), x.end()&#xD;
+#define sortvec(x) sort(all(x))&#xD;
+#define compress(x) x.erase(unique(all(x)), x.end())&#xD;
+#define findvec(x, value) find(all(x), value) != x.end()&#xD;
+&#xD;
+using ll = long long;&#xD;
+using pii = pair&lt;int, int&gt;;&#xD;
+using pll = pair&lt;ll, ll&gt;;&#xD;
+&#xD;
+const ll  MOD = 1000000007;&#xD;
+const int INF = 0x3f3f3f3f;&#xD;
+const ll  LLINF = 1e18;&#xD;
+&#xD;
+int main()&#xD;
+{&#xD;
+	ios::sync_with_stdio(false); cin.tie(nullptr);&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Applicability/=Surround/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Description/@EntryValue">for loop pattern with integer index starting with 1</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Field/=INDEX/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Field/=INDEX/Expression/@EntryValue">suggestIndexVariable()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Field/=INDEX/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Field/=MAX/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Field/=MAX/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/IsBlessed/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Mnemonic/@EntryValue">3</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Scope/=FB2B1B3627C3074699DE05129AC80274/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Scope/=FB2B1B3627C3074699DE05129AC80274/Type/@EntryValue">InCppCompoundStatement</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Shortcut/@EntryValue">fori1</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BF97221579CD3A48B512D07FC53EE14D/Text/@EntryValue">for (int $INDEX$ = 1; $INDEX$ &lt;= $MAX$; ++$INDEX$)&#xD;
+{&#xD;
+  $SELECTION$$END$&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=AABB/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=binormal/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Clonable/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=CONIN/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=CONOUT/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Coord/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Deparent/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=FMOD/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=iter/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Lbtn/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=LOGFONT/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Minable/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Mipmaps/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=ortho/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=outb/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=quat/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Rasterizer/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Rigidbody/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=stddev/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=umap/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Undock/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=vecs/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=wcex/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Welford/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=WELFORD/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Wstring/@EntryIndexedValue">True</s:Boolean>
+
+	</wpf:ResourceDictionary>
