@@ -26,7 +26,7 @@ constexpr ll  MOD = 1000000007;
 constexpr int INF = 0x3f3f3f3f;
 constexpr ll  LLINF = 1e18;
 
-// 음수면 트리의 크기, 양수면 부모 노드
+// 음수면 트리의 랭크/크기, 양수면 부모 노드
 int p[1'000'001];
 
 int Find(int a)
@@ -35,6 +35,21 @@ int Find(int a)
     p[a] = Find(p[a]); // 경로 압축
     return p[a];
 }
+
+void MergeByRank(int a, int b)
+{
+    int ap = Find(a);
+    int bp = Find(b);
+    if (ap == bp) return;
+
+    // 큰 ap의 아래로 작은 bp 넣기이므로
+    // ap의 랭크가 bp의 랭크보다 크게하도록 스왑
+    if (-p[ap] < -p[bp]) swap(ap, bp);
+    if (-p[ap] == -p[bp]) --p[ap]; // 만약 랭크가 같다면, 새 부모가 되는 ap의 랭크가 1 증가한다
+
+    p[bp] = ap;
+}
+
 
 void MergeBySize(int a, int b)
 {
@@ -49,6 +64,7 @@ void MergeBySize(int a, int b)
 
     p[bp] = ap;
 }
+
 
 void MergeNaive(int a, int b)
 {
@@ -76,7 +92,7 @@ int main()
 
         if (func == 0)
         {
-            MergeBySize(a, b);
+            MergeByRank(a, b);
         }
         else
         {
