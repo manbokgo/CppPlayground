@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\2020">
+      <UniqueIdentifier>{7bd7367e-d71f-4020-8c61-2452d75d49ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
@@ -23,142 +26,132 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="problem\%40 Template.cpp">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="bits\stdc++.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="problem\2020\%40 Template.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1068.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1181.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1181.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1260.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1260.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1463.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1463.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1620.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1620.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1620_map.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1620_map.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1654.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1647.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1753.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1654.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1920.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1753 OLD.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\1988.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1920.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2178.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1988.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2188.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2178.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2188_BipartiteMatch.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2188.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2252.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2188_BipartiteMatch.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2293.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2252.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2293_MemoryOver.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2293.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2294.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2293_MemoryOver.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2316.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2294.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2512.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2316.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2750.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2512.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\2751.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2750.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\4485.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2751.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\5567.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\4485.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\5651.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\5567.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\6086.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\5651.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\7569.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\6086.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\7576.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\7569.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\7616.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\7576.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\9465.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\7616.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\9576.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\9465.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\10808.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\9576.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\10828.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\10808.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\10845.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\10828.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\10989.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\10845.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\11004.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\10989.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\11048.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11004.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\11403.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11048.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\11495.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11403.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\17114.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11495.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem\2020\17412.cpp">
+      <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17114.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem\17412.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem\playGround.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="etc\suffixarray.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="etc\kmp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem\1240.cpp">
+    <ClCompile Include="problem\11404.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem\1753.cpp">
@@ -167,19 +160,26 @@
     <ClCompile Include="problem\1103.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11404.cpp">
+    <ClCompile Include="problem\1240.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1717.cpp">
+    <ClCompile Include="problem\playGround.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem\1922.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="bits\stdc++.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
+    <ClCompile Include="problem\1717.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\2293.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\2020\1647.cpp">
+      <Filter>소스 파일\2020</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\2020\1068.cpp">
+      <Filter>소스 파일\2020</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
