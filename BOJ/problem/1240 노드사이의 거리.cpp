@@ -1,5 +1,6 @@
 ﻿// URL: https://www.acmicpc.net/problem/1240
 // Algo: BFS, DFS 인접 리스트 기본
+
 // 2년만에 코테 복귀. 다 까먹었다..
 
 // Start:	240205 14 35

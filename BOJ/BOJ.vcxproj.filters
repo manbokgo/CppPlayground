@@ -151,28 +151,28 @@
     <ClCompile Include="problem\2020\17412.cpp">
       <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11404.cpp">
+    <ClCompile Include="problem\11404 플로이드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1753.cpp">
+    <ClCompile Include="problem\1753 최단경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1103.cpp">
+    <ClCompile Include="problem\1103 게임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1240.cpp">
+    <ClCompile Include="problem\1240 노드사이의 거리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem\playGround.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1922.cpp">
+    <ClCompile Include="problem\1922 네트워크 연결.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1717.cpp">
+    <ClCompile Include="problem\1717 집합의 표현.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2293.cpp">
+    <ClCompile Include="problem\2293 동전 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem\2020\1647.cpp">
@@ -181,7 +181,7 @@
     <ClCompile Include="problem\2020\1068.cpp">
       <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2110.cpp">
+    <ClCompile Include="problem\2110 공유기 설치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
