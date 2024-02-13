@@ -190,5 +190,8 @@
     <ClCompile Include="problem\2609 최대공약수와 최소공배수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\15683 감시.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
