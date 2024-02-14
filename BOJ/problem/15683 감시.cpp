@@ -15,7 +15,10 @@
 // 깊이가 CCTV 개수와 같아지면 return하면 간단한 거였음. 백트래킹은 좀 풀어봐야 한다. 멍청함.
 
 // 위 2가지 수정함. 이전 코딩은 커밋 참고. 시간은 44ms로 동일하게 나온다.
-// 이전 상태 백업용으로 벡터 사용했는데 동적할당 때문에 성능이 좀 낮은 듯
+// tile의 이전 상태 백업용으로 벡터 사용했는데 동적 할당 때문에 성능이 좀 낮은 듯해서
+// tile을 2차원 배열로 바꿔보니 12ms로 줄어듦.
+// 다른 사람 코드 보니깐 상태 저장하는 배열로 백업하는대신
+// -1로 대입한 곳들을 다시 0으로 바꾸는 식으로 하면 4ms까지 줄어드는 듯
 
 // 또한 DFS로 백트래킹을 진행했는데
 // 4진법으로 각 CCTV의 4가지 방향을 조합한 모든 경우의 수를 구하는 방법이 참 세련됨
@@ -54,12 +57,14 @@ int dy[4] = {0, 1, 0, -1}; // 동남서북
 vector<pii> cctv;
 vector<pii> listOfFive;
 
+int tile[10][10];
+
 bool OOB(int y, int x)
 {
     return y < 0 || y >= n || x < 0 || x >= m;
 }
 
-int view(int y, int x, int dir, vector<vector<int>>& tile)
+int view(int y, int x, int dir)
 {
     int blind = 0;
 
@@ -78,7 +83,7 @@ int view(int y, int x, int dir, vector<vector<int>>& tile)
 }
 
 
-int solve(int depth, int blind, vector<vector<int>>& tile)
+int solve(int depth, int blind)
 {
     if (depth == cctv.size())
     {
@@ -90,32 +95,40 @@ int solve(int depth, int blind, vector<vector<int>>& tile)
     int bestBlind = blind;
     for (int k = 0; k < 4; ++k)
     {
-        auto prevTile = tile;
+        int prevTile[10][10];
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                prevTile[i][j] = tile[i][j];
+            }
+        }
+
         int  thisBlind = 0;
 
         if (tile[y][x] == 4)
         {
-            thisBlind += view(y, x, k + 0, tile);
-            thisBlind += view(y, x, k + 1, tile);
-            thisBlind += view(y, x, k + 2, tile);
+            thisBlind += view(y, x, k + 0);
+            thisBlind += view(y, x, k + 1);
+            thisBlind += view(y, x, k + 2);
         }
         else if (tile[y][x] == 3)
         {
-            thisBlind += view(y, x, k + 0, tile);
-            thisBlind += view(y, x, k + 1, tile);
+            thisBlind += view(y, x, k + 0);
+            thisBlind += view(y, x, k + 1);
         }
         else if (tile[y][x] == 2)
         {
             if (k >= 2) continue;
-            thisBlind += view(y, x, k + 0, tile);
-            thisBlind += view(y, x, k + 2, tile);
+            thisBlind += view(y, x, k + 0);
+            thisBlind += view(y, x, k + 2);
         }
         else if (tile[y][x] == 1)
         {
-            thisBlind += view(y, x, k + 0, tile);
+            thisBlind += view(y, x, k + 0);
         }
 
-        int availBlind = solve(depth + 1, blind - thisBlind, tile);
+        int availBlind = solve(depth + 1, blind - thisBlind);
         if (availBlind == 0)
         {
             cout << "0";
@@ -126,7 +139,14 @@ int solve(int depth, int blind, vector<vector<int>>& tile)
         {
             bestBlind = availBlind;
         }
-        tile = prevTile;
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                tile[i][j] = prevTile[i][j];
+            }
+        }
     }
 
 
@@ -140,8 +160,6 @@ int main()
 
     cin >> n >> m;
     int blind = n * m;
-
-    vector<vector<int>> tile(n, vector<int>(m));
 
     for (int i = 0; i < n; ++i)
     {
@@ -162,10 +180,10 @@ int main()
     {
         for (int k = 0; k < 4; ++k)
         {
-            blind -= view(y, x, k, tile);
+            blind -= view(y, x, k);
         }
     }
 
-    cout << solve(0, blind, tile);
+    cout << solve(0, blind);
     return 0;
 }
