@@ -14,6 +14,9 @@
 // stack으로 재귀 깊이를 측정했는데, 그냥 CCTV 좌표를 쭉 넣은 vector<pii>에 깊이로 인덱스로 참조하게 하고
 // 깊이가 CCTV 개수와 같아지면 return하면 간단한 거였음. 백트래킹은 좀 풀어봐야 한다. 멍청함.
 
+// 위 2가지 수정함. 이전 코딩은 커밋 참고. 시간은 44ms로 동일하게 나온다.
+// 이전 상태 백업용으로 벡터 사용했는데 동적할당 때문에 성능이 좀 낮은 듯
+
 // 또한 DFS로 백트래킹을 진행했는데
 // 4진법으로 각 CCTV의 4가지 방향을 조합한 모든 경우의 수를 구하는 방법이 참 세련됨
 
@@ -44,79 +47,45 @@ constexpr ll  LLINF = 1e18;
 
 
 int n, m;
-enum direction { R, D, L, U };
-stack<pii>  s;
+
+int dx[4] = {1, 0, -1, 0};
+int dy[4] = {0, 1, 0, -1}; // 동남서북
+
+vector<pii> cctv;
 vector<pii> listOfFive;
 
+bool OOB(int y, int x)
+{
+    return y < 0 || y >= n || x < 0 || x >= m;
+}
 
-int view(int y, int x, direction dir, vector<vector<int>>& tile)
+int view(int y, int x, int dir, vector<vector<int>>& tile)
 {
     int blind = 0;
-    switch (dir)
+
+    dir %= 4;
+    while (true)
     {
-    case R:
-        for (int i = 1; i < m - x; ++i)
-        {
-            int& num = tile[y][x + i];
-            if (num == 6) break;
-            if (num == 0)
-            {
-                num = -1;
-                ++blind;
-            }
-        }
-        break;
-    case D:
-        for (int i = 1; i < n - y; ++i)
-        {
-            int& num = tile[y + i][x];
-            if (num == 6) break;
-            if (num == 0)
-            {
-                num = -1;
-                ++blind;
-            }
-        }
-        break;
-    case L:
-        for (int i = 1; i <= x; ++i)
-        {
-            int& num = tile[y][x - i];
-            if (num == 6) break;
-            if (num == 0)
-            {
-                num = -1;
-                ++blind;
-            }
-        }
-        break;
-    case U:
-        for (int i = 1; i <= y; ++i)
-        {
-            int& num = tile[y - i][x];
-            if (num == 6) break;
-            if (num == 0)
-            {
-                num = -1;
-                ++blind;
-            }
-        }
-        break;
+        y += dy[dir];
+        x += dx[dir];
+        if (OOB(y, x) || tile[y][x] == 6) break;
+        if (tile[y][x] != 0) continue;
+        tile[y][x] = -1;
+        ++blind;
     }
 
     return blind;
 }
 
 
-int solve(int blind, vector<vector<int>>& tile)
+int solve(int depth, int blind, vector<vector<int>>& tile)
 {
-    if (s.empty())
+    if (depth == cctv.size())
     {
         return blind;
     }
 
-    auto [y, x] = s.top();
-    s.pop();
+    auto [y, x] = cctv[depth];
 
     int bestBlind = blind;
     for (int k = 0; k < 4; ++k)
@@ -126,27 +95,27 @@ int solve(int blind, vector<vector<int>>& tile)
 
         if (tile[y][x] == 4)
         {
-            thisBlind += view(y, x, (direction)((k + 0) % 4), tile);
-            thisBlind += view(y, x, (direction)((k + 1) % 4), tile);
-            thisBlind += view(y, x, (direction)((k + 2) % 4), tile);
+            thisBlind += view(y, x, k + 0, tile);
+            thisBlind += view(y, x, k + 1, tile);
+            thisBlind += view(y, x, k + 2, tile);
         }
         else if (tile[y][x] == 3)
         {
-            thisBlind += view(y, x, (direction)((k + 0) % 4), tile);
-            thisBlind += view(y, x, (direction)((k + 1) % 4), tile);
+            thisBlind += view(y, x, k + 0, tile);
+            thisBlind += view(y, x, k + 1, tile);
         }
         else if (tile[y][x] == 2)
         {
             if (k >= 2) continue;
-            thisBlind += view(y, x, (direction)((k + 0) % 4), tile);
-            thisBlind += view(y, x, (direction)((k + 2) % 4), tile);
+            thisBlind += view(y, x, k + 0, tile);
+            thisBlind += view(y, x, k + 2, tile);
         }
         else if (tile[y][x] == 1)
         {
-            thisBlind += view(y, x, (direction)((k + 0) % 4), tile);
+            thisBlind += view(y, x, k + 0, tile);
         }
 
-        int availBlind = solve(blind - thisBlind, tile);
+        int availBlind = solve(depth + 1, blind - thisBlind, tile);
         if (availBlind == 0)
         {
             cout << "0";
@@ -160,7 +129,6 @@ int solve(int blind, vector<vector<int>>& tile)
         tile = prevTile;
     }
 
-    s.push({y, x});
 
     return bestBlind;
 }
@@ -183,7 +151,7 @@ int main()
             if (tile[i][j] > 0)
             {
                 --blind;
-                if (tile[i][j] <= 4) s.push({i, j});
+                if (tile[i][j] <= 4) cctv.pb({i, j});
                 if (tile[i][j] == 5) listOfFive.pb({i, j});
             }
         }
@@ -194,10 +162,10 @@ int main()
     {
         for (int k = 0; k < 4; ++k)
         {
-            blind -= view(y, x, (direction)k, tile);
+            blind -= view(y, x, k, tile);
         }
     }
 
-    cout << solve(blind, tile);
+    cout << solve(0, blind, tile);
     return 0;
 }
