@@ -55,8 +55,7 @@ int main()
         {
             for (int e = 1; e <= N; ++e)
             {
-                if (dist[s][e] > dist[s][k] + dist[k][e])
-                    dist[s][e] = dist[s][k] + dist[k][e];
+                dist[s][e] = min(dist[s][e], dist[s][k] + dist[k][e]);
             }
         }
     }
