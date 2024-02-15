@@ -50,16 +50,13 @@ int main()
 
         // 회문이면 더 진행할 필요 없음
         // 아니라면 일단 커서 멈춤
-        while (st <= en)
+        for (; st <= en; ++st, --en)
         {
             if (text[st] != text[en])
             {
                 result = 1;
                 break;
             }
-
-            ++st;
-            --en;
         }
 
         // 멈춘 커서에서 왼쪽 한칸만 움직여서
@@ -68,16 +65,13 @@ int main()
         {
             int st2 = st + 1;
             int en2 = en;
-            while (st2 <= en2)
+            for (; st2 <= en2; ++st2, --en2)
             {
                 if (text[st2] != text[en2])
                 {
                     result = 2;
                     break;
                 }
-
-                ++st2;
-                --en2;
             }
         }
 
@@ -88,16 +82,13 @@ int main()
         {
             int st2 = st;
             int en2 = en - 1;
-            while (st2 <= en2)
+            for (; st2 <= en2; ++st2, --en2)
             {
                 if (text[st2] != text[en2])
                 {
                     result = 2;
                     break;
                 }
-
-                ++st2;
-                --en2;
             }
 
             if (st2 > en2) result = 1;
