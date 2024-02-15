@@ -83,7 +83,7 @@ int main()
             if (!Insert(text))
             {
                 cout << "NO\n";
-                while (n--) cin >> text;
+                while (n--) cin >> text; // 실수: 남은 전화번호들 지워줘야함. 그냥 처음에 cin으로 string 배열에 몽땅 다 담고 진행하는게 더 간편한가?
                 goto Fail;
             }
         }
