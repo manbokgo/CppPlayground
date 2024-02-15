@@ -2,9 +2,9 @@
 // Algo: DP 기본
 
 // Start:	240210 23 00 
-// Read:	23 00
-// Think:	23 10
-// Code:	23 20
+// Read:	0 0
+// Think:	0 10
+// Code:	0 10
 // Total:	0 20
 
 #include <bits/stdc++.h>

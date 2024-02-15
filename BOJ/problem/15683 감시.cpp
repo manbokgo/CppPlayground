@@ -24,9 +24,9 @@
 // 4진법으로 각 CCTV의 4가지 방향을 조합한 모든 경우의 수를 구하는 방법이 참 세련됨
 
 // Start:	240213 23 32
-// Read:	23 33
-// Think:	23 37
-// Code:	00 50
+// Read:	0 1
+// Think:	0 4
+// Code:	1 13
 // Total:	1 18
 
 #include <bits/stdc++.h>

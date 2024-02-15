@@ -2,10 +2,10 @@
 // Algo: MST 크루스칼 기본, 프림 기본
 
 // Start:	240209 00 32
-// Read:	00 32
-// Think:	00 32
-// Code:	00 56
-// Total:	0 25
+// Read:	0 0
+// Think:	0 0
+// Code:	0 24
+// Total:	0 24
 
 #include <bits/stdc++.h>
 using namespace std;

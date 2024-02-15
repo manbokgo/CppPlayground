@@ -5,9 +5,9 @@
 // 메모리 1536MB 제한으로 트라이로 한번 풀어보라는 의도의 문제임
 
 // Start:	240215 20 46
-// Read:	20 46
-// Think:	20 46
-// Code:	20 54
+// Read:	0 0
+// Think:	0 0
+// Code:	0 8
 // Total:	0 8
 
 #include <bits/stdc++.h>

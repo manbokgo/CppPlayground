@@ -4,17 +4,15 @@
 // 2년만에 코테 복귀. 다 까먹었다..
 
 // Start:	240205 14 35
-// Read:	yesterday
-// Think:	yesterday
-// Code:	15 32
-// Total:	1 0
+// Read:	0 0
+// Think:	0 20
+// Code:	0 37
+// Total:	0 57
 
 #include <bits/stdc++.h>
 using namespace std;
 
 #define pb push_back
-#define F first
-#define S second
 #define all(x) x.begin(), x.end()
 #define sortvec(x) sort(all(x))
 #define compress(x) x.erase(unique(all(x)), x.end())
@@ -41,10 +39,7 @@ int BFS(int start, int end)
 
     while (!q.empty())
     {
-        // 코테 때 IDE 제대로 된 거 쓰는 것도 아닌데 이건 좀 아닌 듯
-        // auto [node, dist] = q.front();
-        int node = q.front().F;
-        int dist = q.front().S;
+        auto [node, dist] = q.front();
         q.pop();
 
         // 종료
@@ -53,12 +48,8 @@ int BFS(int start, int end)
             return dist;
         }
 
-        // for (auto [cNode, cDist] : tree[node])
-        for (pii child : tree[node])
+        for (auto [cNode, cDist] : tree[node])
         {
-            int cNode = child.F;
-            int cDist = child.S;
-
             if (visited[cNode]) continue;
             visited[cNode] = true;
             q.push({cNode, cDist + dist});

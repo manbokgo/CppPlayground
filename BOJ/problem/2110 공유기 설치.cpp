@@ -2,10 +2,10 @@
 // Algo: 이분 탐색 + 매개변수 탐색
 
 // Start:	240210 23 40
-// Read:	23 41
-// Think:	00 33
-// Code:	00 49
-// Total:	1 08
+// Read:	0 1
+// Think:	0 52
+// Code:	0 16
+// Total:	1 09
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -2,10 +2,10 @@
 // Algo: 플로이드 기본
 
 // Start:	240206 23 20
-// Read:	23 20
-// Think:	23 20
-// Code:	23 31
-// Total:	0 10
+// Read:	0 0
+// Think:	0 0
+// Code:	0 11
+// Total:	0 11
 
 #include <bits/stdc++.h>
 using namespace std;

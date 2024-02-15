@@ -7,9 +7,9 @@
 // 이 경우 오른쪽 지우는 패스를 한번 더 해서 회문인지 재차 검사를 해야함.
 
 // Start:	240215 05 41
-// Read:	05 41
-// Think:	05 43
-// Code:	06 25
+// Read:	0 0
+// Think:	0 2
+// Code:	0 42
 // Total:	0 44
 
 #include <bits/stdc++.h>

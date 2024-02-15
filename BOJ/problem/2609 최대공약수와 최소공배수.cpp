@@ -2,9 +2,9 @@
 // Algo: 유클리드 호제법(이지만 STL 쓰기)
 
 // Start:	240213 00 40
-// Read:	00 40
-// Think:	00 40
-// Code:	00 43
+// Read:	0 0
+// Think:	0 0
+// Code:	0 3
 // Total:	0 3
 
 #include <bits/stdc++.h>

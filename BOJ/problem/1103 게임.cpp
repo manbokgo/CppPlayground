@@ -13,10 +13,10 @@
 // 위상 정렬을 선처리해야하는데 이건 좀 아닌거 같고.
 
 // Start:	240206 18 13
-// Read:	18 14
-// Think:	18 14
-// Code:	19 05
-// Total:	0 50
+// Read:	0 0
+// Think:	0 1
+// Code:	0 51
+// Total:	0 52
 
 #include <variant>
 #include <bits/stdc++.h>

@@ -2,9 +2,9 @@
 // Algo: 에라토스테네스의 체
 
 // Start:	240213 00 23
-// Read:	00 23
-// Think:	00 23
-// Code:	00 31
+// Read:	0 0
+// Think:	0 0
+// Code:	0 8
 // Total:	0 8
 
 #include <bits/stdc++.h>

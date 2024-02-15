@@ -2,10 +2,10 @@
 // Algo: 다익스트라 기본
 
 // Start:	240206 17 25
-// Read:	17 26
-// Think:	17 46  복습
-// Code:	18 10
-// Total:	0 45
+// Read:	0 1
+// Think:	0 20 복습
+// Code:	0 35
+// Total:	0 55
 
 #include <bits/stdc++.h>
 using namespace std;

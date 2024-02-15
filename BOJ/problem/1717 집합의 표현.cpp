@@ -2,9 +2,9 @@
 // Algo: 유니온파인드 기본 + Union by Size
 
 // Start:	240208 01 00
-// Read:	01 00
-// Think:	01 00
-// Code:	01 20
+// Read:	0 0
+// Think:	0 0
+// Code:	0 20
 // Total:	0 20
 
 #include <bits/stdc++.h>
