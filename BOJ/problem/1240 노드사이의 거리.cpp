@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1240
-// Algo: BFS, DFS 인접 리스트 기본
+// Algo: BFS, DFS 기본 (인접 리스트)
 
 // 2년만에 코테 복귀. 다 까먹었다..
 
@@ -59,42 +59,8 @@ int BFS(int start, int end)
     return -1; // Fucked
 }
 
-
-int DFS(int start, int end)
-{
-    stack<pii> s;
-
-    visited[start] = true;
-    s.push({start, 0});
-
-    while (!s.empty())
-    {
-        int node = s.top().F;
-        int dist = s.top().S;
-        s.pop();
-
-        // 종료
-        if (node == end)
-        {
-            return dist;
-        }
-
-        for (pii child : tree[node])
-        {
-            int cNode = child.F;
-            int cDist = child.S;
-
-            if (visited[cNode]) continue;
-            visited[cNode] = true;
-            s.push({cNode, cDist + dist});
-        }
-    }
-
-    return -1; // Fucked
-}
-
 int DFSAnswer = 0;
-void DFSRecur(int cur, int end, int dist)
+void DFS(int cur, int end, int dist)
 {
     visited[cur] = true;
 
@@ -104,14 +70,41 @@ void DFSRecur(int cur, int end, int dist)
         return;
     }
 
-    for (pii child: tree[cur])
+    for (auto [cNode, cDist]: tree[cur])
     {
-        int cNode = child.F;
-        int cDist = child.S;
-
         if (visited[cNode]) continue;
-        DFSRecur(cNode, end, dist + cDist);
+        DFS(cNode, end, dist + cDist);
     }
+}
+
+
+int DFSStack(int start, int end)
+{
+    stack<pii> s;
+
+    visited[start] = true;
+    s.push({start, 0});
+
+    while (!s.empty())
+    {
+        auto [node, dist] = s.top();
+        s.pop();
+
+        // 종료
+        if (node == end)
+        {
+            return dist;
+        }
+
+        for (auto [cNode, cDist] : tree[node])
+        {
+            if (visited[cNode]) continue;
+            visited[cNode] = true;
+            s.push({cNode, cDist + dist});
+        }
+    }
+
+    return -1; // Fucked
 }
 
 int main()
@@ -143,7 +136,7 @@ int main()
         // cout << DFS(start, end) << '\n';
 
         DFSAnswer = 0;
-        DFSRecur(start, end, 0);
+        DFS(start, end, 0);
         cout << DFSAnswer << '\n';
     }
 }
