@@ -202,5 +202,8 @@
     <ClCompile Include="problem\5052 전화번호 목록.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\1701 Cubeeditor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
