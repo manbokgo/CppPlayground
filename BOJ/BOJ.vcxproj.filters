@@ -217,5 +217,8 @@
     <ClCompile Include="problem\1647 도시 분할 계획.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\10282 해킹.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -26,6 +26,7 @@
     <ClInclude Include="bits\stdc++.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="problem\10282 해킹.cpp" />
     <ClCompile Include="problem\1103 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
