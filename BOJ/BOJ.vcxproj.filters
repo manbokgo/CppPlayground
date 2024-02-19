@@ -223,5 +223,8 @@
     <ClCompile Include="problem\11053 가장 긴 증가하는 부분 수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\12015 가장 긴 증가하는 부분 수열 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
