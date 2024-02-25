@@ -238,5 +238,8 @@
     <ClCompile Include="problem\4485 녹색 옷 입은 애가 젤다지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\13418 학교 탐방하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
