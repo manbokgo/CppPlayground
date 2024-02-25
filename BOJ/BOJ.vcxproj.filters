@@ -241,5 +241,8 @@
     <ClCompile Include="problem\13418 학교 탐방하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\2887 행성 터널.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
