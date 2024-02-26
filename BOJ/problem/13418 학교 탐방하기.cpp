@@ -5,7 +5,7 @@
 // Read:	0 2
 // Think:	0 1
 // Code:	0 11
-// Total:	
+// Total:	0 14
 
 #include <bits/stdc++.h>
 using namespace std;
