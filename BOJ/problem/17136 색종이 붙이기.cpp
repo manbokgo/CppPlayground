@@ -29,10 +29,6 @@ constexpr int INF = 0x3f3f3f3f;
 // constexpr ll  LLINF = 1e18;
 // constexpr ll  MOD = 1000000007;
 
-// int dy[4] = {0, 1, 0, -1};
-// int dx[4] = {1, 0, -1, 0}; // 동남서북
-bool OOB(int y, int x) { return y < 0 || y >= 10 || x < 0 || x >= 10; }
-
 bool tile[10][10];
 int  avail[6] = {-1, 5, 5, 5, 5, 5};
 int  maxFilled = 0;
@@ -41,15 +37,13 @@ int  answer = INF;
 bool Check(int y, int x, int size)
 {
     if (avail[size] == 0) return false;
-    for (int i = 0; i < size; ++i)
+    if (y + size - 1 >= 10 || x + size - 1 >= 10) return false;
+
+    for (int i = y; i < y + size; ++i)
     {
-        for (int j = 0; j < size; ++j)
+        for (int j = x; j < x + size; ++j)
         {
-            // 최적화 가능하긴한데 일단 넘김
-            int ny = y + i;
-            int nx = x + j;
-            if (OOB(ny, nx)) return false;
-            if (!tile[ny][nx]) return false;
+            if (!tile[i][j]) return false;
         }
     }
 
@@ -61,18 +55,16 @@ void FillTile(int y, int x, int size, bool b)
     if (!b) --avail[size];
     else ++avail[size];
 
-    for (int i = 0; i < size; ++i)
+    for (int i = y; i < y + size; ++i)
     {
-        for (int j = 0; j < size; ++j)
+        for (int j = x; j < x + size; ++j)
         {
-            int ny = y + i;
-            int nx = x + j;
-            tile[ny][nx] = b;
+            tile[i][j] = b;
         }
     }
 }
 
-void Solve(int used, int filled)
+void Solve(int used, int filled, int prevY, int prevX)
 {
     if (used >= answer) return;
     if (filled == maxFilled)
@@ -81,20 +73,22 @@ void Solve(int used, int filled)
         return;
     }
 
-    int y = -1;
-    int x = -1;
-    for (int i = 0; i < 10; ++i)
+    int y = prevY;
+    int x = prevX;
+    if (x >= 10)
     {
-        for (int j = 0; j < 10; ++j)
+        ++y;
+        x = 0;
+    }
+
+    while (!tile[y][x])
+    {
+        ++x;
+        if (x >= 10)
         {
-            if (tile[i][j])
-            {
-                y = i;
-                x = j;
-                break;
-            }
+            ++y;
+            x = 0;
         }
-        if (y != -1) break;
     }
 
     for (int size = 5; size > 0; --size)
@@ -102,7 +96,7 @@ void Solve(int used, int filled)
         if (Check(y, x, size))
         {
             FillTile(y, x, size, false);
-            Solve(used + 1, filled + size * size);
+            Solve(used + 1, filled + size * size, y, x + size);
             FillTile(y, x, size, true);
         }
     }
@@ -122,7 +116,7 @@ int main()
         }
     }
 
-    Solve(0, 0);
+    Solve(0, 0, 0, 0);
 
     if (answer == INF) cout << -1;
     else cout << answer;
