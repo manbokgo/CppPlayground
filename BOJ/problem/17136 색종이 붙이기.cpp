@@ -1,11 +1,12 @@
 ﻿// URL: https://www.acmicpc.net/problem/17136
-// Algo: 
+// Algo: 백트래킹
 
 // Start:	240228 17 42
 // Read:	0 0
 // Think:	0 12
-// Code:	0 31
-// Total:	
+// Code:	0 31 실패 (그리디 풀이)
+// Code:	0 40 백트래킹
+// Total:	1 23
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -34,33 +35,77 @@ bool OOB(int y, int x) { return y < 0 || y >= 10 || x < 0 || x >= 10; }
 
 bool tile[10][10];
 int  avail[6] = {-1, 5, 5, 5, 5, 5};
+int  maxFilled = 0;
+int  answer = INF;
 
-int Possible(int y, int x)
+bool Check(int y, int x, int size)
 {
-    if (OOB(y, x)) return 0;
-    if (!tile[y][x]) return 0;
-
-    int maxSize = 0;
-    for (int range = 1; range <= 5; ++range)
+    if (avail[size] == 0) return false;
+    for (int i = 0; i < size; ++i)
     {
-        if (avail[range] == 0) continue;
-        for (int i = 0; i < range; ++i)
+        for (int j = 0; j < size; ++j)
         {
-            for (int j = 0; j < range; ++j)
-            {
-                // 최적화 가능하긴한데 일단 넘김
-                int ny = y + i;
-                int nx = x + j;
-                if (OOB(ny, nx)) goto Exit;
-                if (!tile[ny][nx]) goto Exit;
-            }
+            // 최적화 가능하긴한데 일단 넘김
+            int ny = y + i;
+            int nx = x + j;
+            if (OOB(ny, nx)) return false;
+            if (!tile[ny][nx]) return false;
         }
-
-        maxSize = range;
     }
 
-Exit:
-    return maxSize;
+    return true;
+}
+
+void FillTile(int y, int x, int size, bool b)
+{
+    if (!b) --avail[size];
+    else ++avail[size];
+
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
+            int ny = y + i;
+            int nx = x + j;
+            tile[ny][nx] = b;
+        }
+    }
+}
+
+void Solve(int used, int filled)
+{
+    if (used >= answer) return;
+    if (filled == maxFilled)
+    {
+        answer = min(answer, used);
+        return;
+    }
+
+    int y = -1;
+    int x = -1;
+    for (int i = 0; i < 10; ++i)
+    {
+        for (int j = 0; j < 10; ++j)
+        {
+            if (tile[i][j])
+            {
+                y = i;
+                x = j;
+                break;
+            }
+        }
+        if (y != -1) break;
+    }
+
+    for (int size = 5; size > 0; --size)
+    {
+        if (Check(y, x, size))
+        {
+            FillTile(y, x, size, false);
+            Solve(used + 1, filled + size * size);
+            FillTile(y, x, size, true);
+        }
+    }
 }
 
 int main()
@@ -68,65 +113,17 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int count = 0;
-    int answer = 0;
-
     for (int i = 0; i < 10; ++i)
     {
         for (int j = 0; j < 10; ++j)
         {
             cin >> tile[i][j];
-            if (tile[i][j]) ++count;
+            if (tile[i][j]) ++maxFilled;
         }
     }
 
-    if (count == 0)
-    {
-        cout << 0;
-        return 0;
-    }
+    Solve(0, 0);
 
-    priority_queue<tiii> pq;
-
-    for (int i = 0; i < 10; ++i)
-    {
-        for (int j = 0; j < 10; ++j)
-        {
-            int size = Possible(i, j);
-            if (size == 0) continue;
-            pq.push({size, i, j});
-        }
-    }
-
-    while (!pq.empty())
-    {
-        if (count == 0) break;
-
-        auto [size, y, x] = pq.top();
-        pq.pop();
-
-        if (int checkSize = Possible(y, x); checkSize != size)
-        {
-            if (checkSize > 0)
-                pq.push({checkSize, y, x});
-            continue;
-        }
-
-        for (int i = 0; i < size; ++i)
-        {
-            for (int j = 0; j < size; ++j)
-            {
-                int ny = y + i;
-                int nx = x + j;
-                tile[ny][nx] = false;
-            }
-        }
-
-        --avail[size];
-        count -= (size) * (size);
-        ++answer;
-    }
-
-    if (count > 0) cout << -1;
+    if (answer == INF) cout << -1;
     else cout << answer;
 }
