@@ -72,6 +72,66 @@ int  dy[4] = {0, 1, 0, -1};
 int  dx[4] = {1, 0, -1, 0}; // 동남서북
 bool OOB(int y, int x) { return y < 0 || y >= n || x < 0 || x >= m; }
 
+
+
+// BFS 풀이
+int tile[100][100];
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cin >> m >> n;
+    memset(tile, -1, sizeof(tile));
+
+    vector<pii> C;
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            char c;
+            cin >> c;
+            if (c == 'C') C.pb({i, j});
+            else if (c == '*') tile[i][j] = INF;
+        }
+    }
+
+    queue<pii> q;
+    tile[C[0].Y][C[0].X] = 0;
+    q.push(C[0]);
+    while (!q.empty())
+    {
+        auto [y, x] = q.front();
+        q.pop();
+        for (int i = 0; i < 4; ++i)
+        {
+            int ny = y + dy[i];
+            int nx = x + dx[i];
+
+            while (!OOB(ny, nx) && tile[ny][nx] != INF)
+            {
+                if (tile[ny][nx] == -1)
+                {
+                    tile[ny][nx] = tile[y][x] + 1;
+                    q.push({ny, nx});
+
+                    if (ny == C[1].Y && nx == C[1].X)
+                    {
+                        cout << tile[C[1].Y][C[1].X] - 1;
+                        return 0;
+                    }
+                }
+
+                ny += dy[i];
+                nx += dx[i];
+            }
+        }
+    }
+}
+
+
+// 다익스트라 풀이
+/*
 int tile[100][100];
 int dirs[100][100];
 
@@ -143,3 +203,4 @@ int main()
         }
     }
 }
+*/
