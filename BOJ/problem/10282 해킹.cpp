@@ -43,7 +43,7 @@ int main()
         for (auto& ad : adj)
             ad.clear();
 
-        memset(d, INF, sizeof(d));
+        fill_n(d, 10005, INF);
 
         cin >> n >> m >> c;
 
