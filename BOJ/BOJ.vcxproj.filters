@@ -259,13 +259,13 @@
     <ClCompile Include="problem\6087 레이저 통신.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="14238 출근 기록.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2632 피자판매.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="problem\14938 서강그라운드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\14238 출근 기록.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\2632 피자판매.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
