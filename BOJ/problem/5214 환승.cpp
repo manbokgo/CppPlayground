@@ -50,6 +50,70 @@ using tlll = tuple<ll, ll, ll>;
 
 constexpr int INF = 0x3f3f3f3f;
 
+
+// 명쾌한 풀이
+int n, k, m;
+
+vector<int> nodes[101'001]; // 노드 + (100'001, 101'000] 튜브(더미노드)
+int depth[101'001]; // visited 겸 depth
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    cin >> n >> k >> m;
+    if (n == 1)
+    {
+        cout << 1;
+        return 0;
+    }
+
+    for (int i = 1; i <= m; ++i)
+    {
+        for (int j = 0; j < k; ++j)
+        {
+            int num;
+            cin >> num;
+            nodes[num].pb(100'000 + i);
+            nodes[100'000 + i].pb(num);
+        }
+    }
+
+    queue<int> q;
+    depth[1] = 1;
+    q.push(1);
+
+    while (!q.empty())
+    {
+        auto node = q.front();
+        q.pop();
+
+        // if (nNode == n) 조건을 이 곳에 넣으면 n == 1 케이스를 선처리하지 않아도 됨
+        // 쓸데없이 더 연산을 한다는 게 단점이긴 한데 실수 줄이려면 그냥 여기다가 넣는 게 맞을지도?
+
+        for (auto nNode : nodes[node])
+        {
+            if (nNode == n)
+            {
+                cout << depth[node];
+                return 0;
+            }
+
+            if (depth[nNode]) continue;
+
+            if (nNode > 100'000) depth[nNode] = depth[node] + 1;
+            else depth[nNode] = depth[node];
+            q.push(nNode);
+        }
+    }
+
+    cout << -1;
+}
+
+
+
+/*
 // 196ms 풀이. 튜브를 큐에 visited[tube]
 // for (auto nNode : tubes[tube])
 //   for (auto tube : belong[node])
@@ -115,6 +179,7 @@ int main()
 
     cout << -1;
 }
+*/
 
 
 // 1072ms 풀이. 일반적인 경우처럼 노드를 큐에 visited[node]
