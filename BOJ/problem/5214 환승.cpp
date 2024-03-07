@@ -28,7 +28,7 @@
 // 큐에 노드 넣으면 큐에 n개 들어가고, 노드마다 연결된 ?개 튜브(총합 E)를 접근하고, 각 튜브에 속한 노드 k개를 접근하니 연산 횟수는 n+Ek
 // 큐에 튜브 넣으면 큐에 m개 들어가고, 튜브마다 연결된 k개 노드를 접근하고, 각 노드가 속한 튜브 ?개(총합 E)를 접근하니 연산 횟수는 km+E
 // 전자는 결국 1000^3이고, 후자는 1000^2이다. 위에서 말한 명쾌한 방법이랑 시간 비슷하게 나옴.
-// 그냥 정석대로 명쾌한 방법 쓰는게 맞을 듯 ㅎㅎ
+// 그냥 정석대로 명쾌한 방법 쓰는게 맞을 듯
 
 
 #include <bits/stdc++.h>
@@ -170,7 +170,7 @@ int main()
 
             for (auto nTube : belong[nNode])
             {
-                if (visited[nTube]) continue;;
+                if (visited[nTube]) continue;
                 visited[nTube] = true;
                 q.push({nTube, depth + 1});
             }
