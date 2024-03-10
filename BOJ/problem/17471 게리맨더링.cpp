@@ -11,6 +11,19 @@
 // 선거구가 3개일 경우 처리하는 법 잘못 생각해서 헤멤. 단순히 노드끼리 최소 하나 이상 서로 연결되어 있는 식으로는 안 되고 (반례 1-2-X-3-4)
 // BFS 돌려서 한 노드에서 모든 노드까지 방문 가능한지를 확인해야함.
 
+// 조합을 next_permutation 대신 비트마스킹으로 구현해 간단하게 모든 조합 체크 가능하지만
+// 6개 중에 1~3개만 고른 조합만 체크하면 충분할 것을, 1~6개 조합 다 체크해야하는 단점 있음
+// vector<int> vecRed;
+// vector<int> vecBlue;
+// for(int i = 1; i < (1 << n) -1; ++i)
+// {
+//     for(int j = 1; j <= n; ++j)
+//     {
+//         if (i & (1 << j-1)) vecRed.push_back(j);
+//         else vecBlue.push_back(j);
+//     }
+// }
+
 #include <bits/stdc++.h>
 using namespace std;
 
