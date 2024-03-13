@@ -286,5 +286,8 @@
     <ClCompile Include="problem\19942 다이어트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\2406 안정적인 네트워크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
