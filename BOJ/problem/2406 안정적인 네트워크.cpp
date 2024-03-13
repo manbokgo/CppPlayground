@@ -62,7 +62,7 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    int validEdge = 0;
+    int validEdge = 0; // 실수: 이미 존재하는 간선이 2-3 3-4 2-4 같은 순환 간선이라면, 유효한 간선은 2-3 3-4 2개 뿐
     for (int i = 0; i < m; ++i)
     {
         int a, b;
