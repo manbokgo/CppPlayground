@@ -91,8 +91,9 @@ int main()
     }
 
     SortVec(edges);
-    int         count = 0;
-    int         ansCost = 0;
+
+    int count = 0;
+    int ansCost = 0;
     vector<pii> ansVec;
     ansVec.reserve(n);
 
