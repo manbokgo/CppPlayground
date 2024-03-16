@@ -1,14 +1,15 @@
 ﻿// URL: https://www.acmicpc.net/problem/14425
-// Algo: 트라이 기본.
-//
-// 사실 그냥 unordered_set으로 풀 수 있는 문제이긴 하나
-// 메모리 1536MB 제한으로 트라이로 한번 풀어보라는 의도의 문제임
+// Algo: 트라이 기본
 
 // Start:	240215 20 46
 // Read:	0 0
 // Think:	0 0
 // Code:	0 8
 // Total:	0 8
+
+// 사실 그냥 unordered_set으로 풀 수 있는 문제이긴 하나
+// 메모리 1536MB 제한을 보면 트라이로 한번 풀어보라는 의도의 문제임
+
 
 #include <bits/stdc++.h>
 using namespace std;

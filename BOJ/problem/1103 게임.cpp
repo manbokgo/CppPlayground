@@ -1,6 +1,12 @@
 ﻿// URL: https://www.acmicpc.net/problem/1103
 // Algo: DP, DFS
 
+// Start:	240206 18 13
+// Read:	0 0
+// Think:	0 1
+// Code:	0 51
+// Total:	0 52
+
 // 실수가 너무 잦음. 연습 열심히 해야할듯.
 // DP 탑다운으로 구현했는데 바텀업은 어떻게? 막다른 길 0 넣는 거부터 시작해서
 // 이후 막다른 길로 향하는 타일들을 거슬러가면서 하니깐, 인풋 받을 때
@@ -8,15 +14,9 @@
 // 이론적으로 될 거 같은데 이러면 대부분의 타일의 dp 값을 채우는 거 같아서 비효율적인 듯
 // 참고: 아래 링크대로 모든 dp를 다 채우는 것이 비효율적인 경우(ex 백준 1351 무한 수열)에는 탑다운 접근이 맞다함.
 // https://devruby7777.tistory.com/entry/Top-down-DP%EC%99%80-Bottom-up-DP%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EC%93%B0%EB%8A%94-%EA%B2%BD%EC%9A%B0
-// 
 // 탑다운처럼 하려면 [1,1] 좌표가 닿을 수 있는 길의 끝에 있는 막다른 길들만 해야하니
 // 위상 정렬을 선처리해야하는데 이건 좀 아닌거 같고.
 
-// Start:	240206 18 13
-// Read:	0 0
-// Think:	0 1
-// Code:	0 51
-// Total:	0 52
 
 #include <variant>
 #include <bits/stdc++.h>

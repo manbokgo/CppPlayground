@@ -1,13 +1,13 @@
 ﻿// URL: https://www.acmicpc.net/problem/1240
 // Algo: BFS, DFS 기본 (인접 리스트)
 
-// 2년만에 코테 복귀. 다 까먹었다..
-
 // Start:	240205 14 35
 // Read:	0 0
 // Think:	0 20
 // Code:	0 37
 // Total:	0 57
+
+// 2년만에 코테 복귀. 다 까먹었다..
 
 #include <bits/stdc++.h>
 using namespace std;
