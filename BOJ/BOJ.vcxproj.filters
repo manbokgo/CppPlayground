@@ -298,5 +298,8 @@
     <ClCompile Include="problem\2481 해밍 경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\13144 List of Unique Numbers.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
