@@ -301,5 +301,8 @@
     <ClCompile Include="problem\13144 List of Unique Numbers.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\12886 돌 그룹.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
