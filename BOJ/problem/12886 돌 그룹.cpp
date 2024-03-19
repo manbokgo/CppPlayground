@@ -40,19 +40,23 @@ bool DFS(int a, int b, int c)
     if (visited[a][b]) return false;
     visited[a][b] = true;
 
+    /*
     bool ret = false;
+    // b-a>0 이 a<b (a!=b)보다 메모리 400KB 적게 먹음. 왜??
     if (b != target && b - a > 0) // a b
     {
-        ret |= DFS(2 * a, b - a, c);
+        ret = DFS(2 * a, b - a, c);
     }
-    if (!ret && c != target && c - a > 0) // a c
+    if (!ret && c != target) // a c
     {
-        ret |= DFS(2 * a, b, c - a);
+        ret = DFS(2 * a, b, c - a);
     }
-
     return ret;
-}
+    */
 
+    // 깔끔하지만 약간 비효율적
+    return DFS(a + a, b - a, c) || DFS(a + a, b, c - a);
+}
 
 /*
 bool visited[1501][1501];
