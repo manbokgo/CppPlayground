@@ -151,28 +151,25 @@
     <ClCompile Include="problem\2020\17412.cpp">
       <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11404 플로이드.cpp">
+    <ClCompile Include="problem\G4 11404 플로이드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1753 최단경로.cpp">
+    <ClCompile Include="problem\G4 1753 최단경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1103 게임.cpp">
+    <ClCompile Include="problem\G2 1103 게임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1240 노드사이의 거리.cpp">
+    <ClCompile Include="problem\G5 1240 노드사이의 거리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\playGround.cpp">
+    <ClCompile Include="problem\G4 1922 네트워크 연결.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1922 네트워크 연결.cpp">
+    <ClCompile Include="problem\G5 1717 집합의 표현.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1717 집합의 표현.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem\2293 동전 1.cpp">
+    <ClCompile Include="problem\G5 2293 동전 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem\2020\1647.cpp">
@@ -181,130 +178,130 @@
     <ClCompile Include="problem\2020\1068.cpp">
       <Filter>소스 파일\2020</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2110 공유기 설치.cpp">
+    <ClCompile Include="problem\G4 2110 공유기 설치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2960 에라토스테네스의 체.cpp">
+    <ClCompile Include="problem\S4 2960 에라토스테네스의 체.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2609 최대공약수와 최소공배수.cpp">
+    <ClCompile Include="problem\B1 2609 최대공약수와 최소공배수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\15683 감시.cpp">
+    <ClCompile Include="problem\G4 15683 감시.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17609 회문.cpp">
+    <ClCompile Include="problem\G5 17609 회문.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\14425 문자열 집합.cpp">
+    <ClCompile Include="problem\S4 14425 문자열 집합.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\5052 전화번호 목록.cpp">
+    <ClCompile Include="problem\G4 5052 전화번호 목록.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1701 Cubeeditor.cpp">
+    <ClCompile Include="problem\G3 1701 Cubeeditor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17886 찾기.cpp">
+    <ClCompile Include="problem\P5 17886 찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1260 DFS와 BFS.cpp">
+    <ClCompile Include="problem\S2 1260 DFS와 BFS.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2178 미로 탐색.cpp">
+    <ClCompile Include="problem\S1 2178 미로 탐색.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1647 도시 분할 계획.cpp">
+    <ClCompile Include="problem\G4 1647 도시 분할 계획.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\10282 해킹.cpp">
+    <ClCompile Include="problem\G4 10282 해킹.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\11053 가장 긴 증가하는 부분 수열.cpp">
+    <ClCompile Include="problem\S2 11053 가장 긴 증가하는 부분 수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\12015 가장 긴 증가하는 부분 수열 2.cpp">
+    <ClCompile Include="problem\G2 12015 가장 긴 증가하는 부분 수열 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\16236 아기 상어.cpp">
+    <ClCompile Include="problem\G3 16236 아기 상어.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1167 트리의 지름.cpp">
+    <ClCompile Include="problem\G2 1167 트리의 지름.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1613 역사.cpp">
+    <ClCompile Include="problem\G3 1613 역사.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\4485 녹색 옷 입은 애가 젤다지.cpp">
+    <ClCompile Include="problem\G4 4485 녹색 옷 입은 애가 젤다지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\13418 학교 탐방하기.cpp">
+    <ClCompile Include="problem\G3 13418 학교 탐방하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2887 행성 터널.cpp">
+    <ClCompile Include="problem\P5 2887 행성 터널.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1516 게임 개발.cpp">
+    <ClCompile Include="problem\G3 1516 게임 개발.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1504 특정한 최단 경로.cpp">
+    <ClCompile Include="problem\G4 1504 특정한 최단 경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17136 색종이 붙이기.cpp">
+    <ClCompile Include="problem\G2 17136 색종이 붙이기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\1520 내리막 길.cpp">
+    <ClCompile Include="problem\G3 1520 내리막 길.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\6087 레이저 통신.cpp">
+    <ClCompile Include="problem\G3 6087 레이저 통신.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\14938 서강그라운드.cpp">
+    <ClCompile Include="problem\G4 14938 서강그라운드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\14238 출근 기록.cpp">
+    <ClCompile Include="problem\G2 14238 출근 기록.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2632 피자판매.cpp">
+    <ClCompile Include="problem\G2 2632 피자판매.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\5214 환승.cpp">
+    <ClCompile Include="problem\G2 5214 환승.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17135 캐슬 디펜스.cpp">
+    <ClCompile Include="problem\G3 17135 캐슬 디펜스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\17471 게리맨더링.cpp">
+    <ClCompile Include="problem\G4 17471 게리맨더링.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\8983 사냥꾼.cpp">
+    <ClCompile Include="problem\G4 8983 사냥꾼.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\9252 LCS 2.cpp">
+    <ClCompile Include="problem\G4 9252 LCS 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\19942 다이어트.cpp">
+    <ClCompile Include="problem\G4 19942 다이어트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2406 안정적인 네트워크.cpp">
+    <ClCompile Include="problem\G3 2406 안정적인 네트워크.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\9370 미확인 도착지.cpp">
+    <ClCompile Include="problem\G2 9370 미확인 도착지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\3745 오름세.cpp">
+    <ClCompile Include="problem\G2 3745 오름세.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2481 해밍 경로.cpp">
+    <ClCompile Include="problem\G2 2481 해밍 경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\13144 List of Unique Numbers.cpp">
+    <ClCompile Include="problem\G4 13144 List of Unique Numbers.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\12886 돌 그룹.cpp">
+    <ClCompile Include="problem\G4 12886 돌 그룹.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem\2616 소형기관차.cpp">
+    <ClCompile Include="problem\G3 2616 소형기관차.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

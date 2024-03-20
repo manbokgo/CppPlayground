@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2632
-// Algo: 누적합
+// Algo: 누적 합
 
 // Start:	240305 12 28
 // Read:	0 0
