@@ -8,18 +8,30 @@
 // Total:	2 40
 // 오모시로이
 
-// 거의 3시간 머리 박아서 끝끝내 승리했다! 아이디어 못 떠오르면 DP 어렵다는 말을 처음 실감한 듯.
+// 거의 3시간 머리 박아서 풀었다! 아이디어 못 떠오르면 DP 어렵다는 말을 처음 실감한 듯.
 // 나이브하게 초안 짠거 시간초과 난거 보고 '음~ DP가 있어야겠는걸~' 싶긴 했지만 어떻게 DP를 넣어야 하는지 감이 전혀 안 왔음.
 // 그림판 놓고 끄적이고, 누워서 뇌내 시뮬레이션 돌리고... 1시간 30분 동안 삽질함
 
 // 완전 탐색 방식에서는 DP를 넣으려고 해도 int[50000][50000]로 그냥 무조건 메모리 터지니깐 다른 방식으로 접근함.
 
-// 중간에 len 길이의 열차 한 대 mid를 두고, 그 열차 기준으로 좌우 '구간의 최대값'을 구하는 것을
-// mid를 처음부터 끝까지 쭉 순회하는 식으로 풀이해봄. 인덱스 구하는게 아주아주 복잡함.
-// 일단 시간 초과는 나지 않고, 직접 만든 테스트케이스에서는 답 잘 나오는데 제출해보니 틀렸습니다 뜸.
+// len 길이의 열차(mid)를 왼->오로 쭉 순회하면서
+// 그 열차 기준으로 좌우 구간 각각에, len 길이의 열차가 최대로 운송할 수 있는 값을 구해서
+// 왼쪽구간최대값 + mid + 오른쪽구간최대값  의 최대값으로 정답을 구하는 풀이. 인덱스 넣는 게 복잡함.
+
+// 왼쪽 구간의 최대값: mid가 한 칸씩 움직일 때마다 왼쪽 구간의 오른끝에 열차 배치 가능한 위치가 하나씩 늘어나므로
+// 그 위치에 열차를 둘 때의 운송값이 기존 왼쪽구간 최대값보다 큰 지 체크하고 (DP스럽다)
+
+// 오른쪽 구간의 최대값: 무식하게 오른쪽 구간을 O(n) 전체 순회해서 최대값을 찾고, 무효화될 때마다 다시 찾는 식으로 푸니
+// 108ms로 정답. (std::max가 아니라 std::max_element 써야하는데 실수해서 오래 삽질함)
+// 하지만 n=50000 len=1과 같은 케이스에서는 시간초과 나는게 맞는데 채점 테케가 부족한 듯하다.
+
+// + 오른쪽 구간의 최대값: dpBack[i]  i~n 구간에서의 최대값
+// 왼쪽 구간의 최대값을 구하는 것과 동일한 방식으로
+// --i 루프를 통해 오른쪽 구간(i부터 n까지)의 최대값을 미리 계산해두는 DP를 사용함. 4ms 정답.
 
 // 이 정도로 복잡하게 풀어야하는 문제는 아닌 거 같아서 생각 비우고, 순수하게 DP 바텀업으로 생각해봄.
-// '어떤 구간의 최대값'이 중요한 키워드라는걸 깨닫고 30분 생각해서 DP 점화식을 알아냄. 끼얏호우~
+// '어떤 구간의 최대값'이 중요한 키워드라는걸 깨닫고 30분 생각해서 DP 점화식을 알아냄. 4ms 정답. 끼얏호우~
+// 위 방식과 비교해 훨씬 깔끔하다. 다른 사람들 코드도 다 이거인거 보니 이게 의도된 풀이인 듯.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -40,6 +52,8 @@ using tlll = tuple<ll, ll, ll>;
 
 constexpr int INF = 0x3f3f3f3f;
 
+// 순수 DP 바텀업
+// dp[i][k]  1~k 구간에 i개의 열차를 놓을 때 최대 운송수
 int dp[4][50'001];
 int main()
 {
@@ -73,8 +87,8 @@ int main()
 }
 
 
-// 끔찍한 혼종. mid 열차 처음부터 끝까지 옮기면서 좌우 구간 최대값 구하기
 /*
+// mid 열차 왼->오로 옮기면서 좌우 구간 최대값 구하기
 int main()
 {
     ios::sync_with_stdio(false);
@@ -84,7 +98,7 @@ int main()
     cin >> n;
     // n = 50'000;
 
-    vector<int> org(n + 1);
+    vector<int> org(n + 1); // 누적 합
     for (int i = 1; i <= n; ++i)
     {
         int num;
@@ -97,24 +111,27 @@ int main()
 
     int len;
     cin >> len;
-    // len = 2;
+    // len = 1;
     // len = 500;
 
-    vector<int> sum(n + 1);
+    vector<int> sum(n + 1); // i번째부터 len 길이의 운송값
     for (int i = 1; i <= n - len + 1; ++i)
     {
         sum[i] = org[i + len - 1] - org[i - 1];
     }
 
-    int maxL = 0;
-    int maxR = max(sum.begin() + 1 + 2 * len, sum.end() - len + 1) - sum.begin() - 1;
-
-    int answer = 0;
-    for (int i = 1 + len; i <= n - 2 * len + 1; ++i)
+    vector<int> dpBack(n + 5); // i~n 구간에서의 최대값
+    for (int i = n - len + 1; i >= 1; --i)
     {
-        if (sum[maxL] < sum[i - len]) maxL = i - len;
-        if (i + len - 1 >= maxR) maxR = max(sum.begin() + i + len, sum.end() - len + 1) - sum.begin() - 1;
-        answer = max(answer, sum[i] + sum[maxL] + sum[maxR]);
+        dpBack[i] = max(dpBack[i + 1], sum[i]);
+    }
+
+    int maxL = 0;
+    int answer = 0;
+    for (int mid = 1 + len; mid <= n - 2 * len + 1; ++mid)
+    {
+        if (sum[maxL] < sum[mid - len]) maxL = mid - len;
+        answer = max(answer, sum[maxL] + sum[mid] + dpBack[mid + len]);
     }
 
     cout << answer;
