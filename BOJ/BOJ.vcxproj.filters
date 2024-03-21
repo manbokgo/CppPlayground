@@ -304,5 +304,8 @@
     <ClCompile Include="problem\G3 2616 소형기관차.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 16940 BFS 스페셜 저지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
