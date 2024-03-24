@@ -7,6 +7,9 @@
 // Code:	0 13
 // Total:	0 29
 
+// 이런 경우를 '완전순열'이라고 한다.
+// https://namu.wiki/w/%EC%99%84%EC%A0%84%EC%88%9C%EC%97%B4
+
 #include <bits/stdc++.h>
 using namespace std;
 
