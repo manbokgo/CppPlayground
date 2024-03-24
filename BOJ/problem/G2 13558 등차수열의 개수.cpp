@@ -1,11 +1,17 @@
 ﻿// URL: https://www.acmicpc.net/problem/13558
-// Algo: DP (숫자 개수 카운팅)
+// Algo: DP (숫자 개수 카운팅, 정해 아님)
 
 // Start:	240324 16 40
 // Read:	0 0
 // Think:	0 50
 // Code:	0 21
 // Total:	1 11
+
+// 정해는 고속 푸리에 변환 FFT를 활용한 버킷 카운팅... 으로 원래는 다이아급 문제
+// https://gratus-blog.tistory.com/94
+
+// 하지만 컴퓨터 성능이 워낙 좋아져서
+// 아래 코드처럼 야매로 나이브하게 접근하는 O(kn) 풀이로도 풀린다. 그래서 난이도가 골드3으로 낮아진 듯.
 
 #include <bits/stdc++.h>
 using namespace std;
