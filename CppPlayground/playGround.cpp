@@ -1,6 +1,10 @@
-﻿#include <cstdio>
+﻿#include <bits/stdc++.h>
+using namespace std;
+
 int main() {
-    const int N=100000, M=15000;
-    printf("%d\n", N);
-    for(int i=1; i<=N; i++) printf("%d%c", M, " \n"[i==N]);
+    string a = "110010101001";
+    int b = stoi(a, nullptr, 2);
+    string c = bitset<32>(b).to_string();
+
+    cout << c;
 }
