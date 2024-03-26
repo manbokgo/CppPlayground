@@ -24,15 +24,21 @@ int solution(vector<int> a) {
     int left = INF;
     for (int i = 0; i < minIdx; ++i)
     {
-        if (left > a[i]) ++answer;
-        left = min(left, a[i]);
+        if (left > a[i])
+        {
+            ++answer;
+            left = a[i];
+        }
     }
     
     int right = INF;
     for (int i = a.size() - 1; i > minIdx; --i)
     {
-        if (right > a[i]) ++answer;
-        right = min(right, a[i]);
+        if (right > a[i])
+        {
+            ++answer;
+            right = a[i];
+        }
     }
     
     return answer;
