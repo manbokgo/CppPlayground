@@ -7,6 +7,9 @@
 // Code:	0 28
 // Total:	0 31
 
+// 2진 string->int  std::stoi 인수로 base를 넣을 수 있다는 점 참고
+// int->2진 string  std::bitset<>.to_string() 으로 가능
+
 // 이분탐색 풀이 O(kn log n)로는 메모리 3860 KB, 240ms
 // 탐색이 잦은 상황이므로 unordered_map으로 탐색을 O(1)으로 줄이면
 // O(kn log n)인건 같지만 메모리 7600KB, 176ms로 메모리 더 쓰고 시간 단축 가능
