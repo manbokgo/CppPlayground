@@ -1,69 +1,63 @@
 ﻿// URL: https://school.programmers.co.kr/learn/courses/30/lessons/87391
-// Algo: 
+// Algo: 시뮬레이션
 
 // Start:	240327 17 05
 // Read:	0 2
 // Think:	0 50
-// Code:	0 37
-// Total:	
+// Code:	0 58
+// Total:	1 50
+
+// 정말 힘들게 풀었다..
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int dy[4] = {1, -1, 0, 0};
-int dx[4] = {0, 0, 1, -1}; // 북남서동
-bool OOB(int y, int x, int n, int m) { return y < 0 || y >= n || x < 0 || x >= m; }
-using ll = long long;
+long long solution(int n, int m, int startY, int startX, vector<vector<int>> queries)
+{
+    int LTy = startY;
+    int LTx = startX;
+    int RBy = startY + 1;
+    int RBx = startX + 1;
 
-
-ll solution(int m, int n, int curY, int curX, vector<vector<int>> queries) {
-    int ansY = 1;
-    int ansX = 1;
-    
-    int trigY = -1;
-    int trigX = -1;
     for (int i = queries.size() - 1; i >= 0; --i)
     {
         int dir = queries[i][0];
         int num = queries[i][1];
-        
-        if (trigY == -1)
-        {
-            if (curY == 0) trigY = 1;
-            else if (curY == n-1) trigY = 0;
-        }
-        if (trigX == -1)
-        {
-            if (curX == 0) trigX = 3;
-            else if (curX == n-1) trigX = 2;
-        }
-        
-        curY += dy[dir] * num;
-        curX += dx[dir] * num;
-        if (OOB(curY, curX, n, m))
-            return 0;
-        
-        if (trigY != -1 && dir / 2 == 0)
-        {
-            if (dir == trigY) ansY += num;
-            else ansY -= num;
 
-            ansY = clamp(ansY, 0, n - 1);
-        }
-        
-        if (trigX != -1 && dir / 2 == 1)
+        if (dir == 0) // 동
         {
-            if (dir == trigX) ansX += num;
-            else ansX -= num;
+            if (LTx != 0) LTx += num;
+            RBx += num;
 
-            ansX = clamp(ansX, 0, m - 1);
+            if (RBx > m) RBx = m;
         }
-        
-        if (ansY == 0 || ansX == 0 )
+        else if (dir == 1) // 서
+        {
+            LTx -= num;
+            if (RBx != m) RBx -= num;
+
+            if (LTx < 0) LTx = 0;
+        }
+        else if (dir == 2) // 남
+        {
+            if (LTy != 0) LTy += num;
+            RBy += num;
+
+            if (RBy > n) RBy = n;
+        }
+        else if (dir == 3) // 북
+        {
+            LTy -= num;
+            if (RBy != n) RBy -= num;
+
+            if (LTy < 0) LTy = 0;
+        }
+
+        if (LTy >= RBy || LTx >= RBx)
             return 0;
     }
-    
-    return ansY * ansX;
+
+    return ((long long)RBy - LTy) * ((long long)RBx - LTx);
 }
 
 int main()
@@ -73,6 +67,6 @@ int main()
 
     vector<vector<int>> tmp = {{2, 1}, {0, 1}, {1, 1}, {0, 1}, {2, 1}};
     vector<vector<int>> tmp2 = {{3, 1}, {2, 2}, {1, 1}, {2, 3}, {0, 1}, {2, 1}};
-    // cout << solution(2, 2, 0, 0, move(tmp));
-    cout << solution(2, 5, 0, 1, move(tmp2));
+    cout << solution(2, 2, 0, 0, move(tmp));
+    // cout << solution(2, 5, 0, 1, move(tmp2));
 }
