@@ -325,5 +325,8 @@
     <ClCompile Include="problem\LV3 68646 풍선 터트리기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 87391 공 이동 시뮬레이션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
