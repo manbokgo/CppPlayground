@@ -7,7 +7,9 @@
 // Code:	0 58
 // Total:	1 50
 
-// 정말 힘들게 풀었다..
+// 정말 힘들게 풀었다... 모범답안 방식대로 생각은 했는데
+// '범위 직사각형' LT, RB를 두고 이동시킨다는 개념을 떠오르기 힘들었음.
+// 가로/세로 범위 숫자를 더하고 빼는 식으로 접근했다가 예외처리 지옥인 걸 깨닫고 선회함
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -60,6 +62,8 @@ long long solution(int n, int m, int startY, int startX, vector<vector<int>> que
     return ((long long)RBy - LTy) * ((long long)RBx - LTx);
 }
 
+
+/*
 int main()
 {
     ios::sync_with_stdio(false);
@@ -70,3 +74,4 @@ int main()
     cout << solution(2, 2, 0, 0, move(tmp));
     // cout << solution(2, 5, 0, 1, move(tmp2));
 }
+*/

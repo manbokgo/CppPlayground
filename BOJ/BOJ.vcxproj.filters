@@ -328,5 +328,8 @@
     <ClCompile Include="problem\LV3 87391 공 이동 시뮬레이션.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 76503 모두 0으로 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
