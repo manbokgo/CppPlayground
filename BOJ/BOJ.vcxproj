@@ -55,6 +55,7 @@
     <ClCompile Include="problem\G4 17141 연구소 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 12927 야근 지수.cpp" />
     <ClCompile Include="problem\LV3 68646 풍선 터트리기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

@@ -331,5 +331,8 @@
     <ClCompile Include="problem\LV3 76503 모두 0으로 만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 12927 야근 지수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
