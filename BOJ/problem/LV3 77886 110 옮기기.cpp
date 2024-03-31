@@ -52,6 +52,7 @@ vector<string> solution(vector<string> s) {
             }
         }
 
+        /*
         int target = 0;
         for (int i = tmp.size() - 1; i >= 0; --i)
         {
@@ -61,6 +62,8 @@ vector<string> solution(vector<string> s) {
                 break;
             }
         }
+        */
+        int target = tmp.find_last_of('0') + 1; // 못 찾으면 npos(= -1)가 나오므로 +1 하면 의도한대로 0이 됨
         
         ans += tmp.substr(0, target);
         while (--count >= 0) ans += "110";
