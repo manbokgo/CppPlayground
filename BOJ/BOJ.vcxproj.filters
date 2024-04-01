@@ -337,5 +337,8 @@
     <ClCompile Include="problem\LV3 77886 110 옮기기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 72413 합승 택시 요금.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
