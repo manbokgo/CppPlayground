@@ -58,10 +58,13 @@
     <ClCompile Include="problem\LV3 12927 야근 지수.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 152995 인사고과.cpp" />
     <ClCompile Include="problem\LV3 68646 풍선 터트리기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="problem\LV3 72413 합승 택시 요금.cpp" />
+    <ClCompile Include="problem\LV3 72413 합승 택시 요금.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="problem\LV3 76503 모두 0으로 만들기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
