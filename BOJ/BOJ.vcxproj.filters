@@ -349,5 +349,8 @@
     <ClCompile Include="problem\LV3 49191 순위.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 86053 금과 은 운반하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
