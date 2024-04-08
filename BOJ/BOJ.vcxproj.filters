@@ -355,5 +355,8 @@
     <ClCompile Include="problem\LV3 132266 부대복귀.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 92343 양과 늑대.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
