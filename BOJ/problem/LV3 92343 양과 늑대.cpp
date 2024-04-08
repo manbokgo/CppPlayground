@@ -37,7 +37,7 @@ int solution(vector<int> info, vector<vector<int>> edges) {
         else right[p] = c;
     }
     
-    vector<bool> visited((1 << n) - 1);
+    vector<bool> visited(1 << n); // 실수: 사이즈가 (1<<n)여야지 인덱스 (1<<n)-1까지 접근 가능
     queue<int> q;
     q.push(1);
     
