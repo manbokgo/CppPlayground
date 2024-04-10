@@ -361,5 +361,8 @@
     <ClCompile Include="problem\LV3 43105 정수 삼각형.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 92344 파괴되지 않은 건물.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
