@@ -91,6 +91,7 @@
     <ClCompile Include="problem\LV3 77886 110 옮기기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 81303 표 편집.cpp" />
     <ClCompile Include="problem\LV3 86053 금과 은 운반하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

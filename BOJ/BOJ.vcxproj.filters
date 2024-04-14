@@ -373,5 +373,8 @@
     <ClCompile Include="problem\LV3 12942 최적의 행렬 곱셈.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 81303 표 편집.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
