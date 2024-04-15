@@ -73,6 +73,7 @@
     <ClCompile Include="problem\LV3 258705 산 모양 타일링.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 42884 단속카메라.cpp" />
     <ClCompile Include="problem\LV3 43105 정수 삼각형.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

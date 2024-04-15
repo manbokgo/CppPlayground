@@ -376,5 +376,8 @@
     <ClCompile Include="problem\LV3 81303 표 편집.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 42884 단속카메라.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
