@@ -70,6 +70,7 @@
     <ClCompile Include="problem\LV3 152995 인사고과.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 17678 [1차] 셔틀버스.cpp" />
     <ClCompile Include="problem\LV3 258705 산 모양 타일링.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
