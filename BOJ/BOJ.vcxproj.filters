@@ -388,5 +388,8 @@
     <ClCompile Include="problem\LV3 42861 섬 연결하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 118669 등산코스 정하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
