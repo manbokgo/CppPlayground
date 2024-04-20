@@ -385,5 +385,8 @@
     <ClCompile Include="problem\LV3 77486 다단계 칫솔 판매.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 42861 섬 연결하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
