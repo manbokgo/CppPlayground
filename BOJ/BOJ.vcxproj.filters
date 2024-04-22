@@ -394,5 +394,8 @@
     <ClCompile Include="problem\LV3 67259 경주로 건설.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 43238 입국심사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -88,6 +88,7 @@
     <ClCompile Include="problem\LV3 43105 정수 삼각형.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 43238 입국심사.cpp" />
     <ClCompile Include="problem\LV3 49191 순위.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
