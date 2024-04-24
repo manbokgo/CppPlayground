@@ -400,5 +400,8 @@
     <ClCompile Include="problem\LV3 60061 기둥과 보 설치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 42892 길 찾기 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
