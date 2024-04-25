@@ -64,21 +64,14 @@ vector<vector<int>> solution(vector<vector<int>> ninfo) {
     
     vector<vector<int>> answer(2);
     
-    auto PRE = [&](const auto& func, int node) {
+    auto SOLVE = [&](const auto& func, int node) {
         if (node == -1) return;
         answer[0].push_back(nodes[node].idx);
         func(func, nodes[node].l);
         func(func, nodes[node].r);
-    };
-    PRE(PRE, 0);
-    
-    auto POST = [&](const auto& func, int node) {
-        if (node == -1) return;
-        func(func, nodes[node].l);
-        func(func, nodes[node].r);
         answer[1].push_back(nodes[node].idx);
     };
-    POST(POST, 0);
-    
+    SOLVE(SOLVE, 0);
+
     return answer;
 }
