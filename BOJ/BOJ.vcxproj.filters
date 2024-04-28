@@ -409,5 +409,8 @@
     <ClCompile Include="problem\LV3 12904 가장 긴 팰린드롬.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 64062 징검다리 건너기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
