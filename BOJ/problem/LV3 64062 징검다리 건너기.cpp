@@ -23,12 +23,12 @@
 // 이 풀이를 효율적으로 구현하는 방법은 Deque를 사용한다.
 
 // 1. Deque의 뒤에서부터 원소를 집어넣는다.
-// 2. Deque의 뒷 원소가 지금 집어넣을 원소보다 작다면, pop_back()
-// 3. Deque의 앞 원소가 지금 집어넣을 원소에서 왼쪽으로 k 범위 안에 없다면, pop_front()
+// 2. Deque의 앞 원소가 지금 집어넣을 원소에서 왼쪽으로 k 범위 안에 없다면, pop_front()
+// 3. Deque의 뒷 원소가 지금 집어넣을 원소보다 작다면, pop_back()
 // 4. Deque의 앞 원소가 현재 슬라이딩 윈도우의 최대값이다. (단, 현재 인덱스 >= k-1)
 
-// 1,3은 당연한 내용이고, 슬라이딩 윈도우의 최대값을 구하는 것만이 중요한만큼
-// 2를 통해 현재 윈도우에서 최대값이 아닌 원소는 싹 버리고, 최대값이 항상 앞 원소로 위치하도록 하여
+// 1,2는 당연한 내용이고, 슬라이딩 윈도우의 최대값을 구하는 것만이 중요한만큼
+// 3를 통해 현재 윈도우에서 최대값이 아닌 원소는 싹 버리고, 최대값이 항상 앞 원소로 위치하도록 하여
 // 4로 빠르게 최대값에 접근할 수 있다. 신박함.
 
 // https://velog.io/@rmswjdtn/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9-%EC%9C%88%EB%8F%84%EC%9A%B0-Leet-code-239.-Sliding-Window-Maximum
@@ -48,8 +48,8 @@ int solution(vector<int> stones, int k) {
     int answer = INF;
     for (int i = 0; i < stones.size(); ++i)
     {
-        while (!dq.empty() && dq.back().first < stones[i]) dq.pop_back();
         while (!dq.empty() && dq.front().second < i - k + 1) dq.pop_front();
+        while (!dq.empty() && dq.back().first < stones[i]) dq.pop_back();
         dq.push_back({stones[i], i});
         if (i >= k-1 && dq.front().first < answer) answer = dq.front().first;
     }
