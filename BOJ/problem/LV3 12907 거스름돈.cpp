@@ -9,8 +9,6 @@
 
 // 예전에 푼 백준 G5 동전 1 문제랑 동일한 문제임. 복습.
 
-
-#include <cstring>
 #include <vector>
 
 using namespace std;
@@ -27,7 +25,7 @@ int solution(int n, vector<int> money) {
 }
 
 
-// 궁금해서 해본 탑다운 dp. 재귀 호출이 너무 많아서 정확성 테케도 20ms이고 효율성은 시간 초과
+// 궁금해서 해본 탑다운 dp. 재귀 호출이 너무 많은지 정확성 테케도 20ms이고 효율성은 시간 초과
 /*
 #include <cstring>
 #include <vector>
