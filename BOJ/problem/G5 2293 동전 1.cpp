@@ -15,14 +15,7 @@
 // i번째 동전을 하나 (이상) 사용해야지만 기존 dp값(1~i-1번째 동전만 사용)하는 경우와 차별이 생겨서
 // 경우의 수가 새로 유의미하게 생김
 
-// top-down 불가능?
-// dp[k][n] 2차원 배열로 두고, 'i번쨰 동전을 하나 사용하는 경우'로만 채우는 것이 근본 접근.
-// dp[j][i] = dp[j-coin[i]][i] + dp[j-coin[i]][i-1] + ... + dp[j-coin[i]][1]
-// 최종 답은 dp[k]의 모든 [n]의 합 (본 문제라면 dp[10][1] = 1, dp[10][2] = 5, dp[10][3] = 4)
-// 이 방식을 사용할시 탑다운 재귀로 가능할 것 같으나
-// n 100, k 10000 으로 dp 배열만 4MB로 메모리 초과로 인해 불가능.
-// dp를 채워넣을 떄나, 최종 답을 낼 때 결국 dp[k]의 모든 [n]의 합이 필요하기 때문에
-// 아예 누적 합으로 dp를 채우는 식으로 1차원 배열로 압축 가능함.
+// 탑 다운은 dp[100][10'000] 으로 400만개의 int = 4MB로 메모리 초과로 불가능하다.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -43,6 +36,7 @@ constexpr ll MOD = 1000000007;
 constexpr int INF = 0x3f3f3f3f;
 constexpr ll LLINF = 1e18;
 
+// 바텀 업
 int dp[10005];
 int n, k;
 int coin[105];
@@ -54,20 +48,44 @@ int main()
 
     cin >> n >> k;
     for (int i = 1; i <= n; ++i)
-    {
         cin >> coin[i];
-    }
 
-    // bottom-up
     dp[0] = 1;
     for (int i = 1; i <= n; ++i)
-    {
         // j가 coin[i] 미만일시 'i번쨰 동전을 하나 사용하는 경우'가 아예 0이므로 갱신 안 함 
         for (int j = coin[i]; j <= k; ++j) // 실수: j가 k '이하'까지 <=
-        {
             dp[j] += dp[j - coin[i]];
-        }
-    }
 
     cout << dp[k];
 }
+
+// 탑 다운. 메모리 초과.
+/*
+int dp[101][10001];
+int n, k;
+int coin[101];
+
+int DFS(int i, int k)
+{
+    if (dp[i][k] != -1) return dp[i][k];
+    dp[i][k] = DFS(i-1, k);
+    if (k >= coin[i]) dp[i][k] += DFS(i, k - coin[i]);
+    return dp[i][k];
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    cin >> n >> k;
+    for (int i = 1; i <= n; ++i)
+        cin >> coin[i];
+
+    memset(dp, -1, sizeof(dp));
+    for (int num = 1; num <= k; ++num) dp[0][num] = 0;
+    dp[0][0] = 1;
+
+    cout << DFS(n, k);
+}
+*/
