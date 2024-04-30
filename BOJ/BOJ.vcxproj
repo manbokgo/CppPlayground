@@ -106,6 +106,7 @@
     <ClCompile Include="problem\LV3 49191 순위.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 60059 자물쇠와 열쇠.cpp" />
     <ClCompile Include="problem\LV3 60061 기둥과 보 설치.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
