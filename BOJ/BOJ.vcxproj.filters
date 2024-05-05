@@ -427,5 +427,8 @@
     <ClCompile Include="problem\LV3 60062 외벽 점검.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 12979 기지국 설치.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

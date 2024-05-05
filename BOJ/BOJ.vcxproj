@@ -74,6 +74,7 @@
     <ClCompile Include="problem\LV3 12942 최적의 행렬 곱셈.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 12979 기지국 설치.cpp" />
     <ClCompile Include="problem\LV3 12987 숫자 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
