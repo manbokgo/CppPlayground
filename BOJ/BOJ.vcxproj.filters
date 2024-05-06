@@ -430,5 +430,8 @@
     <ClCompile Include="problem\LV3 12979 기지국 설치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 70130 스타 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
