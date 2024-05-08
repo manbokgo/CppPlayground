@@ -436,5 +436,8 @@
     <ClCompile Include="problem\LV3 150367 표현 가능한 이진트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 12920 선입 선출 스케줄링.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
