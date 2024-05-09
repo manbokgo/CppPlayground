@@ -80,6 +80,7 @@
     <ClCompile Include="problem\LV3 12987 숫자 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\LV3 131129 카운트 다운.cpp" />
     <ClCompile Include="problem\LV3 132266 부대복귀.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
