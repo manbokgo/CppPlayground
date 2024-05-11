@@ -442,5 +442,8 @@
     <ClCompile Include="problem\LV3 131129 카운트 다운.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV3 72414 광고 삽입.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
