@@ -448,5 +448,8 @@
     <ClCompile Include="problem\G3 16235 나무 재테크.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 15897 잘못 구현한 에라토스테네스의 체.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
