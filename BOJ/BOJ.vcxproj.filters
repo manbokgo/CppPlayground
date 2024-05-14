@@ -451,5 +451,8 @@
     <ClCompile Include="problem\G2 15897 잘못 구현한 에라토스테네스의 체.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 10159 저울.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
