@@ -58,7 +58,11 @@ int main()
 
         pieces[i] = {a, b, c-1};
         tiles[a][b].lst.push_back(i);
-        if (tiles[a][b].lst.size() >= 4) return 0;
+        if (tiles[a][b].lst.size() >= 4)
+        {
+            cout << 0;
+            return 0;
+        }
     }
 
     for (int turn = 1; turn <= 1000; ++turn)
