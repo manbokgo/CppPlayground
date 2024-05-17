@@ -460,5 +460,8 @@
     <ClCompile Include="problem\G2 17780 새로운 게임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\LV2 138476 귤 고르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
