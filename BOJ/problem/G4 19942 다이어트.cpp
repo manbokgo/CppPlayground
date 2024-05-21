@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/19942
-// Algo: 브루트포스(부분집합 비트마스킹)
+// Algo: 브루트포스, 비트마스킹
 
 // Start:	240313 02 28
 // Read:	0 1
