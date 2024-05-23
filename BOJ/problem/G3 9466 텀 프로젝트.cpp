@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/9466
-// Algo: DFS, SCC 타잔
+// Algo: DFS or BFS or SCC 타잔
 
 // Start:	240522 21 48
 // Read:	0 3
@@ -33,7 +33,8 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define pb push_back
 
-// SCC 타잔 알고리즘
+/*
+// SCC 타잔 알고리즘 696ms 13MB
 vector<int> adj[100'001];
 int group[100'001];
 bool finish[100'001];
@@ -107,9 +108,10 @@ int main()
         cout << answer << '\n';
     }
 }
+*/
 
 
-// DFS 제출 풀이
+// DFS 제출 풀이 512ms 2.6MB
 /*
 int adj[100'001];
 bool visited[100'001];
@@ -181,3 +183,66 @@ int main()
     }
 }
 */
+
+// 재명이 풀이 코드. adj의 역 간선인 radj로, 나한테 도달할 수 있는 모든 노드를 BFS로 탐색한다.
+// 만약 방문했던 노드에 또 방문한다면 사이클이 형성된 것으로
+// 그 때까지의 레벨만큼의 노드가 사이클을 이룬 노드 개수다.
+// 몇 번 노드들이 사이클을 이루었는지는 모르지만, 사이클을 이룬 노드 개수만 알면 되는 문제이므로 똑똑하고 간결한 풀이임
+// 속도는 좀 느리다. 1488ms 7.6MB
+
+vector<int> radj[100'001];
+bool visited[100'001];
+
+int main()
+{
+    fastio;
+
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        for (auto& ad : radj) ad.clear();
+        memset(visited, false, sizeof(visited));
+
+        int n;
+        cin >> n;
+        for (int i = 1; i <= n; ++i)
+        {
+            int num;
+            cin >> num;
+            radj[num].pb(i);
+        }
+
+        int answer = n;
+        for (int i = 1; i <= n; ++i)
+        {
+            if (visited[i]) continue;
+            queue<int> q;
+
+            visited[i] = true;
+            q.push(i);
+
+            int cnt = 0;
+            while (!q.empty())
+            {
+                int qsz = q.size();
+                while (qsz--)
+                {
+                    const int cur = q.front();
+                    q.pop();
+
+                    for (const int nxt : radj[cur])
+                    {
+                        if (nxt == i) answer -= cnt + 1;
+                        if (visited[nxt]) continue;
+                        visited[nxt] = true;
+                        q.push(nxt);
+                    }
+                }
+                ++cnt;
+            }
+        }
+
+        cout << answer << '\n';
+    }
+}
