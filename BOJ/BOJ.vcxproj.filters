@@ -481,5 +481,8 @@
     <ClCompile Include="problem\P5 2150 Strongly Connected Component.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G1 17143 낚시왕.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
