@@ -26,6 +26,7 @@
     <ClInclude Include="bits\stdc++.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="problem\G1 13460 구슬 탈출 2.cpp" />
     <ClCompile Include="problem\G1 17143 낚시왕.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -73,7 +74,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="problem\G4 1197 최소 스패닝 트리.cpp" />
+    <ClCompile Include="problem\G4 1197 최소 스패닝 트리.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="problem\G4 1261 알고스팟.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
