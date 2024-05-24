@@ -7,7 +7,8 @@
 // Code:	0 8
 // Total:	0 10
 
-// G1 13460 구슬 탈출 2 복붙 날먹
+// G1 13460 구슬 탈출 2 복붙 날먹..까지는 아니고 string move를 잘못 써서 약간 헤맴
+// move 써도 되는지 잘 판단하고 쓰자
 
 #include <bits/stdc++.h>
 using namespace std;
