@@ -23,12 +23,12 @@ struct bInfo
     string route;
 };
 
-
 int dy[4] = {0, 1, 0, -1};
 int dx[4] = {1, 0, -1, 0}; // 동남서북
 
 char tile[10][10];
 bool visited[10][10][10][10]; // ry rx by bx
+
 int main()
 {
     fastio;

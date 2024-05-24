@@ -13,20 +13,21 @@
 using namespace std;
 
 #define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
-#define all(x) x.begin(), x.end()
-#define pb push_back
 
-constexpr int INF = 0x3f3f3f3f;
-
-using pii = pair<int, int>;
-using tiiii = tuple<int, int, int, int>;
-
+struct bInfo
+{
+    int ry;
+    int rx;
+    int by;
+    int bx;
+};
 
 int dy[4] = {0, 1, 0, -1};
 int dx[4] = {1, 0, -1, 0}; // 동남서북
 
-int tile[10][10];
+char tile[10][10];
 bool visited[10][10][10][10]; // ry rx by bx
+
 int main()
 {
     fastio;
@@ -34,39 +35,30 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    tiiii pos;
+    bInfo pos;
     {
         auto& [ry, rx, by, bx] = pos;
         for (int i = 0; i < n; ++i)
         {
             for (int j = 0; j < m; ++j)
             {
-                char c;
-                cin >> c;
-                switch (c)
+                cin >> tile[i][j];
+                if (tile[i][j] == 'R')
                 {
-                case '#':
-                    tile[i][j] = -1;
-                    break;
-                case 'O':
-                    tile[i][j] = INF;
-                    break;
-                case 'R':
                     ry = i;
                     rx = j;
-                    break;
-                case 'B':
+                }
+                else if (tile[i][j] == 'B')
+                {
                     by = i;
                     bx = j;
-                    break;
-                default: ;
                 }
             }
         }
         visited[ry][rx][by][bx] = true;
     }
 
-    queue<tiiii> q;
+    queue<bInfo> q;
     q.push(pos);
 
     int cnt = 1;
@@ -95,13 +87,13 @@ int main()
                     {
                         nry += dy[i];
                         nrx += dx[i];
-                        if (tile[nry][nrx] == -1)
+                        if (tile[nry][nrx] == '#')
                         {
                             nry -= dy[i];
                             nrx -= dx[i];
                             rStuck = true;
                         }
-                        else if (tile[nry][nrx] == INF)
+                        else if (tile[nry][nrx] == 'O')
                         {
                             rStuck = true;
                             rExit = true;
@@ -112,13 +104,13 @@ int main()
                     {
                         nby += dy[i];
                         nbx += dx[i];
-                        if (tile[nby][nbx] == -1)
+                        if (tile[nby][nbx] == '#')
                         {
                             nby -= dy[i];
                             nbx -= dx[i];
                             bStuck = true;
                         }
-                        else if (tile[nby][nbx] == INF)
+                        else if (tile[nby][nbx] == 'O')
                         {
                             bStuck = true;
                             bExit = true;
