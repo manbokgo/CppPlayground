@@ -32,7 +32,10 @@
     <ClCompile Include="problem\G1 13460 구슬 탈출 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="problem\G1 15644 구슬 탈출 3.cpp" />
+    <ClCompile Include="problem\G1 15644 구슬 탈출 3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="problem\G1 15653 구슬 탈출 4.cpp" />
     <ClCompile Include="problem\G1 17143 낚시왕.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
