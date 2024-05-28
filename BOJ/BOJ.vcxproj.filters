@@ -508,5 +508,8 @@
     <ClCompile Include="problem\G4 2239 스도쿠.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 2467 용액.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
