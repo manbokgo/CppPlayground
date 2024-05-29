@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\2020">
       <UniqueIdentifier>{7bd7367e-d71f-4020-8c61-2452d75d49ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\nanobench">
+      <UniqueIdentifier>{384fba9a-1279-4fb7-9703-824f82e6e0bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
@@ -28,6 +31,9 @@
   <ItemGroup>
     <ClInclude Include="bits\stdc++.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="nanobench.h">
+      <Filter>소스 파일\nanobench</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -513,6 +519,9 @@
     </ClCompile>
     <ClCompile Include="problem\G3 2623 음악프로그램.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="nanobench.cpp">
+      <Filter>소스 파일\nanobench</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

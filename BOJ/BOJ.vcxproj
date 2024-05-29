@@ -24,8 +24,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bits\stdc++.h" />
+    <ClInclude Include="nanobench.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="nanobench.cpp" />
     <ClCompile Include="problem\G1 13459 구슬 탈출.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
