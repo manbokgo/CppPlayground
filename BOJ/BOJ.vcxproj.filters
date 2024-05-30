@@ -523,5 +523,8 @@
     <ClCompile Include="nanobench.cpp">
       <Filter>소스 파일\nanobench</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G1 9328 열쇠.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

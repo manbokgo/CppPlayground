@@ -43,6 +43,7 @@
     <ClCompile Include="problem\G1 17143 낚시왕.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="problem\G1 9328 열쇠.cpp" />
     <ClCompile Include="problem\G2 1202 보석 도둑.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
