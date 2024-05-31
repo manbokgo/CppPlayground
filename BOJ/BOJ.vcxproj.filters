@@ -526,5 +526,8 @@
     <ClCompile Include="problem\G1 9328 열쇠.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G1 1208 부분수열의 합 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
