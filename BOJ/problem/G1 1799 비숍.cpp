@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1799
-// Algo: 백트래킹 응용
+// Algo: 백트래킹, 밋 인 더 미들
 
 // Start:	240603 07 28
 // Read:	0 1
