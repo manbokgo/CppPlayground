@@ -559,5 +559,8 @@
     <ClCompile Include="problem\G2 12100 2048 (Easy).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 1918 후위 표기식.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
