@@ -1,7 +1,7 @@
 ﻿// URL: https://www.acmicpc.net/problem/1238
 // Algo: 다익스트라 (단방향 All to One)
 
-// Start:	
+// Start:	240610 09 10
 // Read:	0 2
 // Think:	0 3
 // Code:	0 7
