@@ -20,8 +20,8 @@ using namespace std;
 
 int n;
 bool col[15];
-bool bSlash[29];
 bool fSlash[29];
+bool bSlash[29];
 int answer = 0;
 
 void BackTracking(int y)
@@ -34,12 +34,12 @@ void BackTracking(int y)
 
     for (int x = 0; x < n; ++x)
     {
-        const int bIdx = y + x;
-        const int fIdx = (n - 1) + (y - x);
-        if (col[x] || bSlash[bIdx] || fSlash[fIdx]) continue;
-        col[x] = bSlash[bIdx] = fSlash[fIdx] = true;
+        const int fIdx = x + y;
+        const int bIdx = (n - 1) + (x - y);
+        if (col[x] || fSlash[fIdx] || bSlash[bIdx]) continue;
+        col[x] = fSlash[fIdx] = bSlash[bIdx] = true;
         BackTracking(y + 1);
-        col[x] = bSlash[bIdx] = fSlash[fIdx] = false;
+        col[x] = fSlash[fIdx] = bSlash[bIdx] = false;
     }
 }
 

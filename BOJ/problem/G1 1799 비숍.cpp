@@ -30,8 +30,8 @@ using namespace std;
 
 int n;
 bool board[10][10];
-bool bSlash[19];
 bool fSlash[19];
+bool bSlash[19];
 int answer = -1;
 
 void BackTracking(int y, int x, int sum)
@@ -55,17 +55,17 @@ void BackTracking(int y, int x, int sum)
         return;
     }
 
-    const int bIdx = y + x;
-    const int fIdx = (n - 1) + (y - x);
-    if (bSlash[bIdx] || fSlash[fIdx])
+    const int fIdx = x + y;
+    const int bIdx = (n - 1) + (x - y);
+    if (fSlash[fIdx] || bSlash[bIdx])
     {
         BackTracking(y, x + 2, sum);
         return;
     }
 
-    bSlash[bIdx] = fSlash[fIdx] = true;
+    fSlash[fIdx] = bSlash[bIdx] = true;
     BackTracking(y, x + 2, sum + 1); // 놓기
-    bSlash[bIdx] = fSlash[fIdx] = false;
+    fSlash[fIdx] = bSlash[bIdx] = false;
     BackTracking(y, x + 2, sum); // 안 놓기
 }
 
