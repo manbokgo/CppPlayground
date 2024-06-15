@@ -577,5 +577,8 @@
     <ClCompile Include="problem\G4 17144 미세먼지 안녕!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 9663 N-Queen.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
