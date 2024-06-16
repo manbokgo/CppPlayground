@@ -580,5 +580,8 @@
     <ClCompile Include="problem\G4 9663 N-Queen.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 1987 알파벳.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
