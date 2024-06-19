@@ -589,5 +589,8 @@
     <ClCompile Include="problem\G2 28707 배열 정렬.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 11054 가장 긴 바이토닉 부분 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
