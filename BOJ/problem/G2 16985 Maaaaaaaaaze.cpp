@@ -86,7 +86,7 @@ void DFS(int depth)
 {
     if (depth == 5)
     {
-        if (board[0][0][0])
+        if (board[0][0][0] && board[4][4][4])
         {
             answer = min(answer, BFS());
             if (answer == 12)
