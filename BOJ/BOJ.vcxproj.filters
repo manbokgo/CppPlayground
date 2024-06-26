@@ -613,5 +613,8 @@
     <ClCompile Include="problem\G3 15998 카카오머니.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 2812 크게 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
