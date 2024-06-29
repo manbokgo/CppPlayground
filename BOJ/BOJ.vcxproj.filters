@@ -619,5 +619,8 @@
     <ClCompile Include="problem\G3 20057 마법사 상어와 토네이도.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1132 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
