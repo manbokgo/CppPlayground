@@ -18,6 +18,11 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define pb push_back
 
+int _gcd(int a, int b)
+{
+    return b ? _gcd(b, a % b) : a;
+}
+
 int main()
 {
     fastio;

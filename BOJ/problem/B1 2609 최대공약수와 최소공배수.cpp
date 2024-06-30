@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2609
-// Algo: 유클리드 호제법(이지만 STL 쓰기)
+// Algo: GCD, LCM, 유클리드 호제법(이지만 STL 쓰기)
 
 // Start:	240213 00 40
 // Read:	0 0
@@ -26,7 +26,13 @@ constexpr ll  MOD = 1000000007;
 constexpr int INF = 0x3f3f3f3f;
 constexpr ll  LLINF = 1e18;
 
-int myGcd(int a, int b)
+
+int _gcd(int a, int b)
+{
+    return b ? _gcd(b, a % b) : a;
+}
+
+int _gcd2(int a, int b)
 {
     int temp = a % b;
     while (temp != 0)
@@ -39,9 +45,9 @@ int myGcd(int a, int b)
     return b;
 }
 
-int myLcm(int a, int b)
+int _lcm(int a, int b)
 {
-    return abs(a * b) / myGcd(a, b);
+    return abs(a * b) / _gcd(a, b);
 }
 
 int main()
@@ -54,5 +60,5 @@ int main()
 
     // 몰라레후!
     // cout << gcd(a, b) << "\n" << lcm(a, b);
-    cout << myGcd(a, b) << "\n" << myLcm(a, b);
+    cout << _gcd(a, b) << "\n" << _lcm(a, b);
 }
