@@ -628,5 +628,8 @@
     <ClCompile Include="problem\G1 1114 통나무 자르기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G1 22963 3초 정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
