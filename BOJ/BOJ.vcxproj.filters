@@ -631,5 +631,8 @@
     <ClCompile Include="problem\G1 22963 3초 정렬.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 11562 백양로 브레이크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
