@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/22963
-// Algo: DP (LIS + 복구)
+// Algo: DP (LIS + 복원)
 
 // Start:	240702 09 46
 // Read:	0 2
