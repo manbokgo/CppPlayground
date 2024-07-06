@@ -640,5 +640,8 @@
     <ClCompile Include="problem\P5 14003 가장 긴 증가하는 부분 수열 5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 10986 나머지 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
