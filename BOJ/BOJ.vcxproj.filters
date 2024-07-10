@@ -652,5 +652,8 @@
     <ClCompile Include="problem\G3 1774 우주신과의 교감.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 17616 등수 찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
