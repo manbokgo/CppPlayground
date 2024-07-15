@@ -1,5 +1,5 @@
 ﻿// URL: https://school.programmers.co.kr/learn/courses/30/lessons/77886
-// Algo: 그리디
+// Algo: 그리디, 스택
 
 // Start:	240401 01 42
 // Read:	0 2
