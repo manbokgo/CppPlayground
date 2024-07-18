@@ -676,5 +676,8 @@
     <ClCompile Include="problem\P5 13141 Ignition.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 11559 Puyo Puyo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
