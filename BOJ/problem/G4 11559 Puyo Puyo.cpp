@@ -89,22 +89,16 @@ int main()
         }
         if (!broke) break;
 
-
-        vector<char> moveBuffer;
-        moveBuffer.reserve(12);
         for (int x = 0; x < 6; ++x)
         {
-            moveBuffer.clear();
+            int cur = 11;
             for (int y = 11; y >= 0; --y)
             {
                 if (board[y][x] != '.')
-                    moveBuffer.pb(board[y][x]);
-            }
-
-            for (int y = 11; y >= 0; --y)
-            {
-                if (11 - y < moveBuffer.size()) board[y][x] = moveBuffer[11 - y];
-                else board[y][x] = '.';
+                {
+                    swap(board[y][x], board[cur][x]);
+                    --cur;
+                }
             }
         }
 
