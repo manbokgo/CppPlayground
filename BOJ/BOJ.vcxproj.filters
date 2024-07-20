@@ -682,5 +682,8 @@
     <ClCompile Include="problem\G1 1562 계단 수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 17182 우주 탐사선.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
