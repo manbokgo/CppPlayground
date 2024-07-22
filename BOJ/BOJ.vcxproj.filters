@@ -688,5 +688,8 @@
     <ClCompile Include="problem\P5 10165 버스 노선.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 14863 서울에서 경산까지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
