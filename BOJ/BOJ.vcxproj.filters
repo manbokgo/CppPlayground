@@ -706,5 +706,8 @@
     <ClCompile Include="problem\G4 1027 고층 건물.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 17387 선분 교차 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
