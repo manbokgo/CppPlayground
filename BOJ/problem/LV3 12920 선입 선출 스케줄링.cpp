@@ -1,5 +1,5 @@
 ﻿// URL: https://school.programmers.co.kr/learn/courses/30/lessons/12920
-// Algo: 이분 탐색 + 매개변수 탐색
+// Algo: 이분 탐색, 매개변수 탐색
 
 // Start:	240508 18 06
 // Read:	0 2

@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2110
-// Algo: 이분 탐색 + 매개변수 탐색
+// Algo: 이분 탐색, 매개변수 탐색
 
 // Start:	240210 23 40
 // Read:	0 1

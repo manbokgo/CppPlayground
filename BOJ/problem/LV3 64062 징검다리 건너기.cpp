@@ -1,5 +1,5 @@
 ﻿// URL: https://school.programmers.co.kr/learn/courses/30/lessons/64062
-// Algo: 이분 탐색 + 매개변수 탐색 or 슬라이딩 윈도우 Maximum
+// Algo: 이분 탐색, 매개변수 탐색 or 슬라이딩 윈도우 Maximum
 
 // Start:	240429 02 02
 // Read:	0 1
