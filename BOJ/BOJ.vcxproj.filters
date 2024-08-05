@@ -730,5 +730,8 @@
     <ClCompile Include="problem\G3 16724 피리 부는 사나이.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1941 소문난 칠공주.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
