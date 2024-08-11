@@ -751,5 +751,8 @@
     <ClCompile Include="problem\G4 1034 램프.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 1915 가장 큰 정사각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
