@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1717
-// Algo: 유니온 파인드 기본 + Union by Size
+// Algo: 분리 집합 기본 + Union by Size
 
 // Start:	240208 01 00
 // Read:	0 0

@@ -7,7 +7,7 @@
 // Code:	0 3
 // Total:	0 5
 
-// 크루스칼, 유니온 파인드는 이제 눈 (반쯤만) 감고도 치겠다
+// 크루스칼, 분리 집합은 이제 눈 (반쯤만) 감고도 치겠다
 
 #include <bits/stdc++.h>
 using namespace std;
