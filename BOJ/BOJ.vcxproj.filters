@@ -760,5 +760,8 @@
     <ClCompile Include="problem\G4 2015 수들의 합 4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 10836 여왕벌.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
