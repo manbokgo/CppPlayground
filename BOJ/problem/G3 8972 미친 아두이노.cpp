@@ -44,20 +44,20 @@ int main()
     string commands;
     cin >> commands;
 
-    for (int T = 1; T <= commands.size(); ++T)
+    for (int cmdIdx = 0; cmdIdx < commands.size(); ++cmdIdx)
     {
         char preBoard[100][100];
         memcpy(preBoard, board, sizeof(preBoard));
         memset(board, '.', sizeof(board));
 
-        const int cmd = commands[T - 1] - '0';
+        const int cmd = commands[cmdIdx] - '0';
         auto& [jy, jx] = jong;
 
         jy += dy[cmd];
         jx += dx[cmd];
         if (preBoard[jy][jx] == 'R')
         {
-            cout << "kraj " << T;
+            cout << "kraj " << cmdIdx + 1;
             return 0;
         }
         board[jy][jx] = 'I';
@@ -79,7 +79,7 @@ int main()
 
                 if (board[ny][nx] == 'I')
                 {
-                    cout << "kraj " << T;
+                    cout << "kraj " << cmdIdx + 1;
                     return 0;
                 }
 
