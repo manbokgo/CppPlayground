@@ -784,5 +784,8 @@
     <ClCompile Include="problem\P4 20149 선분 교차 3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 8972 미친 아두이노.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
