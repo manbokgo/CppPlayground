@@ -17,10 +17,9 @@ using namespace std;
 int arr[100'001];
 int n;
 
-bool BinarySearch(int target)
+bool BinarySearch(int st, int en, int target)
 {
-    int st = 0;
-    int en = n - 1;
+    --en; // en 포함 안 됨
     while (st <= en)
     {
         const int mid = (st + en) / 2;
@@ -46,7 +45,7 @@ int main()
     {
         int target;
         cin >> target;
-        cout << BinarySearch(target) << '\n';
+        cout << BinarySearch(0, n, target) << '\n';
 
         // STL
         // cout << binary_search(arr, arr + n, target) << '\n';
