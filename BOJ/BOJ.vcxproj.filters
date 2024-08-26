@@ -799,5 +799,8 @@
     <ClCompile Include="problem\S4 1654 랜선 자르기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1939 중량제한.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
