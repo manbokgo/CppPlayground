@@ -811,5 +811,8 @@
     <ClCompile Include="problem\G3 11437 LCA.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 11438 LCA 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
