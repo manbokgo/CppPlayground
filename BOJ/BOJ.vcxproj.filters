@@ -814,5 +814,8 @@
     <ClCompile Include="problem\P5 11438 LCA 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 2696 중앙값 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
