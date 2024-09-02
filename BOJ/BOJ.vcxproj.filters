@@ -820,5 +820,8 @@
     <ClCompile Include="problem\G3 1414 불우이웃돕기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 16234 인구 이동.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
