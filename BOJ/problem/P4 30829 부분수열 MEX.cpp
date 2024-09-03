@@ -6,6 +6,8 @@
 // Think:	3 0
 // Code:	0 34
 // Total:	3 36
+// 오모시로이
+// https://manbokgo.notion.site/P4-30829-MEX-C-088c5a8939784918bba998bae8275900
 
 // 접근법은 30분만에 캐치했는데 40%에서 계속 틀림. 반례 안 떠올라서 미치는 줄 알았다
 // 맞힌사람 20명짜리 문제라서 포기하고 해설보려고 해도 아무 것도 안 나옴. 아 ㅋㅋ
@@ -39,11 +41,11 @@ int main()
 
     string str;
     cin >> str;
-    const int n = str.size();
+    const int n = (int)str.size();
 
-    int pos[20'005]{};
+    int pos[20'005]{}; // 구간 시작 인덱스
     pos[0] = n;
-    int now = 1;
+    int now = 1; // 구간 인덱스
 
     int remain = 10;
     bool checked[10]{};
@@ -55,11 +57,12 @@ int main()
         {
             --remain;
 
+            // 0~9가 각각 하나 이상씩 발견되었다면 현재 인덱스를 구간의 시작으로 한다
             if (remain == 0)
             {
                 remain = 10;
                 memset(checked, false, sizeof(checked));
-                pos[now++] = i;
+                pos[now++] = i; 
             }
             else
             {
@@ -72,7 +75,8 @@ int main()
     vector<int> answer;
     answer.reserve(now);
 
-    int findNum = 1;
+    // 첫 구간에서 빠진 숫자(1~9)를 찾아 선택한다. 
+    int findNum = -1;
     for (int i = 1; i < 10; ++i)
     {
         if (!checked[i])
@@ -82,8 +86,18 @@ int main()
             break;
         }
     }
-    if (answer.empty()) answer.pb(findNum);
 
+    // 만약 1~9가 모두 채워져 있다면 1을 정답에 넣고 0을 선택한다.
+    if (answer.empty()) 
+    {
+        answer.pb(1);
+        answer.pb(0);
+        findNum = 0;
+    }
+
+    // 이전 구간에서 빠진 숫자를 다음 구간에서 찾아 선택하는 걸 반복한다.
+    // 단, 입력 전체가 구간 하나일 경우도 있기 때문에 맨 앞 구간부터 시작한다. (OOB 방지)
+    // 맨 앞 구간에서는 if 조건에 걸리지 않아 자연스럽게 다음 구간으로 넘어간다.
     do
     {
         for (int i = pos[now]; i < pos[now - 1]; ++i)
