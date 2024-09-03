@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/10282
-// Algo: 다익스트라 기본
+// Algo: 다익스트라
 
 // Start:	240218 22 42
 // Read:	0 0
