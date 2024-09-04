@@ -49,7 +49,7 @@ int main()
                 if (dp[!cur][i][j] == INF) continue;
                 dp[cur][num][j] = min(dp[cur][num][j], dp[!cur][i][j] + GetCost(i, num));
                 dp[cur][i][num] = min(dp[cur][i][num], dp[!cur][i][j] + GetCost(j, num));
-                dp[!cur][i][j] = INF; // 배열을 재활용하는만큼 INF로 초기화해준다
+                dp[!cur][i][j] = INF; // 다음 턴에 !cur이 cur이 되어 재활용하는만큼 INF로 초기화해준다
             }
         }
     }
