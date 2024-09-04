@@ -6,23 +6,14 @@
 // Think:	0 18
 // Code:	0 20
 // Total:	0 38
+// https://manbokgo.notion.site/G4-12886-C-gcc-de061675848b47b793bb7cea79f35c2f?pvs=74
 
 #include <bits/stdc++.h>
 using namespace std;
 
-#define pb push_back
-#define Y first
-#define X second
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 #define all(x) x.begin(), x.end()
-#define SortVec(x) sort(all(x))
-#define CompressVec(x) x.erase(unique(all(x)), x.end())
-#define ExistInVec(x, value) find(all(x), value) != x.end()
-
-using ll = long long;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-using tiii = tuple<int, int, int>;
-using tlll = tuple<ll, ll, ll>;
+#define pb push_back
 
 constexpr int INF = 0x3f3f3f3f;
 int sum, target;
@@ -42,7 +33,6 @@ bool DFS(int a, int b, int c)
 
     /*
     bool ret = false;
-    // b-a>0 이 a<b (a!=b)보다 메모리 400KB 적게 먹음. 왜??
     if (b != target && b - a > 0) // a b
     {
         ret = DFS(2 * a, b - a, c);
