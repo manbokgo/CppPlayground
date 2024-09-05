@@ -35,8 +35,7 @@ int main()
     }
 
     // 최댓값 뽑기 68ms
-    /*
-     *sort(arr, arr + n, greater<>());
+    sort(arr, arr + n, greater<>());
     priority_queue<int> pq;
     
     int ans = 0;
@@ -56,9 +55,9 @@ int main()
             pq.pop();
         }
     }
-    */
 
     // 최솟값 대체하기 56ms
+    /*
     sort(arr, arr + n);
     priority_queue<int, vector<int>, greater<>> pq;
 
@@ -85,6 +84,7 @@ int main()
             }
         }
     }
+    */
 
     cout << ans;
 }
