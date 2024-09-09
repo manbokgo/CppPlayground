@@ -841,5 +841,8 @@
     <ClCompile Include="problem\G5 20055 컨베이어 벨트 위의 로봇.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 2252 줄 세우기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
