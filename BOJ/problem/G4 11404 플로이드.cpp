@@ -22,9 +22,9 @@ using ll = long long;
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 
-const ll  MOD = 1000000007;
+const ll MOD = 1000000007;
 const int INF = 0x3f3f3f3f;
-const ll  LLINF = 1e18;
+const ll LLINF = 1e18;
 
 int dist[101][101];
 
@@ -33,36 +33,30 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, M;
-    cin >> N >> M;
+    memset(dist, INF, sizeof(dist));
 
-    for (int i = 1; i <= N; ++i)
-    {
-        fill(dist[i] + 1, dist[i] + N + 1, INF);
-    }
+    int n, m;
+    cin >> n >> m;
 
-    while (M--)
+    for (int i = 1; i <= n; ++i)
+        dist[i][i] = 0;
+
+    while (m--)
     {
         int a, b, c;
         cin >> a >> b >> c;
         dist[a][b] = min(dist[a][b], c);
     }
 
-    for (int k = 1; k <= N; ++k)
-    {
-        dist[k][k] = 0;
-        for (int s = 1; s <= N; ++s)
-        {
-            for (int e = 1; e <= N; ++e)
-            {
+    // 플로이드
+    for (int k = 1; k <= n; ++k)
+        for (int s = 1; s <= n; ++s)
+            for (int e = 1; e <= n; ++e)
                 dist[s][e] = min(dist[s][e], dist[s][k] + dist[k][e]);
-            }
-        }
-    }
 
-    for (int s = 1; s <= N; ++s)
+    for (int s = 1; s <= n; ++s)
     {
-        for (int e = 1; e <= N; ++e)
+        for (int e = 1; e <= n; ++e)
         {
             if (dist[s][e] == INF) cout << "0 ";
             else cout << dist[s][e] << " ";
