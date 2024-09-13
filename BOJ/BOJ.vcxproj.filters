@@ -856,5 +856,8 @@
     <ClCompile Include="problem\G2 14864 줄서기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 2143 두 배열의 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
