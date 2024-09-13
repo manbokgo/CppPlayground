@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2015
-// Algo: 누적 합, 맵
+// Algo: 누적 합, 해시 맵
 
 // Start:	240814 09 02
 // Read:	0 2

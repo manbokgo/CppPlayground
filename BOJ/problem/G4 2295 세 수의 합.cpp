@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2295
-// Algo: 이분 탐색 or 맵
+// Algo: 이분 탐색 or 해시 맵
 
 // Start:	240825 14 09
 // Read:	0 1
