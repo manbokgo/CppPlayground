@@ -30,7 +30,7 @@ int main()
     int answer = INF;
     for (int st = 0; st < 3; ++st)
     {
-        memset(dp, INF, sizeof(dp));
+        memset(dp, INF, sizeof(dp)); // 로직상 없어도 잘 동작하기는 하지만 명확하게 하자
 
         dp[1][st] = cost[1][st];
         for (int i = 2; i <= n; ++i)
