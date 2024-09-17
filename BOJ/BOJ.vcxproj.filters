@@ -871,5 +871,8 @@
     <ClCompile Include="problem\G2 16946 벽 부수고 이동하기 4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 27172 수 나누기 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
