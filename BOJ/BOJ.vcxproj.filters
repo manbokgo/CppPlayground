@@ -874,5 +874,11 @@
     <ClCompile Include="problem\G4 27172 수 나누기 게임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 15681 트리와 쿼리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem\P5 2162 선분 그룹.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
