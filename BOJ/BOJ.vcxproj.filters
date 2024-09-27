@@ -898,5 +898,8 @@
     <ClCompile Include="problem\G3 16437 양 구출 작전.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 2568 전깃줄 - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
