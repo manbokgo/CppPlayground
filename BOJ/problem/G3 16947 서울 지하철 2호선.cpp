@@ -14,8 +14,9 @@
 // 아무리 생각해도 단순 DFS로는 풀 수 없고, G3 9466에서 배웠던 타잔 알고리즘만으로만 풀 수 있다고 판단했다.
 // 그러면 골3짜리 문제는 아닌데... 고민하다 결국 타잔으로 풀었다.
 
-// 다 풀고나서 보니 사이클이 하나인만큼, 단순하게 DFS 돌다가 사이클 찾으면 다른 간선을 더 탐색하지 않고 탈출하는 것으로도 가능하고
-// 사이클에서 가장 먼 노드부터 위상 정렬을 시작하여, indegree가 1인 것들을 삭제하다 남는 것들이 사이클이라고 판정할 수도 있다.
+// 다 풀고 나서 보니 사이클이 하나 뿐인만큼, 단순하게 DFS 돌다가 사이클 찾으면 다른 간선을 더 탐색하지 않고 탈출하는 것만으로도 충분했고,
+// 아니면 사이클에서 가장 먼 노드부터 위상 정렬을 시작하여, indegree가 1인 것들을 삭제하다
+// indegree가 1 초과로 남은 것들이 사이클이라고 판정할 수도 있었다.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -25,15 +26,17 @@ using namespace std;
 #define pb push_back
 
 vector<int> adj[3'001];
+bool cycle[3'001];
+int dist[3'001];
 
+
+// 타잔 풀이. 2412KB 0ms
+/*
 int label[3'001];
 bool finish[3'001];
 stack<int> S;
 vector<int> scc;
 int labelIdx = 1;
-
-bool cycle[3'001];
-int dist[3'001];
 
 // 양방향인만큼 직전 노드를 다시 방문해 사이클로 판정될 수 있기 때문에
 // 문제 조건 상, 직전 노드는 탐색에서 제외하도록 수정
@@ -72,6 +75,30 @@ int Tarjan(int i, int from)
 
     return parent;
 }
+*/
+
+// DFS 풀이. 2260KB 0ms
+bool visited[3'001];
+int DFS(int cur, int parent)
+{
+    if (visited[cur]) return cur;
+
+    visited[cur] = true;
+    for (const int nxt : adj[cur])
+    {
+        if (nxt == parent) continue;
+
+        int ret = DFS(nxt, cur);
+        if (ret != -1)
+        {
+            cycle[cur] = true;
+            if (ret == cur) ret = -1;
+            return ret;
+        }
+    }
+
+    return -1;
+}
 
 int main()
 {
@@ -89,10 +116,14 @@ int main()
         adj[b].pb(a);
     }
 
+    /*
     for (int i = 1; i <= n; ++i)
     {
         if (!label[i]) Tarjan(i, -1);
     }
+    */
+
+    DFS(1, -1);
 
     // BFS
     queue<int> q;
