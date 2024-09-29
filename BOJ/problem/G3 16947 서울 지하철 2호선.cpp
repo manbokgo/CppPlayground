@@ -30,7 +30,7 @@ int label[3'001];
 bool finish[3'001];
 stack<int> S;
 vector<int> scc;
-int nIdx = 1;
+int labelIdx = 1;
 
 bool cycle[3'001];
 int dist[3'001];
@@ -40,7 +40,7 @@ int dist[3'001];
 int Tarjan(int i, int from)
 {
     S.push(i);
-    label[i] = nIdx++;
+    label[i] = labelIdx++;
 
     int parent = label[i];
     for (const auto j : adj[i])
