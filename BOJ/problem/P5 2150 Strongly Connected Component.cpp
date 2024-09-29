@@ -19,26 +19,26 @@ using namespace std;
 
 // SCC 타잔 알고리즘
 vector<int> adj[10'001];
-int group[10'001];
+int label[10'001];
 bool finish[10'001];
 stack<int> S;
 
 vector<vector<int>> answer;
-int nIdx = 1;
+int labelIdx = 1;
 
 int Tarjan(int i)
 {
     S.push(i);
-    group[i] = nIdx++;
+    label[i] = labelIdx++;
 
-    int parent = group[i];
+    int parent = label[i];
     for (const auto j : adj[i])
     {
-        if (!group[j]) parent = min(parent, Tarjan(j));
-        else if (!finish[j]) parent = min(parent, group[j]);
+        if (!label[j]) parent = min(parent, Tarjan(j));
+        else if (!finish[j]) parent = min(parent, label[j]);
     }
 
-    if (parent == group[i]) // 내가 부모 노드다
+    if (parent == label[i]) // 내가 부모 노드다
     {
         vector<int> SCC;
         while (true)
@@ -74,7 +74,7 @@ int main()
 
     for (int i = 1; i <= V; ++i)
     {
-        if (!group[i]) Tarjan(i);
+        if (!label[i]) Tarjan(i);
     }
 
     sort(all(answer));
