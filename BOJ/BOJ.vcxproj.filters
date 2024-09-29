@@ -904,5 +904,8 @@
     <ClCompile Include="problem\G5 1074 Z.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 16947 서울 지하철 2호선.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
