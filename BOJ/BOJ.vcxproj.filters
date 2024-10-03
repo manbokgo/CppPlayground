@@ -916,5 +916,8 @@
     <ClCompile Include="problem\G5 9205 맥주 마시면서 걸어가기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 2151 거울 설치.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
