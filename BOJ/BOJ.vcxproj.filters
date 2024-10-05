@@ -925,5 +925,8 @@
     <ClCompile Include="problem\S1 12849 본대 산책.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1719 택배.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
