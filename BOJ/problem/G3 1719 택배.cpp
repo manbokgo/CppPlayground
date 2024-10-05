@@ -41,7 +41,7 @@ int main()
         nxt[b][a] = a;
     }
 
-    // 플로이드 + 복원
+    // 플로이드 + 경로 복원
     for (int k = 1; k <= n; ++k)
     {
         for (int s = 1; s <= n; ++s)

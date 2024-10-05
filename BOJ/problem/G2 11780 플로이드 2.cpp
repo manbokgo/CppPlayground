@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/11780
-// Algo: 플로이드 + 복원 기본
+// Algo: 플로이드 + 경로 복원 기본
 
 // Start:	241001 14 37
 // Read:	0 1
@@ -39,7 +39,7 @@ int main()
         nxt[a][b] = b;
     }
 
-    // 플로이드 + 복원
+    // 플로이드 + 경로 복원
     for (int k = 1; k <= n; ++k)
     {
         for (int s = 1; s <= n; ++s)
