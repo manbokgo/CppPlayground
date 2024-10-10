@@ -63,9 +63,11 @@ int main()
             {
                 const int ny = y + dy[i];
                 const int nx = x + dx[i];
-                const int nBroke = broke + board[ny][nx];
+                if (OOB(ny, nx)) continue;
 
-                if (OOB(ny, nx) || nBroke > k || visited[ny][nx][nBroke]) continue;
+                const int nBroke = broke + board[ny][nx];
+                if (nBroke > k || visited[ny][nx][nBroke]) continue;
+
                 visited[ny][nx][nBroke] = true;
                 q.push({ny, nx, nBroke});
             }
