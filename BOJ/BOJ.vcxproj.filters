@@ -955,5 +955,8 @@
     <ClCompile Include="problem\G2 10711 모래성.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 18223 민준이와 마산 그리고 건우.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
