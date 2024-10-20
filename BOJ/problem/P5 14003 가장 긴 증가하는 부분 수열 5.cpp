@@ -14,6 +14,8 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define pb push_back
 
+constexpr int INF = 0x3f3f3f3f;
+
 int main()
 {
     fastio;
@@ -21,40 +23,28 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> arr(n);
+    vector<int> seq(n);
     vector<int> indices(n);
-    vector<int> dp;
-    dp.reserve(n);
+    vector<int> dp(n, INF);
 
-    cin >> arr[0];
-    dp.pb(arr[0]);
-    indices[0] = 1;
-
-    for (int i = 1; i < n; ++i)
+    for (int i = 0; i < n; ++i)
     {
-        cin >> arr[i];
-        if (arr[i] > dp.back())
-        {
-            dp.pb(arr[i]);
-            indices[i] = dp.size();
-        }
-        else
-        {
-            const int idx = lower_bound(all(dp), arr[i]) - dp.begin();
-            dp[idx] = arr[i];
-            indices[i] = idx + 1;
-        }
+        cin >> seq[i];
+        int idx = lower_bound(all(dp), seq[i]) - dp.begin();
+        dp[idx] = seq[i];
+        indices[i] = idx + 1;
     }
+    const int LIS = lower_bound(all(dp), INF) - dp.begin();
 
-    cout << dp.size() << '\n';
+    cout << LIS << '\n';
 
-    vector<int> answer(dp.size());
-    int fIdx = dp.size();
+    vector<int> answer(LIS);
+    int fIdx = LIS;
     for (int i = n - 1; i >= 0; --i)
     {
         if (indices[i] == fIdx)
         {
-            answer[fIdx - 1] = arr[i];
+            answer[fIdx - 1] = seq[i];
             --fIdx;
         }
     }

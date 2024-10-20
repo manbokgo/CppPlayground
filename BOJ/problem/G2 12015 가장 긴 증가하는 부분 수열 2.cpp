@@ -35,17 +35,16 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> dp(n, INF);
     vector<int> seq(n);
+    vector<int> dp(n, INF);
 
-    int answer = 1;
     for (int i = 0; i < n; ++i)
     {
         cin >> seq[i];
         int idx = lower_bound(all(dp), seq[i]) - dp.begin();
-        answer = max(answer, idx + 1);
         dp[idx] = seq[i];
     }
+    const int LIS = lower_bound(all(dp), INF) - dp.begin();
 
-    cout << answer;
+    cout << LIS;
 }

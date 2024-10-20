@@ -17,6 +17,8 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define pb push_back
 
+constexpr int INF = 0x3f3f3f3f;
+
 int main()
 {
     fastio;
@@ -24,24 +26,16 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> arr(n);
+    vector<int> seq(n);
+    vector<int> dp(n, INF);
+
     for (int i = 0; i < n; ++i)
-        cin >> arr[i];
-
-    vector<int> dp;
-    dp.reserve(n);
-
-    for (const int num : arr)
     {
-        if (dp.empty() || num > dp.back())
-        {
-            dp.pb(num);
-            continue;;
-        }
-
-        const int idx = lower_bound(all(dp), num) - dp.begin();
-        dp[idx] = num;
+        cin >> seq[i];
+        int idx = lower_bound(all(dp), seq[i]) - dp.begin();
+        dp[idx] = seq[i];
     }
+    const int LIS = lower_bound(all(dp), INF) - dp.begin();
 
-    cout << n - dp.size();
+    cout << n - LIS;
 }

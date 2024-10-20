@@ -35,16 +35,17 @@ int main()
     while (cin >> n)
     {
         vector<int> dp(n, INF);
-        int answer = 1;
+
         for (int i = 0; i < n; ++i)
         {
             int price;
             cin >> price;
+
             int idx = lower_bound(all(dp), price) - dp.begin();
-            answer = max(answer, idx + 1);
             dp[idx] = price;
         }
+        const int LIS = lower_bound(all(dp), INF) - dp.begin();
 
-        cout << answer << '\n';
+        cout << LIS << '\n';
     }
 }
