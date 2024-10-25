@@ -53,11 +53,11 @@ int main()
 
     while (T--)
     {
-        cout << '\n';
         memset(row, false, sizeof(row));
         memset(col, false, sizeof(col));
         memset(sqa, false, sizeof(sqa));
 
+        bool isValid = true;
         for (int i = 0; i < 9; ++i)
         {
             for (int j = 0; j < 9; ++j)
@@ -67,16 +67,25 @@ int main()
 
                 const int num = c - '0';
                 tile[i][j] = num;
+                if (num == 0) continue;
+                if (row[i][num] || col[j][num] || sqa[GetSqa(i, j)][num]) isValid = false;
+
                 row[i][num] = true;
                 col[j][num] = true;
                 sqa[GetSqa(i, j)][num] = true;
             }
         }
-
+        
+        if (!isValid)
+        {
+            cout << "Could not complete this grid.\n\n";
+            continue;
+        }
+        
         bool bFind = DFS(0);
         if (!bFind)
         {
-            cout << "Could not complete this grid.\n";
+            cout << "Could not complete this grid.\n\n";
             continue;
         }
 
@@ -88,5 +97,6 @@ int main()
             }
             cout << '\n';
         }
+        cout << '\n';
     }
 }
