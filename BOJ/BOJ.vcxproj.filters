@@ -991,5 +991,8 @@
     <ClCompile Include="problem\G4 14002 가장 긴 증가하는 부분 수열 4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\S2 18870 좌표 압축.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
