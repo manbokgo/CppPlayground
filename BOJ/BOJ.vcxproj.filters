@@ -994,5 +994,8 @@
     <ClCompile Include="problem\S2 18870 좌표 압축.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1865 웜홀.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
