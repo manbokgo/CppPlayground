@@ -997,5 +997,8 @@
     <ClCompile Include="problem\G3 1865 웜홀.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 1062 가르침.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
