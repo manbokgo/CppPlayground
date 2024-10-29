@@ -16,7 +16,7 @@
 
 // 다 풀고 나서 보니 사이클이 하나 뿐인만큼, 단순하게 DFS 돌다가 사이클 찾으면 다른 간선을 더 탐색하지 않고 탈출하는 것만으로도 충분했고,
 // 아니면 사이클에서 가장 먼 노드부터 위상 정렬을 시작하여, indegree가 1인 것들을 삭제하다
-// indegree가 1 초과로 남은 것들이 사이클이라고 판정할 수도 있었다.
+// indegree가 1 이상으로 남은 것들이 사이클이라고 판정할 수도 있었다.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -27,8 +27,6 @@ using namespace std;
 
 vector<int> adj[3'001];
 bool cycle[3'001];
-int dist[3'001];
-
 
 // 타잔 풀이. 2412KB 0ms
 /*
@@ -78,7 +76,10 @@ int Tarjan(int i, int from)
 */
 
 // DFS 풀이. 2260KB 0ms
+/*
+int dist[3'001];
 bool visited[3'001];
+
 int DFS(int cur, int parent)
 {
     if (visited[cur]) return cur;
@@ -116,12 +117,8 @@ int main()
         adj[b].pb(a);
     }
 
-    /*
-    for (int i = 1; i <= n; ++i)
-    {
-        if (!label[i]) Tarjan(i, -1);
-    }
-    */
+    // for (int i = 1; i <= n; ++i)
+    //     if (!label[i]) Tarjan(i, -1);
 
     DFS(1, -1);
 
@@ -130,6 +127,81 @@ int main()
     for (int i = 1; i <= n; ++i)
     {
         if (cycle[i])
+        {
+            dist[i] = 0;
+            q.push(i);
+        }
+    }
+
+    while (!q.empty())
+    {
+        const int cur = q.front();
+        q.pop();
+
+        for (const int nxt : adj[cur])
+        {
+            if (dist[nxt] != -1) continue;
+            dist[nxt] = dist[cur] + 1;
+            q.push(nxt);
+        }
+    }
+
+    for (int i = 1; i <= n; ++i)
+    {
+        cout << dist[i] << ' ';
+    }
+}
+*/
+
+// 위상 정렬 풀이. 2252KB 0ms
+int indegree[3'001];
+int dist[3'001];
+
+int main()
+{
+    fastio;
+    memset(dist, -1, sizeof(dist));
+
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; ++i)
+    {
+        int a, b;
+        cin >> a >> b;
+        adj[a].pb(b);
+        adj[b].pb(a);
+        ++indegree[a];
+        ++indegree[b];
+    }
+
+    // Cycle
+    queue<int> q;
+    for (int i = 1; i <= n; ++i)
+    {
+        if (indegree[i] == 1) q.push(i);
+    }
+
+    while (!q.empty())
+    {
+        const int cur = q.front();
+        q.pop();
+        --indegree[cur];
+
+        for (const int nxt : adj[cur])
+        {
+            if (indegree[nxt])
+            {
+                --indegree[nxt];
+                if (indegree[nxt] == 1) q.push(nxt);
+            }
+        }
+    }
+
+    // BFS
+    for (int i = 1; i <= n; ++i)
+    {
+        if (indegree[i])
         {
             dist[i] = 0;
             q.push(i);
