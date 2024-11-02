@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1922
-// Algo: MST 크루스칼 기본, 프림 기본
+// Algo: MST 크루스칼, 프림
 
 // Start:	240209 00 32
 // Read:	0 0

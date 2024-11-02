@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1197
-// Algo: MST 크루스칼
+// Algo: MST 크루스칼 기본
 
 // Start:	240524 23 16
 // Read:	0 1
