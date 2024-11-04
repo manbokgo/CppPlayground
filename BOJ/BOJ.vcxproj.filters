@@ -1015,5 +1015,8 @@
     <ClCompile Include="problem\G4 1958 LCS 3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1099 알 수 없는 문장.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
