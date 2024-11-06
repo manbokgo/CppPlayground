@@ -1021,5 +1021,8 @@
     <ClCompile Include="problem\G4 10216 Count Circle Groups.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 1069 집으로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
