@@ -1024,5 +1024,8 @@
     <ClCompile Include="problem\G3 1069 집으로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 5430 AC.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
