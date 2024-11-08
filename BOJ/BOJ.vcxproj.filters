@@ -1027,5 +1027,8 @@
     <ClCompile Include="problem\G5 5430 AC.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 9935 문자열 폭발.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
