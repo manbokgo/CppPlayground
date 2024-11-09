@@ -10,21 +10,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define pb push_back
-#define X first
-#define Y second
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 #define all(x) x.begin(), x.end()
-#define sortvec(x) sort(all(x))
-#define compress(x) x.erase(unique(all(x)), x.end())
-#define findvec(x, value) find(all(x), value) != x.end()
-
-using ll = long long;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-
-constexpr ll  MOD = 1000000007;
-constexpr int INF = 0x3f3f3f3f;
-constexpr ll  LLINF = 1e18;
+#define pb push_back
 
 vector<int> Failure(const string& s)
 {
@@ -43,8 +31,7 @@ vector<int> Failure(const string& s)
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    fastio;
 
     string S, P;
     getline(cin, S);
@@ -53,25 +40,22 @@ int main()
     vector<int> fail = Failure(P);
 
     vector<int> results;
-    int         j = 0;
+    int j = 0;
     for (int i = 0; i < S.size(); i++) // 실수: i=0에서 시작. fail 함수 무지성으로 복사 금지.
     {
         while (j > 0 && S[i] != P[j])
             j = fail[j - 1];
+
         if (S[i] == P[j])
         {
-            if (j == P.size() - 1)
+            ++j;
+            if (j == P.size())
             {
                 results.pb(i - P.size() + 2);
-                // 실수: 다음 i에 들어갈 j를 넣는 것이니 fail[j-1]이 아니라 fail[j] 여야함
                 // ex) ABCABD 에서 ABCAB 를 완전히 매칭시킨 상황에서
                 // S의 다음 매칭인 D에는 P의 접두사 AB가 유효함
-                // P의 C를 가리키도록 j에는 fail[4] = 3 넣어야함
-                j = fail[j];
-            }
-            else
-            {
-                ++j;
+                // P의 C를 가리키도록 j에는 fail[4] = 2 넣어야함
+                j = fail[j - 1];
             }
         }
     }

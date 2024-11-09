@@ -9,25 +9,14 @@
 // Code:	0 10    string erase 잘못 써서 헤맴
 // Total:	0 20
 
+// KMP fail[x] : x 인덱스까지의 문자열(앞에서부터 x+1개의 문자열)에서 접두사가 끝난 후의 인덱스(접두사의 문자 개수)
+
 #include <bits/stdc++.h>
 using namespace std;
 
-#define pb push_back
-#define X first
-#define Y second
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 #define all(x) x.begin(), x.end()
-#define sortvec(x) sort(all(x))
-#define compress(x) x.erase(unique(all(x)), x.end())
-#define findvec(x, value) find(all(x), value) != x.end()
-
-using ll = long long;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-
-constexpr ll  MOD = 1000000007;
-constexpr int INF = 0x3f3f3f3f;
-constexpr ll  LLINF = 1e18;
-
+#define pb push_back
 
 vector<int> Failure(const string& s)
 {
@@ -46,8 +35,7 @@ vector<int> Failure(const string& s)
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    fastio;
 
     string text;
     cin >> text;
