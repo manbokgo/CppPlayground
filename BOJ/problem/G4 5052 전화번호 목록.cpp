@@ -10,40 +10,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define pb push_back
-#define X first
-#define Y second
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 #define all(x) x.begin(), x.end()
-#define sortvec(x) sort(all(x))
-#define compress(x) x.erase(unique(all(x)), x.end())
-#define findvec(x, value) find(all(x), value) != x.end()
-
-using ll = long long;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-
-constexpr ll  MOD = 1000000007;
-constexpr int INF = 0x3f3f3f3f;
-constexpr ll  LLINF = 1e18;
+#define pb push_back
 
 constexpr int ROOT = 1;
-int           unused = 2;
+int unused = 2;
+
 constexpr int MX = 10'000 * 10 + 5;
-bool          chk[MX];
-int           nxt[MX][10];
+bool chk[MX];
+int nxt[MX][10];
 
-int C2I(char c)
-{
-    return c - '0';
-}
-
+inline int C2I(char c) { return c - '0'; }
 
 bool Insert(const string& s)
 {
     int cur = ROOT;
     for (int i = 0; i < s.size(); ++i)
     {
-        int idx = C2I(s[i]);
+        const int idx = C2I(s[i]);
         if (nxt[cur][idx] == -1)
         {
             nxt[cur][idx] = unused++;
@@ -62,32 +47,31 @@ bool Insert(const string& s)
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    fastio;
 
-    int    t, n;
-    string text;
-
-    cin >> t;
-    while (t--)
+    int T, n;
+    cin >> T;
+    while (T--)
     {
-        // 실수: 테스트 케이스마다 unused, chk, nxt 초기화
         unused = 2;
         memset(chk, false, sizeof(chk));
         memset(nxt, -1, sizeof(nxt));
 
         cin >> n;
-        while (n--)
+        vector<string> arr(n);
+        for (auto& str : arr) cin >> str;
+
+        bool success = true;
+        for (const string& str : arr)
         {
-            cin >> text;
-            if (!Insert(text))
+            if (!Insert(str))
             {
-                cout << "NO\n";
-                while (n--) cin >> text; // 실수: 남은 전화번호들 지워줘야함. 그냥 처음에 cin으로 string 배열에 몽땅 다 담고 진행하는게 더 간편한가?
-                goto Fail;
+                success = false;
+                break;
             }
         }
-        cout << "YES\n";
-    Fail:;
+
+        if (success) cout << "YES\n";
+        else cout << "NO\n";
     }
 }
