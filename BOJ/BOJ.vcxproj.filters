@@ -1033,5 +1033,8 @@
     <ClCompile Include="problem\G4 2022 사다리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P4 1498 주기문.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
