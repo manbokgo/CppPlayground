@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/14725
-// Algo: 트라이 기본 (클래스)
+// Algo: 트라이 (클래스)
 
 // Start:	241111 08 20
 // Read:	0 2
@@ -16,12 +16,18 @@ using namespace std;
 
 class Trie
 {
+    bool m_Chk = false;
     map<string, Trie> m_Map;
 
 public:
     void Insert(const vector<string>& s, int idx)
     {
-        if (idx == s.size()) return;
+        if (idx == s.size())
+        {
+            m_Chk = true;
+            return;
+        }
+
         m_Map[s[idx]].Insert(s, idx + 1);
     }
 
