@@ -1042,5 +1042,8 @@
     <ClCompile Include="problem\P4 5670 휴대폰 자판.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 11729 하노이 탑 이동 순서.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
