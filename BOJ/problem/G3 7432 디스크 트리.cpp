@@ -18,21 +18,18 @@ using namespace std;
 
 vector<string> Split(const string& str, const string& delim)
 {
+    vector<string> ret;
     size_t st = 0, en;
     const size_t delimLen = delim.length();
 
-    vector<string> result;
     while ((en = str.find(delim, st)) != string::npos)
     {
-        string token = str.substr(st, en - st);
+        ret.push_back(str.substr(st, en - st));
         st = en + delimLen;
-        result.push_back(token);
     }
+    if (st != str.size()) ret.push_back(str.substr(st));
 
-    if (st != str.size())
-        result.push_back(str.substr(st));
-
-    return result;
+    return ret;
 }
 
 class Trie
