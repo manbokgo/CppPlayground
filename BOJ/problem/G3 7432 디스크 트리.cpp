@@ -1,11 +1,13 @@
 ﻿// URL: https://www.acmicpc.net/problem/7432
-// Algo: 트라이
+// Algo: 트라이 클래스
 
 // Start:	241116 05 56
 // Read:	0 1
 // Think:	0 2
 // Code:	0 5
 // Total:	0 8
+
+// G3 14725 개미굴과 거의 같다. Split 구현만 추가됨.
 
 #include <bits/stdc++.h>
 using namespace std;

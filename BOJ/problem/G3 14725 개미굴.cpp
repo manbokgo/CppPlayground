@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/14725
-// Algo: 트라이 (클래스)
+// Algo: 트라이 클래스
 
 // Start:	241111 08 20
 // Read:	0 2
@@ -20,7 +20,7 @@ class Trie
     map<string, Trie> m_Map;
 
 public:
-    void Insert(const vector<string>& s, int idx)
+    void Insert(const vector<string>& s, int idx = 0)
     {
         if (idx == s.size())
         {
@@ -60,7 +60,7 @@ int main()
 
         vector<string> s(k);
         for (auto& str : s) cin >> str;
-        root.Insert(s, 0);
+        root.Insert(s);
     }
     root.Print();
 }

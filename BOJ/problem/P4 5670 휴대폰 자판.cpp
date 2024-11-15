@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/5670
-// Algo: 트라이 기본 (클래스)
+// Algo: 트라이 클래스 기본
 
 // Start:	241112 17 30
 // Read:	0 2
@@ -24,30 +24,7 @@ class Trie
     map<char, Trie> m_Map;
 
 public:
-    void Insert(const string& s)
-    {
-        Trie* cur = this;
-        for (const char c : s)
-            cur = &(cur->m_Map[c]);
-
-        cur->m_Chk = true;
-    }
-
-    int Calc(const string& s)
-    {
-        Trie* cur = this;
-        int cnt = 0;
-
-        for (int i = 0; i < s.size(); ++i)
-        {
-            if (i == 0 || cur->m_Chk || cur->m_Map.size() > 1) ++cnt;
-            cur = &(cur->m_Map[s[i]]);
-        }
-        return cnt;
-    }
-
     // 재귀
-    /*
     void Insert(const string& s, int idx = 0)
     {
         if (idx == s.size())
@@ -69,6 +46,30 @@ public:
 
         ret += m_Map[s[idx]].Calc(s, idx + 1);
         return ret;
+    }
+
+    // 루프
+    /*
+    void Insert(const string& s)
+    {
+        Trie* cur = this;
+        for (const char c : s)
+            cur = &(cur->m_Map[c]);
+
+        cur->m_Chk = true;
+    }
+
+    int Calc(const string& s)
+    {
+        Trie* cur = this;
+        int cnt = 0;
+
+        for (int i = 0; i < s.size(); ++i)
+        {
+            if (i == 0 || cur->m_Chk || cur->m_Map.size() > 1) ++cnt;
+            cur = &(cur->m_Map[s[i]]);
+        }
+        return cnt;
     }
     */
 };

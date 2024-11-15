@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/14425
-// Algo: 트라이 기본
+// Algo: 트라이 배열 기본
 
 // Start:	240215 20 46
 // Read:	0 0
