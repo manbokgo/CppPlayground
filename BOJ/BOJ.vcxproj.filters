@@ -1051,5 +1051,8 @@
     <ClCompile Include="problem\G5 10026 적록색약.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G3 7432 디스크 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
