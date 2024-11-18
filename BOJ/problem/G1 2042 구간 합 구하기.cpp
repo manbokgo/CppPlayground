@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/2042
-// Algo: 세그먼트 트리 기본
+// Algo: 세그먼트 트리 기본 (바텀업)
 
 // Start:	241118 05 38
 // Read:	0 1
@@ -8,7 +8,7 @@
 // Total:	1 35
 
 // 세그먼트 트리 공부.
-// TODO: 탑다운 세그먼트 트리. 펜윅 트리.
+// TODO: 펜윅 트리(BIT)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,27 +19,31 @@ using namespace std;
 
 using ll = long long;
 
-// 0-indexed 바텀 업. 메모리 2n
+// 0-indexed 바텀업. 메모리 2n
 // https://infossm.github.io/blog/2019/11/15/2D-segment-tree/
 
 template <typename T, typename F = plus<T>>
 class SegTree
 {
     int n;
+    T defVal;
+
     vector<T> seg;
     F func;
 
 public:
-    explicit SegTree(int n)
-        : n(n)
+    explicit SegTree(int n, T defVal = T{})
+        : n(n), defVal(defVal)
     {
-        seg.resize(2 * n);
+        seg.resize(2 * n, defVal);
     }
 
-    explicit SegTree(const vector<T>& arr)
-        : n(arr.size())
+    // arr 배열을 따로 만드는대신, seg를 외부에 노출시킨 후
+    // 직접 seg[n]~seg[2n-1]에 값을 넣어주는게 더 효율적이다.
+    explicit SegTree(const vector<T>& arr, T defVal = T{})
+        : n(arr.size()), defVal(defVal)
     {
-        seg.resize(2 * n);
+        seg.resize(2 * n, defVal);
         for (int i = 0; i < n; ++i)
             seg[i + n] = arr[i];
 
@@ -60,11 +64,11 @@ public:
 
     T Query(int l, int r) // O(log n)
     {
-        T ret = 0;
+        T ret = defVal;
         for (l += n, r += n + 1; l < r; l /= 2, r /= 2)
         {
-            if (l & 1) ret += seg[l++];
-            if (r & 1) ret += seg[--r];
+            if (l & 1) ret = func(ret, seg[l++]);
+            if (r & 1) ret = func(ret, seg[--r]);
         }
         return ret;
     }
