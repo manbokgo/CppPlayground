@@ -1066,5 +1066,8 @@
     <ClCompile Include="problem\P5 6549 히스토그램에서 가장 큰 직사각형.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P4 1305 광고.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
