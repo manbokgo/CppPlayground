@@ -7,8 +7,10 @@
 // Code:	0 24
 // Total:	1 35
 
-// 세그먼트 트리 공부.
-// TODO: 펜윅 트리(BIT)
+// 세그먼트 트리 바텀 업.
+// https://infossm.github.io/blog/2019/11/15/2D-segment-tree/
+
+// seg[n]~seg[2n-1]에 arr 값이 들어간다.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,9 +21,7 @@ using namespace std;
 
 using ll = long long;
 
-// 0-indexed 바텀업. 메모리 2n
-// https://infossm.github.io/blog/2019/11/15/2D-segment-tree/
-
+// 1-indexed 바텀업. 메모리 2n
 template <typename T, typename F = plus<T>>
 class SegTree
 {
@@ -33,26 +33,34 @@ class SegTree
 
 public:
     explicit SegTree(int n, T defVal = T{})
-        : n(n), defVal(defVal)
+        : n(n),
+          defVal(defVal)
     {
         seg.resize(2 * n, defVal);
     }
 
-    // arr 배열을 따로 만드는대신, seg를 외부에 노출시킨 후
-    // 직접 seg[n]~seg[2n-1]에 값을 넣어주는게 더 효율적이다.
+    // arr 배열을 따로 만들어 넘기는 대신, seg를 외부에 노출시킨 후
+    // 직접 seg[n]~seg[2n-1]에 값을 넣어 Init을 호출하는 게 더 효율적이다.
     explicit SegTree(const vector<T>& arr, T defVal = T{})
-        : n(arr.size()), defVal(defVal)
+        : n(arr.size()),
+          defVal(defVal)
     {
         seg.resize(2 * n, defVal);
         for (int i = 0; i < n; ++i)
             seg[i + n] = arr[i];
 
+        Init();
+    }
+
+    void Init()
+    {
         for (int i = n - 1; i > 0; i--) // O(n)
             seg[i] = func(seg[i * 2], seg[i * 2 + 1]);
     }
 
     void Update(int i, T val) // O(log n)
     {
+        --i;
         i += n;
         seg[i] = val;
         while (i > 1)
@@ -64,6 +72,8 @@ public:
 
     T Query(int l, int r) // O(log n)
     {
+        --l;
+        --r;
         T ret = defVal;
         for (l += n, r += n + 1; l < r; l /= 2, r /= 2)
         {
@@ -74,6 +84,7 @@ public:
     }
 };
 
+
 int main()
 {
     fastio;
@@ -82,7 +93,7 @@ int main()
     cin >> n >> m >> k;
 
     SegTree<ll> seg(n);
-    for (int i = 0; i < n; ++i)
+    for (int i = 1; i <= n; ++i)
     {
         ll num;
         cin >> num;
@@ -95,7 +106,7 @@ int main()
         ll c;
         cin >> a >> b >> c;
 
-        if (a == 1) seg.Update(b - 1, c);
-        else cout << seg.Query(b - 1, c - 1) << '\n';
+        if (a == 1) seg.Update(b, c);
+        else cout << seg.Query(b, c) << '\n';
     }
 }
