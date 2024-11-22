@@ -1075,5 +1075,8 @@
     <ClCompile Include="problem\G1 2357 최솟값과 최댓값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 12904 A와 B.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
