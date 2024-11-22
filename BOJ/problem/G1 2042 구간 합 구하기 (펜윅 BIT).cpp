@@ -28,6 +28,7 @@ using namespace std;
 
 using ll = long long;
 
+// 1-indexed. 메모리 2n.
 template <typename T, typename F = plus<T>>
 class FwTree
 {
