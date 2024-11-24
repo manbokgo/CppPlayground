@@ -19,15 +19,13 @@ int LCSOnlySize(const string& a, const string& b, const string& c)
     const int mxSz = (int)max({a.size(), b.size(), c.size()}) + 1;
     vector dp(mxSz, vector(mxSz, vector<int>(mxSz)));
 
-    for (int i = 0; i <= (int)a.size(); ++i)
+    for (int i = 1; i <= (int)a.size(); ++i)
     {
-        for (int j = 0; j <= (int)b.size(); ++j)
+        for (int j = 1; j <= (int)b.size(); ++j)
         {
-            for (int k = 0; k <= (int)c.size(); ++k)
+            for (int k = 1; k <= (int)c.size(); ++k)
             {
-                if (i == 0 || j == 0 || k == 0)
-                    dp[i][j][k] = 0;
-                else if (a[i - 1] == b[j - 1] && b[j - 1] == c[k - 1])
+                if (a[i - 1] == b[j - 1] && b[j - 1] == c[k - 1])
                     dp[i][j][k] = dp[i - 1][j - 1][k - 1] + 1;
                 else
                     dp[i][j][k] = max({dp[i - 1][j][k], dp[i][j - 1][k], dp[i][j][k - 1]});

@@ -21,13 +21,11 @@ string LCS(const string& a, const string& b)
     const int mxSz = (int)max(a.size(), b.size()) + 1;
     vector<vector<int>> dp(mxSz, vector<int>(mxSz));
 
-    for (int i = 0; i <= (int)a.size(); ++i)
+    for (int i = 1; i <= (int)a.size(); ++i)
     {
-        for (int j = 0; j <= (int)b.size(); ++j)
+        for (int j = 1; j <= (int)b.size(); ++j)
         {
-            if (i == 0 || j == 0)
-                dp[i][j] = 0;
-            else if (a[i - 1] == b[j - 1])
+            if (a[i - 1] == b[j - 1])
                 dp[i][j] = dp[i - 1][j - 1] + 1;
             else
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
