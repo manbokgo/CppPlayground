@@ -37,10 +37,7 @@ int main()
                 LCStr[i][j] = LCStr[i - 1][j - 1] + 1;
                 ans = max(ans, LCStr[i][j]);
             }
-            else
-            {
-                LCStr[i][j] = 0; // LCS(부분수열)과 이 부분만 다르다
-            }
+            // else LCStr[i][j] = 0; // LCS(부분수열)과 이 부분만 다르다
         }
     }
     cout << ans;
