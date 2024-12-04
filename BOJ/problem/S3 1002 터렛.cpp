@@ -1,11 +1,13 @@
 ﻿// URL: https://www.acmicpc.net/problem/1002
-// Algo: 기하학
+// Algo: 기하학 (두 원의 위치 관계)
 
 // Start:	241201 15 24
 // Read:	0 1
 // Think:	0 10
 // Code:	0 5
 // Total:	0 16
+
+// https://houseofj.tistory.com/167
 
 #include <bits/stdc++.h>
 using namespace std;
