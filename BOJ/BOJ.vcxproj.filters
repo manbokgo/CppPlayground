@@ -1111,5 +1111,8 @@
     <ClCompile Include="problem\G2 7869 두 원.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 3108 로고.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
