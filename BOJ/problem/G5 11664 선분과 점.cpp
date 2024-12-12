@@ -38,6 +38,11 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define pb push_back
 
+double Lerp(double a, double b, double t)
+{
+    return a + t * (b - a);
+}
+
 double GetDistSquare(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     return (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1);
@@ -61,21 +66,21 @@ int main()
         const double mid2 = (lo + hi * 2) / 3;
 
         const double dist1 = GetDistSquare(cx, cy, cz,
-            ax * mid1 + bx * (1 - mid1),
-            ay * mid1 + by * (1 - mid1),
-            az * mid1 + bz * (1 - mid1));
+            Lerp(ax, bx, mid1),
+            Lerp(ay, by, mid1),
+            Lerp(az, bz, mid1));
 
         const double dist2 = GetDistSquare(cx, cy, cz,
-            ax * mid2 + bx * (1 - mid2),
-            ay * mid2 + by * (1 - mid2),
-            az * mid2 + bz * (1 - mid2));
+            Lerp(ax, bx, mid2),
+            Lerp(ay, by, mid2),
+            Lerp(az, bz, mid2));
 
         if (dist1 > dist2) lo = mid1;
         else hi = mid2;
     }
 
     cout << sqrt(GetDistSquare(cx, cy, cz,
-        ax * lo + bx * (1 - lo),
-        ay * lo + by * (1 - lo),
-        az * lo + bz * (1 - lo)));
+        Lerp(ax, bx, lo),
+        Lerp(ay, by, lo),
+        Lerp(az, bz, lo));
 }
