@@ -1129,5 +1129,8 @@
     <ClCompile Include="problem\G5 11664 선분과 점.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\S1 15973 두 박스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
