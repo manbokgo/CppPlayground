@@ -1138,5 +1138,8 @@
     <ClCompile Include="problem\G2 1036 36진수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 4354 문자열 제곱.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
