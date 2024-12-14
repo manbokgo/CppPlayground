@@ -1135,5 +1135,8 @@
     <ClCompile Include="problem\G4 11662 민호와 강호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G2 1036 36진수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
