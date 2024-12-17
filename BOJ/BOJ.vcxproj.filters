@@ -1147,5 +1147,8 @@
     <ClCompile Include="problem\G2 10473 인간 대포.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P3 19585 전설.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
