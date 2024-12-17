@@ -9,7 +9,10 @@
 
 // 처음엔 바킹독식 nxt 배열 트라이 풀이로 풀었다. memset 실수해서 엄청 헤맴. 110MB 796ms
 // 다른 풀이를 보니 일반적으로 하는 Trie 클래스 풀이가 더 효율적이고 깔끔한 거 같아서 다시 풀어봄
-// 재귀로 하든, 현재 풀이처럼 루프로 하든 42MB 416ms
+// 재귀든, 루프든 42MB 416ms
+
+// 재귀가 기본형에서는 직관적이지만 변형이 까다롭고 성능 오버헤드도 있다.
+// 루프를 기본적으로 사용한다.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -24,7 +27,55 @@ class Trie
     map<char, Trie> m_Map;
 
 public:
+    void Insert(const string& s)
+    {
+        auto cur = this;
+        for (const char c : s)
+        {
+            cur = &(cur->m_Map[c]);
+        }
+        cur->m_Chk = true;
+    }
+
+    bool Find(const string& s)
+    {
+        auto cur = this;
+        for (const char c : s)
+        {
+            if (!cur->m_Map.count(c)) return false;
+            cur = &(cur->m_Map[c]);
+        }
+        return cur->m_Chk;
+    }
+
+    bool Erase(const string& s)
+    {
+        auto cur = this;
+        for (const char c : s)
+        {
+            if (!cur->m_Map.count(c)) return false;
+            cur = &(cur->m_Map[c]);
+        }
+        if (!cur->m_Chk) return false;
+        cur->m_Chk = false;
+        return true;
+    }
+
+    int Calc(const string& s)
+    {
+        Trie* cur = this;
+        int cnt = 0;
+
+        for (int i = 0; i < s.size(); ++i)
+        {
+            if (i == 0 || cur->m_Chk || cur->m_Map.size() > 1) ++cnt;
+            cur = &(cur->m_Map[s[i]]);
+        }
+        return cnt;
+    }
+
     // 재귀
+    /*
     void Insert(const string& s, int idx = 0)
     {
         if (idx == s.size())
@@ -46,30 +97,6 @@ public:
 
         ret += m_Map[s[idx]].Calc(s, idx + 1);
         return ret;
-    }
-
-    // 루프
-    /*
-    void Insert(const string& s)
-    {
-        Trie* cur = this;
-        for (const char c : s)
-            cur = &(cur->m_Map[c]);
-
-        cur->m_Chk = true;
-    }
-
-    int Calc(const string& s)
-    {
-        Trie* cur = this;
-        int cnt = 0;
-
-        for (int i = 0; i < s.size(); ++i)
-        {
-            if (i == 0 || cur->m_Chk || cur->m_Map.size() > 1) ++cnt;
-            cur = &(cur->m_Map[s[i]]);
-        }
-        return cnt;
     }
     */
 };
