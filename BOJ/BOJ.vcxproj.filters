@@ -1153,5 +1153,8 @@
     <ClCompile Include="problem\P2 2261 가장 가까운 두 점.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 2608 로마 숫자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
