@@ -22,17 +22,36 @@ using namespace std;
 
 using ll = long long;
 using Pos = pair<ll, ll>;
+
 ll CCW(Pos p1, Pos p2, Pos p3) { return (p2.X - p1.X) * (p3.Y - p1.Y) - (p3.X - p1.X) * (p2.Y - p1.Y); }
 int Normalize(ll var) { return var > 0 ? 1 : var < 0 ? -1 : 0; }
 
-vector<Pos> p;
-ll DistSquare(Pos p1, Pos p2) { return (p2.X - p1.X) * (p2.X - p1.X) + (p2.Y - p1.Y) * (p2.Y - p1.Y); }
+ll Square(ll num) { return num * num; }
+ll GetDistSquare(Pos p1, Pos p2) { return Square(p1.X - p2.X) + Square(p1.Y - p2.Y); }
 
-bool GrahamCmp(const Pos& a, const Pos& b)
+vector<Pos> MakeConvex(vector<Pos> p)
 {
-    const ll c = CCW(p[0], a, b);
-    if (c == 0) return DistSquare(p[0], a) < DistSquare(p[0], b);
-    return c > 0;
+    sort(p.begin(), p.end());
+    sort(p.begin() + 1, p.end(), [pivot = p[0]](const Pos& a, const Pos& b)
+    {
+        const ll c = CCW(pivot, a, b);
+        if (c == 0) return GetDistSquare(pivot, a) < GetDistSquare(pivot, b);
+        return c > 0;
+    });
+
+    vector<Pos> convex;
+    convex.push_back(p[0]);
+    convex.push_back(p[1]);
+
+    for (int i = 2; i < p.size(); ++i)
+    {
+        while (convex.size() >= 2 &&
+            CCW(convex[convex.size() - 2], convex[convex.size() - 1], p[i]) <= 0)
+            convex.pop_back();
+
+        convex.push_back(p[i]);
+    }
+    return convex;
 }
 
 int main()
@@ -42,32 +61,8 @@ int main()
     int n;
     cin >> n;
 
-    p.resize(n);
+    vector<Pos> p(n);
     for (auto& [x, y] : p) cin >> x >> y;
 
-    sort(all(p));
-    sort(p.begin() + 1, p.end(), GrahamCmp);
-
-    stack<int> S;
-    S.push(0);
-    S.push(1);
-
-    for (int i = 2; i < n; ++i)
-    {
-        while (S.size() >= 2)
-        {
-            const int top1 = S.top();
-            S.pop();
-            const int top2 = S.top();
-
-            if (CCW(p[top2], p[top1], p[i]) > 0)
-            {
-                S.push(top1);
-                break;
-            }
-        }
-        S.push(i);
-    }
-
-    cout << S.size();
+    cout << MakeConvex(p).size();
 }
