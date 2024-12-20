@@ -1156,5 +1156,8 @@
     <ClCompile Include="problem\G5 2608 로마 숫자.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P3 9240 로버트 후드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
