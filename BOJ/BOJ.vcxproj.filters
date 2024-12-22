@@ -1159,5 +1159,8 @@
     <ClCompile Include="problem\P3 9240 로버트 후드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 9202 Boggle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
