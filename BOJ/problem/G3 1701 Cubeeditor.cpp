@@ -9,6 +9,9 @@
 // Code:	0 10    string erase 잘못 써서 헤맴
 // Total:	0 20
 
+// https://blog.encrypted.gg/1040
+// i: 위 인덱스. 비교할 대상 문자.
+// j: 아래 인덱스. 불일치하면 fail로 최대한 일치 구간을 유지하면서 앞쪽으로 옮겨감.
 // KMP fail[x] : x 인덱스까지의 문자열(앞에서부터 x+1개의 문자열)에서 접두사가 끝난 후의 인덱스(접두사의 문자 개수)
 
 #include <bits/stdc++.h>

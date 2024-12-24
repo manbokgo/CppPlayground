@@ -7,6 +7,9 @@
 // Code:	0 20
 // Total:	0 21
 
+// https://blog.encrypted.gg/1040
+// KMP fail[x] : x 인덱스까지의 문자열(앞에서부터 x+1개의 문자열)에서 접두사가 끝난 후의 인덱스(접두사의 문자 개수)
+
 #include <bits/stdc++.h>
 using namespace std;
 
