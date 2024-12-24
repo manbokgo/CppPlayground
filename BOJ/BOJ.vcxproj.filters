@@ -1165,5 +1165,8 @@
     <ClCompile Include="problem\G5 20157 화살을 쏘자!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P4 10266 시계 사진들.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
