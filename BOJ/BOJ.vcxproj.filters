@@ -1168,5 +1168,8 @@
     <ClCompile Include="problem\P4 10266 시계 사진들.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\S1 2527 직사각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
