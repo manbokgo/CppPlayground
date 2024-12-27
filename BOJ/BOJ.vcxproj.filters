@@ -1177,5 +1177,8 @@
     <ClCompile Include="problem\G5 1052 물병.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 2195 문자열 복사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
