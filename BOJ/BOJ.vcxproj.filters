@@ -1183,5 +1183,8 @@
     <ClCompile Include="problem\G5 17070 파이프 옮기기 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 2096 내려가기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
