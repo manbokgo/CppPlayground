@@ -7,6 +7,8 @@
 // Code:	0 12
 // Total:	0 21
 
+// https://donggoolosori.github.io/2020/10/15/boj-2263/
+
 #include <bits/stdc++.h>
 using namespace std;
 
