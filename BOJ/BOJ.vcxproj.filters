@@ -1198,5 +1198,8 @@
     <ClCompile Include="problem\G3 2638 치즈.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G4 30805 사전 순 최대 공통 부분 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
