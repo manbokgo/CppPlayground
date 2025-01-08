@@ -1213,5 +1213,8 @@
     <ClCompile Include="problem\S2 11725 트리의 부모 찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\S3 15654 N과 M (5).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
