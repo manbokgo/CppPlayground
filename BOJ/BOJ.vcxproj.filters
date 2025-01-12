@@ -1222,5 +1222,8 @@
     <ClCompile Include="problem\S2 15666 N과 M (12).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\S1 11660 구간 합 구하기 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
