@@ -2,10 +2,10 @@
 // Algo: 재귀
 
 // Start:	250118 07 04
-// Read:	
-// Think:	
-// Code:	
-// Total:	
+// Read:	0 2
+// Think:	0 6
+// Code:	0 5
+// Total:	0 13
 
 #include <bits/stdc++.h>
 using namespace std;
