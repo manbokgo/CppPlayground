@@ -25,7 +25,7 @@ constexpr ll MOD = 1000000007;
 
 ll Power(ll x, ll y)
 {
-    if (y == 1) return x;
+    if (y == 1) return x % MOD;
     if (y % 2 == 1) return Power(x, y - 1) * x % MOD;
 
     const ll half = Power(x, y / 2);

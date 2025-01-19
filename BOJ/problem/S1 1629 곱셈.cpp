@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/1629
-// Algo: 수학
+// Algo: 수학, 분할 정복 거듭 제곱
 
 // Start:	250115 07 47
 // Read:	0 1
@@ -16,21 +16,20 @@ using namespace std;
 
 using ll = long long;
 
-ll a, b, c;
+ll MOD;
 
-ll Solve(ll cur)
+ll Power(ll x, ll y)
 {
-    if (cur == 0) return 1;
-    if (cur == 1) return a % c;
+    if (y == 1) return x % MOD;
+    if (y % 2 == 1) return Power(x, y - 1) * x % MOD;
 
-    const ll half = Solve(cur / 2) % c;
-
-    if (cur % 2 == 0) return half * half % c;
-    else return half * half % c * a % c;
+    const ll half = Power(x, y / 2);
+    return half * half % MOD;
 }
 
 int main()
 {
-    cin >> a >> b >> c;
-    cout << Solve(b);
+    ll a, b;
+    cin >> a >> b >> MOD;
+    cout << Power(a, b);
 }
