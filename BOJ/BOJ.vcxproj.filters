@@ -1255,5 +1255,8 @@
     <ClCompile Include="problem\G4 14500 테트로미노.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\G5 16928 뱀과 사다리 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
