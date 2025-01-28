@@ -1273,5 +1273,8 @@
     <ClCompile Include="problem\P5 1517 버블 소트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 3015 오아시스 재결합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
