@@ -1270,5 +1270,8 @@
     <ClCompile Include="problem\P5 11003 최솟값 찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="problem\P5 1517 버블 소트.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
