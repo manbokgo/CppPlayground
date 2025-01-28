@@ -1,5 +1,5 @@
 ﻿// URL: https://www.acmicpc.net/problem/6549
-// Algo: 세그먼트 트리 변형 (바텀업 arr), 분할 정복 or 스택
+// Algo: 세그먼트 트리 변형 (바텀업 arr), 분할 정복 or 모노톤 스택
 
 // Start:	241120 07 03
 // Read:	0 1
